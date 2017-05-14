@@ -16,7 +16,7 @@ Clickstarter is a web application inspired by Kickstarter built using Ruby on Ra
 - [ ] Backing projects & rewards
 - [ ] Search
 - [ ] Categories / Discover feature
-- [ ] Production README [sample](production_readme.md)
+- [ ] Production README [sample](../README.md)
 
 ## Design Docs
 * [View Wireframes][wireframes]
@@ -25,8 +25,8 @@ Clickstarter is a web application inspired by Kickstarter built using Ruby on Ra
 * [DB schema][schema]
 * [Sample State][sample-state]
 
-[wireframes]: docs/wireframes
-[components]: docs/component-hierarchy.md
-[sample-state]: docs/sample-state.md
-[api-endpoints]: docs/api-endpoints.md
-[schema]: docs/schema.md
+[wireframes]: wireframes
+[components]: component-hierarchy.md
+[sample-state]: sample-state.md
+[api-endpoints]: api-endpoints.md
+[schema]: schema.md
