@@ -1,6 +1,7 @@
 # Clickstarter
 
 [Heroku link][heroku]
+
 [Trello link][trello]
 
 [heroku]: https://clickstarter-gy.herokuapp.com/
@@ -30,3 +31,29 @@ Clickstarter is a web application inspired by Kickstarter built using Ruby on Ra
 [sample-state]: sample-state.md
 [api-endpoints]: api-endpoints.md
 [schema]: schema.md
+
+## Implementation Timeline
+
+### Phase 1: Backend setup and Front End User Authentication (2 days)
+
+**Objective:** Functioning rails project with front-end Authentication
+
+### Phase 2: Projects
+
+**Objective:** Projects can be created, viewed, edited, and destroyed through the API. Stats include '% funded', '$ pledged', and 'days remaining'.
+
+### Phase 3: Backing projects & rewards
+
+**Objective:** Users can back projects and receive rewards. Each pledge will increment the project's total funds raised.
+
+### Phase 4: Search
+
+**Objective:** Search bar which loads the top results dynamically.
+
+### Phase 5: Categories
+
+**Objective:** Display project categories via nav-bar menu. Selecting a category displays all related projects, under a sorting criterion.
+
+### Bonus Features (TBD)
+- [ ] Likes
+- [ ] Credit card payments
