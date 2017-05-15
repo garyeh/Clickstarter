@@ -1,24 +1,16 @@
-# README
+# Clickstarter
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+[Heroku link][heroku]
 
-Things you may want to cover:
+[Trello link][trello]
 
-* Ruby version
+[heroku]: https://clickstarter-gy.herokuapp.com/
+[trello]: https://trello.com/b/7iEXyCqX/clickstarter
 
-* System dependencies
+## Minimum Viable Product
 
-* Configuration
+Clickstarter is a crowd-funding web application inspired by Kickstarter and built on Ruby on Rails and React-Redux. Its projects will consist of other websites, which users can back at various reward levels and try to reach at least 100% funding within a given timeframe.
 
-* Database creation
+* [Development README][README]
 
-* Database initialization
-
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
+[README]: docs/README.md

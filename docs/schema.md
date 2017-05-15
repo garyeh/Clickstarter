@@ -13,12 +13,14 @@ column name        | data type | details
 -------------------|-----------|-----------------------
 id                 | integer   | not null, primary key
 creator_id         | integer   | not null, foreign key (references users), indexed
+category_id        | integer   | not null, foreign key (references categories), indexed
 title              | string    | not null
-short_description  | text      | not null
+description        | text      | not null
 category           | string    | not null
 main_image_url     | string    | not null
 end_date           | string    | not null
 funding_goal       | integer   | not null
+details            | text      | optional
 
 ## rewards
 column name  | data type | details
@@ -37,3 +39,9 @@ column name | data type | details
 id          | integer   | not null, primary key
 reward_id   | integer   | not null, foreign key (references rewards), indexed
 backer_id   | integer   | not null, foreign key (references users), indexed
+
+## categories
+column name | data type | details
+------------|-----------|-----------------------
+id          | integer   | not null, primary key
+name        | string    | not null
