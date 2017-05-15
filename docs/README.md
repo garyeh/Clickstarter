@@ -9,14 +9,14 @@
 
 ## Minimum Viable Product
 
-Clickstarter is a web application inspired by Kickstarter built using Ruby on Rails and React/Redux. By the end of Week 9, this app will, at a minimum, satisfy the following criteria with smooth, bug-free navigation, adequate seed data and sufficient CSS styling:
+Clickstarter is a crowd-funding web application inspired by Kickstarter and built on Ruby on Rails and React-Redux. Its projects will consist of other websites, which users can back at various reward levels and try to reach at least 100% funding within a given timeframe. By May 26th, Clickstarter will, at a minimum, satisfy the following criteria with smooth, bug-free navigation, adequate seed data and sufficient CSS styling:
 
 - [ ] Hosting on Heroku
 - [ ] New account creation, login, and guest/demo login
 - [ ] Projects
 - [ ] Backing projects & rewards
 - [ ] Search
-- [ ] Categories / Discover feature
+- [ ] Categories
 - [ ] Production README [sample](../README.md)
 
 ## Design Docs
@@ -38,19 +38,19 @@ Clickstarter is a web application inspired by Kickstarter built using Ruby on Ra
 
 **Objective:** Functioning rails project with front-end Authentication
 
-### Phase 2: Projects
+### Phase 2: Projects (2 days)
 
 **Objective:** Projects can be created, viewed, edited, and destroyed through the API. Stats include '% funded', '$ pledged', and 'days remaining'.
 
-### Phase 3: Backing projects & rewards
+### Phase 3: Backing projects & rewards (1.5 days)
 
 **Objective:** Users can back projects and receive rewards. Each pledge will increment the project's total funds raised.
 
-### Phase 4: Search
+### Phase 4: Search (1.5 days)
 
 **Objective:** Search bar which loads the top results dynamically.
 
-### Phase 5: Categories
+### Phase 5: Categories (2 days)
 
 **Objective:** Display project categories via nav-bar menu. Selecting a category displays all related projects, under a sorting criterion.
 
