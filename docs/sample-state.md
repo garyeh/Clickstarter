@@ -15,31 +15,30 @@
     1: {
       id: 1,
       title: "Linterest",
-      creator_name: "Yong Lin",
+      creator_name: "Yong",
       main_image_url: "linterest.png",        
       description: "pinterest clone",
-      category: "collections"
+      category_id: 1
       }
     }
     2: {
       id: 2,
       title: "UpShift",
-      creator_name: "Jon Jaffe",
+      creator_name: "JJ",
       main_image_url: "upshift.png",
       description: "shift clone"
-      category: "cars"
+      category_id: 2
   },
 
   projectDetail: {
     id: 1,
     title: "Linterest",
-    creator_name: "Yong Lin",
+    creator_name: "Yong",
     main_image_url: "lin.png",
     description: "pinterest clone",
-    category: "collections",
-    details: "lorem ipsum",
+    category_id: 1,
+    details: "",
     end_date: "06/15/2017",
-    funding: 3000,
     funding_goal: 5000,
     rewards: {
       1: {
@@ -59,7 +58,7 @@
       }
     }
   },
-  
+
   categories: {
     1: {
       name: "collections"
