@@ -49,10 +49,10 @@
         deliver_date: "06/15/2017",
         pledges: {
           1: {
-            backer_name: "vu"
+            backer_name: "Gary"
           },
           2: {
-            backer_name: "sam"
+            backer_name: "Sam"
           }
         }
       }
