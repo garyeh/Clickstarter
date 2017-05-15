@@ -10,7 +10,6 @@ Loads React web app
 ## JSON API
 
 ### Users
-User Sign Up
 
 - `POST /api/users`
 - `PATCH /api/users`
@@ -28,8 +27,6 @@ User Sign Up
 - `PATCH /api/projects/:projectId`
 - `DELETE /api/projects/:projectId`
 
-// TODO: add API for filtered projects by category
-
 ### Rewards
 - `GET /api/projects/:projectId/rewards`
 - `POST /api/projects/:projectId/rewards`
@@ -38,3 +35,5 @@ User Sign Up
 ### Categories
 - `GET /api/categories`
 - `POST /api/categories`
+
+TODO: add API for filtered projects by category
