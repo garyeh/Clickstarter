@@ -35,6 +35,7 @@
     title: "Linterest",
     creator_name: "Yong",
     main_image_url: "lin.png",
+    url: "linterest.io",
     description: "pinterest clone",
     category_id: 1,
     details: "",
