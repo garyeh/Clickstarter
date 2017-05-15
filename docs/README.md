@@ -40,7 +40,7 @@ Clickstarter is a crowd-funding web application inspired by Kickstarter and buil
 
 ### Phase 2: Projects (2 days)
 
-**Objective:** Projects can be created, viewed, edited, and destroyed through the API. Stats include '% funded', '$ pledged', and 'days remaining'.
+**Objective:** Projects can be created, viewed, edited, and destroyed through the API.
 
 ### Phase 3: Backing projects & rewards (1.5 days)
 
@@ -52,7 +52,7 @@ Clickstarter is a crowd-funding web application inspired by Kickstarter and buil
 
 ### Phase 5: Categories (2 days)
 
-**Objective:** Display project categories via nav-bar menu. Selecting a category displays all related projects, under a sorting criterion.
+**Objective:** Display project categories via nav-bar menu. Selecting a category displays all projects under that category.
 
 ### Bonus Features (TBD)
 - [ ] Likes
