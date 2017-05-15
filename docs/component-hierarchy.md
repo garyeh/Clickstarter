@@ -1,4 +1,4 @@
-## Containers
+## Component Hierarchy
 
 ### AuthFormContainer
   - AuthForm
@@ -37,6 +37,6 @@
 | "/project/:projectId"    | "ProjectContainer"            |
 | "/categories/            | "CategoriesContainer"         |
 | "/categories/:categoryId | "ProjectsInCategoryContainer" |
-| "/project/new"	         | "NewProject"                  |
-| "/search"                | "Search"                      |
 | "/search-results"        | "SearchResultsContainer"      |
+| "/search"                | "Search"                      |
+| "/project/new"	         | "NewProject"                  |
