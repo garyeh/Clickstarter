@@ -43,6 +43,7 @@
     funding_goal: 5000,
     rewards: {
       1: {
+        id: 1,
         title: "dinner on me",
         amount: 10,
         limit: 50,
@@ -50,9 +51,11 @@
         deliver_date: "06/15/2017",
         pledges: {
           1: {
+            id: 1,
             backer_name: "Gary"
           },
           2: {
+            id: 2,
             backer_name: "Sam"
           }
         }
@@ -62,9 +65,11 @@
 
   categories: {
     1: {
+      id: 1,
       name: "collections"
     },
     2: {
+      id: 2,
       name: "cars"
     }
   }

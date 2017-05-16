@@ -6,9 +6,8 @@
 ### HomeContainer
   - Navbar Container
     + CategoriesContainer
-    + NewProject
-    + Search
-      - SearchResultsContainer
+    + NewProjectFormContainer
+    + SearchContainer
   - Featured projects
     + ProjectIndex
 
@@ -16,16 +15,23 @@
   - Author
   - Description
   - Rewards
+  - EditProjectFormContainer
 
-### SearchResultsContainer
-  - Search results
+### NewProjectFormContainer
+  - NewProjectForm
+
+### EditProjectFormContainer
+  - EditProjectForm
+
+### SearchContainer
+  - SearchResults
 
 ### CategoriesContainer
   - Categories
     + ProjectsInCategoryContainer
 
 ### ProjectsInCategoryContainer
-  - Category results
+  - ProjectsInCategory
 
 ## Routes
 

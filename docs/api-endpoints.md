@@ -37,5 +37,5 @@ Loads React web app
 
 - `GET /api/categories`
 - `POST /api/categories`
-
-TODO: add API for filtered projects by category
+- `GET /api/categories/:categoryId`
+- `GET /api/categories/:categoryId/projects`
