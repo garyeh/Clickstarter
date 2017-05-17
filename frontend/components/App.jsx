@@ -7,16 +7,18 @@ import GreetingContainer from './greeting/greeting_container';
 
 const App = (props) => (
   <section>
-    <div>
-      Placeholder div
-    </div>
-    <div>
-      <Link to="/">
-        <h1>Clickstarter</h1>
-      </Link>
-    </div>
-    <div>
-      <GreetingContainer />
+    <div className="navbar">
+      <div>
+        Placeholder div
+      </div>
+      <div>
+        <Link to="/">
+          Clickstarter
+        </Link>
+      </div>
+      <div>
+        <GreetingContainer />
+      </div>
     </div>
     <Switch>
       <AuthRoute path="/login" component={SessionFormContainer} />
