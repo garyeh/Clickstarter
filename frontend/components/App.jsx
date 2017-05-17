@@ -13,7 +13,7 @@ const App = () => (
       </div>
       <div>
         <Link to="/">
-          <h2 id="title">CLICKSTARTER</h2>
+          <h2 id="title"><span>CLICK</span><span>STARTER</span></h2>
         </Link>
       </div>
       <div>

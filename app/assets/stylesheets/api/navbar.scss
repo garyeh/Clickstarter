@@ -6,6 +6,10 @@
   box-shadow: -1px 4px 6px 1px rgba(0, 0, 0, 0.09)
 }
 
+#title span:first-child {
+  color: #2BDE73;
+}
+
 #title {
   font-size: 25px;
   padding: 10px 0;
@@ -31,7 +35,7 @@
 }
 
 .login-signup span > *:hover {
-  border-bottom: 3px solid green;
+  border-bottom: 3px solid #2BDE73;
   transition: all 0.15s ease;
 }
 

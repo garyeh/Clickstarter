@@ -1,0 +1,32 @@
+.login-form-container {
+  display: flex;
+  justify-content: center;
+  padding: 60px;
+  background-color: rgba(225, 225, 225, 0.5);
+
+}
+
+.login-form-box {
+  border: 1px solid #e6e6e6;
+  background-color: white;
+  padding: 20px;
+}
+
+.login-form-box p {
+  font-size: 30px;
+}
+
+.login-form * {
+  margin-bottom: 20px;
+}
+
+.login-form label input {
+  width: 330px;
+  height: 20px;
+  padding: 10px;
+  border-radius: 6px;
+}
+
+.login-form input {
+  width: 354px;
+}
