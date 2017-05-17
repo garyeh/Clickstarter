@@ -6,18 +6,23 @@ import SessionFormContainer from './session_form/session_form_container';
 import GreetingContainer from './greeting/greeting_container';
 
 const App = (props) => (
-  <div>
-    <header>
+  <section>
+    <div>
+      Placeholder div
+    </div>
+    <div>
       <Link to="/">
         <h1>Clickstarter</h1>
       </Link>
+    </div>
+    <div>
       <GreetingContainer />
-    </header>
+    </div>
     <Switch>
       <AuthRoute path="/login" component={SessionFormContainer} />
       <AuthRoute path="/signup" component={SessionFormContainer} />
     </Switch>
-  </div>
+  </section>
 );
 
 export default App;

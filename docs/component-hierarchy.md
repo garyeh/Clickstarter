@@ -4,7 +4,7 @@
   - AuthForm
 
 ### HomeContainer
-  - Navbar Container
+  - Navbar
     + CategoriesContainer
     + NewProjectFormContainer
     + SearchContainer
