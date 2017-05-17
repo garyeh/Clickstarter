@@ -6,25 +6,31 @@ import SessionFormContainer from './session_form/session_form_container';
 import GreetingContainer from './greeting/greeting_container';
 
 const App = () => (
-  <section>
-    <div className="navbar">
-      <div>
-        Placeholder div
-      </div>
-      <div>
-        <Link to="/">
-          <h2 id="title"><span>CLICK</span><span>STARTER</span></h2>
-        </Link>
-      </div>
-      <div>
-        <GreetingContainer />
-      </div>
-    </div>
-    <Switch>
-      <AuthRoute path="/login" component={SessionFormContainer} />
-      <AuthRoute path="/signup" component={SessionFormContainer} />
-    </Switch>
-  </section>
+  <div>
+    <section>
+      <nav className="navbar">
+        <div>
+          Placeholder div
+        </div>
+        <div>
+          <Link to="/">
+            <h2 id="title"><span>CLICK</span><span>STARTER</span></h2>
+          </Link>
+        </div>
+        <div>
+          <GreetingContainer />
+        </div>
+      </nav>
+      <Switch>
+        <AuthRoute path="/login" component={SessionFormContainer} />
+        <AuthRoute path="/signup" component={SessionFormContainer} />
+      </Switch>
+    </section>
+
+    <footer>
+      <div>Clickstarter © 2017 (Add footer links)</div>
+    </footer>
+  </div>
 );
 
 export default App;
