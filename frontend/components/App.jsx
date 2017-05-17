@@ -13,7 +13,7 @@ const App = (props) => (
       </div>
       <div>
         <Link to="/">
-          Clickstarter
+          <h2 id="title">CLICKSTARTER</h2>
         </Link>
       </div>
       <div>
