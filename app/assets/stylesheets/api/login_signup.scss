@@ -13,20 +13,31 @@
 }
 
 .login-form-box p {
-  font-size: 30px;
+  font-size: 25px;
 }
 
 .login-form * {
-  margin-bottom: 20px;
+  margin: 10px 0;
 }
 
-.login-form label input {
+.login-input {
   width: 330px;
-  height: 20px;
+  height: 16px;
   padding: 10px;
   border-radius: 6px;
 }
 
-.login-form input {
+.login-submit {
   width: 354px;
+  height: 40px;
+  border: none;
+  color: white;
+  background-color: #25CB68;
+  border-radius: 6px;
+  cursor: pointer;
+}
+
+.login-submit:hover {
+  background-color: #20ac58;
+  transition: all 0.2s ease-in-out;
 }
