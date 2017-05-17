@@ -26,8 +26,8 @@ const App = () => (
       <Switch>
         <AuthRoute path="/login" component={SessionFormContainer} />
         <AuthRoute path="/signup" component={SessionFormContainer} />
-        <AuthRoute exact path="/" component={MainIndex} />
       </Switch>
+      <Route exact path="/" component={MainIndex} />
     </section>
 
     <footer>
