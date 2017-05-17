@@ -1,13 +1,48 @@
 .navbar {
-  border-bottom: 1px solid black;
   display: flex;
   justify-content: space-between;
+  align-items: center;
   height: 60px;
+  box-shadow: -1px 4px 6px 1px rgba(0, 0, 0, 0.09)
 }
 
 #title {
   font-size: 25px;
-  padding: 10px;
+  padding: 10px 0;
   margin: 0px auto;
   font-family: 'Baloo', cursive;
+}
+
+.login-signup {
+  position: relative;
+  margin-left: 100px;
+}
+
+.login-signup span {
+  position: absolute;
+  font-family: "Helvetica Neue";
+  font-size: 14px;
+  line-height: 57px;
+  text-align: center;
+}
+
+.login-signup span > * {
+  padding: 20px 0;
+}
+
+.login-signup span > *:hover {
+  border-bottom: 3px solid green;
+  transition: all 0.15s ease;
+}
+
+.login-signup span:first-child {
+  right: 115px;
+  top: -20px;
+  width: 50px;
+}
+
+.login-signup span:last-child {
+  right: 25px;
+  top: -20px;
+  width: 50px;
 }
