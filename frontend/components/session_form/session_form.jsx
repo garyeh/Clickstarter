@@ -27,26 +27,26 @@ class SessionForm extends React.Component {
   navLink() {
     if (this.props.formType === 'login') {
       return <div>
-              <span>New to Clickstarter?</span>&nbsp;&nbsp;
-              <span><Link to="/signup">Sign up!</Link></span>
-            </div>;
+        <span>New to Clickstarter?</span>&nbsp;&nbsp;
+        <span onClick={this.props.clearErrors}><Link to="/signup">Sign up!</Link></span>
+        </div>;
     } else {
       return <div>
-              <span>Have an account?</span>&nbsp;&nbsp;
-              <span><Link to="/login">Log in</Link></span>
-            </div>;
+        <span>Have an account?</span>&nbsp;&nbsp;
+        <span onClick={this.props.clearErrors}><Link to="/login">Log in</Link></span>
+        </div>;
     }
   }
 
   submitButton() {
     if (this.props.formType === 'login') {
-      return <input type="submit"
-              className="login-submit"
-              value="Log me in!" />;
+      return <div>
+        <input type="submit" value="Log me in!" />
+        </div>;
     } else {
-      return <input type="submit"
-              className="login-submit"
-              value="Create account" />;
+      return <div>
+        <input type="submit" value="Create account" />
+        </div>;
     }
   }
 

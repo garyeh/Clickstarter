@@ -53,7 +53,7 @@
   border-radius: 6px;
 }
 
-.login-submit {
+.login-form div input[type="submit"] {
   width: 354px;
   height: 40px;
   border: none;
@@ -65,7 +65,7 @@
   margin-top: 20px;
 }
 
-.login-submit:hover {
+.login-form div input[type="submit"]:hover {
   background-color: #20ac58;
   transition: all 0.2s ease-in-out;
 }

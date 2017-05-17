@@ -12,7 +12,8 @@ const App = () => (
     <section>
       <nav className="navbar">
         <div>
-          Placeholder div
+          <span>Explore</span>
+          <span>Start a project</span>
         </div>
         <div>
           <Link to="/">
