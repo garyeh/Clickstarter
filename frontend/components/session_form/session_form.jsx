@@ -31,9 +31,35 @@ class SessionForm extends React.Component {
 
   navLink() {
     if (this.props.formType === 'login') {
-      return <Link to="/signup">sign up instead</Link>;
+      return <div>
+              <span>New to Clickstarter?</span>
+              <Link to="/signup">Sign up!</Link>
+            </div>;
     } else {
-      return <Link to="/login">log in instead</Link>;
+      return <div>
+              <span>Have an account?</span>
+              <Link to="/login">Log in</Link>
+            </div>;
+    }
+  }
+
+  submitButton() {
+    if (this.props.formType === 'login') {
+      return <input type="submit"
+              className="login-submit"
+              value="Log me in!" />;
+    } else {
+      return <input type="submit"
+              className="login-submit"
+              value="Create account" />;
+    }
+  }
+
+  titleText() {
+    if (this.props.formType === 'login') {
+      return <p>Log in</p>;
+    } else {
+      return <p>Sign up</p>;
     }
   }
 
@@ -53,8 +79,9 @@ class SessionForm extends React.Component {
     return (
       <div className="login-form-container">
         <form onSubmit={this.handleSubmit} className="login-form-box">
+          <p className="redirect">{this.navLink()}</p>
           <br/>
-          <p>Please {this.props.formType} or {this.navLink()}</p>
+          {this.titleText()}
           <div className="login-form">
             <label>
               <input type="text"
@@ -74,7 +101,7 @@ class SessionForm extends React.Component {
               />
             </label>
             <br/>
-            <input type="submit" className="login-submit" value="Log me in!" />
+            {this.submitButton()}
           </div>
           {this.renderErrors()}
         </form>

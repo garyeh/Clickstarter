@@ -16,8 +16,12 @@
   font-size: 25px;
 }
 
+.redirect {
+  border: 1px solid black;
+}
+
 .login-form * {
-  margin: 10px 0;
+  margin: 8px 0;
 }
 
 .login-input {
@@ -35,6 +39,8 @@
   background-color: #25CB68;
   border-radius: 6px;
   cursor: pointer;
+  font-family: 'Open Sans';
+  font-size: 15px;
 }
 
 .login-submit:hover {

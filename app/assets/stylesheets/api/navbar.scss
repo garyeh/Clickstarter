@@ -24,7 +24,8 @@
 
 .login-signup span {
   position: absolute;
-  font-family: "Helvetica Neue";
+  font-family: 'Open Sans', sans-serif;
+  font-weight: bold;
   font-size: 14px;
   line-height: 57px;
   text-align: center;
@@ -40,13 +41,13 @@
 }
 
 .login-signup span:first-child {
-  right: 115px;
+  right: 125px;
   top: -20px;
-  width: 50px;
+  width: 60px;
 }
 
 .login-signup span:last-child {
-  right: 25px;
+  right: 35px;
   top: -20px;
-  width: 50px;
+  width: 60px;
 }
