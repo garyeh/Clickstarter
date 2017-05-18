@@ -12,16 +12,15 @@ session_token   | string    | not null
 column name        | data type | details
 -------------------|-----------|-----------------------
 id                 | integer   | not null, primary key
-creator_id         | integer   | not null, foreign key (references users), indexed
-category_id        | integer   | not null, foreign key (references categories), indexed
 title              | string    | not null
 url                | string    | not null
 description        | text      | not null
-category           | string    | not null
 main_image_url     | string    | not null
 end_date           | string    | not null
 funding_goal       | integer   | not null
 details            | text      | optional
+creator_id         | integer   | not null, foreign key (references users), indexed
+category_id        | integer   | not null, foreign key (references categories), indexed
 
 ## rewards
 column name  | data type | details
