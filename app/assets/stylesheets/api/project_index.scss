@@ -1,9 +1,6 @@
-.splash img {
-  width: 100%;
-  height: auto;
+.splash_img img {
+  max-width: 100%;
+  max-height: 550px;
   display: block;
-}
-
-.splash p {
-  position: absolute;
+  object-fit: cover;
 }
