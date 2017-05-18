@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20170518013524) do
+ActiveRecord::Schema.define(version: 20170518035618) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -27,8 +27,8 @@ ActiveRecord::Schema.define(version: 20170518013524) do
     t.integer  "category_id",    null: false
     t.datetime "created_at",     null: false
     t.datetime "updated_at",     null: false
-    t.index ["category_id"], name: "index_projects_on_category_id", unique: true, using: :btree
-    t.index ["creator_id"], name: "index_projects_on_creator_id", unique: true, using: :btree
+    t.index ["category_id"], name: "index_projects_on_category_id", using: :btree
+    t.index ["creator_id"], name: "index_projects_on_creator_id", using: :btree
     t.index ["title", "creator_id"], name: "index_projects_on_title_and_creator_id", unique: true, using: :btree
     t.index ["url"], name: "index_projects_on_url", unique: true, using: :btree
   end
