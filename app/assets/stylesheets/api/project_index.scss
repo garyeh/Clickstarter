@@ -3,4 +3,18 @@
   max-height: 550px;
   display: block;
   object-fit: cover;
+  border-bottom: 1px solid #e6e6e6;
+}
+
+.featured {
+  display: flex;
+  margin: 50px;
+  justify-content: space-around;
+}
+
+.featured li {
+  width: 400px;
+  height: 500px;
+  border: 1px solid #e6e6e6;
+  box-shadow: -1px 4px 6px 1px rgba(0, 0, 0, 0.09);
 }
