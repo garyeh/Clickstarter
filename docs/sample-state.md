@@ -15,20 +15,35 @@
     1: {
       id: 1,
       title: "Linterest",
-      creator_name: "Yong",
       main_image_url: "linterest.png",        
       description: "pinterest clone",
-      category_id: 1
+      category_id: 1,
+      creator_id: 2
       }
     }
     2: {
       id: 2,
       title: "UpShift",
-      creator_name: "JJ",
       main_image_url: "upshift.png",
-      description: "shift clone"
-      category_id: 2
+      description: "shift clone",
+      category_id: 2,
+      creator_id: 3
   },
+
+  users: {
+    1: {
+      id: 1,
+      username: "app-academy"
+    },
+    2: {
+      id: 2,
+      username: "Yong"
+    },
+    3: {
+      id: 3,
+      username: "JJ"
+    }
+  }
 
   projectDetail: {
     id: 1,

@@ -16,9 +16,11 @@ class Api::ProjectsController < ApplicationController
       render json: @project.errors.full_messages, status: 422
     end
   end
-  
-  def destroy
 
+  def destroy
+    @project = Project.find(params[:id])
+    @project.destroy
+    render :index
   end
 
   private

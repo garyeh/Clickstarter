@@ -32,7 +32,7 @@ const App = () => (
     </section>
 
     <footer>
-      <div>Clickstarter © 2017 (Add footer links)</div>
+      <div>Copyright © 2017 Clickstarter. All rights reserved.</div>
     </footer>
   </div>
 );
