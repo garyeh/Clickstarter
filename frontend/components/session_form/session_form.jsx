@@ -9,19 +9,13 @@ class SessionForm extends React.Component {
       password: ''
     };
     this.handleSubmit = this.handleSubmit.bind(this);
+    this.handleGuestLogin = this.handleGuestLogin.bind(this);
   }
 
   update(field) {
     return e => this.setState({
       [field]: e.currentTarget.value
     });
-  }
-
-  handleSubmit(e) {
-    e.preventDefault();
-    const user = Object.assign({}, this.state);
-    this.props.processForm({user})
-      .then(res => this.props.history.push('/'));
   }
 
   navLink() {
@@ -38,15 +32,38 @@ class SessionForm extends React.Component {
     }
   }
 
+  handleSubmit(e) {
+    e.preventDefault();
+    const user = Object.assign({}, this.state);
+    this.props.processForm({user})
+    .then(res => this.props.history.push('/'));
+  }
+
+  handleGuestLogin(e) {
+    e.preventDefault();
+    let user = { username: "Guest", password: "password" };
+    console.log(this.props);
+    this.props.guestLogin({user})
+    .then(res => this.props.history.push('/'));
+  }
+
   submitButton() {
     if (this.props.formType === 'login') {
       return <div>
-        <input type="submit" value="Log me in!" />
+        <input type="submit"
+        onClick={this.handleSubmit} value="Log me in!" />
+        <br/>
+        <input type="submit"
+        onClick={this.handleGuestLogin} value="Log in as guest" />
         </div>;
     } else {
       return <div>
-        <input type="submit" value="Create account" />
-        </div>;
+        <input type="submit"
+        onClick={this.handleSubmit} value="Create account" />
+        <br/>
+        <input type="submit"
+        onClick={this.handleGuestLogin} value="Log in as guest" />
+      </div>;
     }
   }
 
@@ -73,7 +90,7 @@ class SessionForm extends React.Component {
   render() {
     return (
       <div className="login-form-container">
-        <form onSubmit={this.handleSubmit} className="login-form-box">
+        <form  className="login-form-box">
           <div className="redirect">{this.navLink()}</div>
           <div className="login-form">
           {this.titleText()}
