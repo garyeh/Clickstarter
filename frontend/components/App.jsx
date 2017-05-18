@@ -4,8 +4,7 @@ import { AuthRoute } from '../util/route_util';
 
 import SessionFormContainer from './session_form/session_form_container';
 import GreetingContainer from './greeting/greeting_container';
-import MainIndexContainer from './main_index/main_index_container';
-import MainIndex from './main_index/main_index';
+import ProjectIndexContainer from './projects/project_index_container';
 
 const App = () => (
   <div>
@@ -28,7 +27,7 @@ const App = () => (
         <AuthRoute path="/login" component={SessionFormContainer} />
         <AuthRoute path="/signup" component={SessionFormContainer} />
       </Switch>
-      <Route exact path="/" component={MainIndex} />
+      <Route exact path="/" component={ProjectIndexContainer} />
     </section>
 
     <footer>
