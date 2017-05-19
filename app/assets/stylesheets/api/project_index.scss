@@ -7,21 +7,21 @@
 }
 
 .splash_content h2 {
-  margin: 50px 0 18px 48px;
+  margin: 50px 0 18px 0;
   padding: 0 20px;
   font-size: 25px;
+  text-align: center;
 }
 
 .featured {
   display: flex;
   flex-flow: row wrap;
-  justify-content: space-between;
-  margin: 0 48px;
+  justify-content: center;
+  margin: 0 48px 48px 48px;
 }
 
 .index_item {
-  width: 29%;
-  max-width: 400px;
+  width: 400px;
   height: 500px;
   margin: 20px;
   border: 1px solid #e6e6e6;

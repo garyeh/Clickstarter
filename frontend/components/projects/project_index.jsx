@@ -13,10 +13,10 @@ class ProjectIndex extends React.Component {
     return (
       <section className="splash_content">
         <Carousel className="splash_img">
-          <img src="https://images.unsplash.com/photo-1481487196290-c152efe083f5?dpr=2&auto=compress,format&fit=crop&w=376&h=227&q=80&cs=tinysrgb&crop=&bg=" alt="Website" />
-          <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/0/0e/Bos_grunniens_at_Letdar_on_Annapurna_Circuit.jpg/1280px-Bos_grunniens_at_Letdar_on_Annapurna_Circuit.jpg" alt="Yakety-slack" />
-          <img src="https://images.unsplash.com/photo-1494390248081-4e521a5940db?dpr=2&amp;auto=format&amp;fit=crop&amp;w=1500&amp;h=1079&amp;q=80&amp;cs=tinysrgb&amp;crop=&amp;bg=" alt="Pantry" />
-          <img src="https://cdn.shutterstock.com/shutterstock/videos/9861461/thumb/1.jpg?i10c=img.resize(height:72)" alt="OpenGym" />
+          <img src="http://res.cloudinary.com/ds1qfel8a/image/upload/v1495161948/Splash_ebort9.jpg" alt="Website" />
+          <img src="http://res.cloudinary.com/ds1qfel8a/image/upload/v1495161000/Yakety-slack_iajgln.jpg" alt="Yakety-slack" />
+          <img src="http://res.cloudinary.com/ds1qfel8a/image/upload/v1495161001/Pantry_adfpkv.jpg" alt="Pantry" />
+          <img src="http://res.cloudinary.com/ds1qfel8a/image/upload/v1495161000/OpenGym_miycjc.jpg" alt="OpenGym" />
           <img src="https://res.cloudinary.com/dbxwu45pr/image/upload/v1495046731/hero-2_hiyzq5.jpg" alt="Prana" />
         </Carousel>
 

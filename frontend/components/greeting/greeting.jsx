@@ -12,7 +12,7 @@ const sessionLinks = (clearErrors) => (
 const personalGreeting = (currentUser, logout) => (
   <hgroup className="header-group">
     <div className="dropdown">
-      <img src="http://findicons.com/files/icons/104/orb/128/6.png"
+      <img src="http://res.cloudinary.com/ds1qfel8a/image/upload/v1495160455/nav_dropdown_ren7yn.png"
       alt="User icon" height="40" width="40" className="dropbtn" />
       <div className="dropdown-content">
         <p>Your Profile</p>

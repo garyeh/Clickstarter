@@ -1,7 +1,6 @@
 import React from 'react';
 
 const ProjectIndexItem = ({ project }) => {
-  console.log(project);
   return (
     <li className="index_item">
       <p>
