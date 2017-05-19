@@ -6,7 +6,7 @@ const ProjectCarousel = () => (
     <div className="project-carousel-slide">
       <h1>Creators thrive here</h1>
       <h2>Clickstarter creators pursue bold ideas on their own terms — and make an impact on the world, too.</h2>
-      <img src="http://res.cloudinary.com/ds1qfel8a/image/upload/v1495161948/Splash_ebort9.jpg" />
+      <img src="http://res.cloudinary.com/ds1qfel8a/image/upload/v1495216601/Splash_emwijn.jpg" />
     </div>
 
     <div className="project-carousel-slide">
@@ -24,7 +24,7 @@ const ProjectCarousel = () => (
     </div>
 
     <div className="project-carousel-slide">
-      <h1>myPantry</h1>
+      <h1>MyPantry</h1>
       <h2>For cooking enthusiasts - a website that keeps track of your pantry so you don't have to!</h2>
       <a href="#/projects/4"><button>View project</button></a>
       <img src="http://res.cloudinary.com/ds1qfel8a/image/upload/v1495161001/Pantry_adfpkv.jpg" />
