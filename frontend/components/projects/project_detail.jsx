@@ -1,5 +1,5 @@
 import React from 'react';
-import { Route } from 'react-router-dom';
+import { Route, Link } from 'react-router-dom';
 
 class ProjectDetail extends React.Component {
   componentDidMount() {
@@ -8,7 +8,7 @@ class ProjectDetail extends React.Component {
 
   render() {
     return (
-      <div>Show page temp</div>
+      <Link to="/">Show page temp</Link>
     );
   }
 }
