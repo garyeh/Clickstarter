@@ -4,6 +4,7 @@
   display: block;
   object-fit: cover;
   border-bottom: 1px solid #e6e6e6;
+  opacity: 0.6;
 }
 
 .splash_content h2 {
@@ -17,7 +18,7 @@
   display: flex;
   flex-flow: row wrap;
   justify-content: center;
-  margin: 0 48px 48px 48px;
+  margin: 0 20px 40px 20px;
 }
 
 .index_item {
