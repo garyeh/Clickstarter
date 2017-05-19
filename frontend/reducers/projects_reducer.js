@@ -1,4 +1,4 @@
-import { RECEIVE_PROJECTS } from '../actions/project_actions';
+import { RECEIVE_PROJECTS, RECEIVE_PROJECT_DETAIL } from '../actions/project_actions';
 import { merge } from 'lodash';
 
 const projectsReducer = (state = {}, action) => {
@@ -7,6 +7,8 @@ const projectsReducer = (state = {}, action) => {
   switch(action.type) {
     case RECEIVE_PROJECTS:
       return action.projects;
+    case RECEIVE_PROJECT_DETAIL:
+      return action.project;
     default:
       return state;
   }

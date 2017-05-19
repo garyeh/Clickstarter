@@ -42,7 +42,6 @@ class SessionForm extends React.Component {
   handleGuestLogin(e) {
     e.preventDefault();
     let user = { username: "Guest", password: "password" };
-    console.log(this.props);
     this.props.guestLogin({user})
     .then(res => this.props.history.push('/'));
   }

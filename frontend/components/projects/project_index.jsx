@@ -1,8 +1,6 @@
 import React from 'react';
-import { Route } from 'react-router-dom';
 import ProjectCarousel from './project_carousel';
 import ProjectIndexItem from './project_index_item';
-import ProjectDetailContainer from './project_detail_container';
 
 class ProjectIndex extends React.Component {
   componentDidMount() {
@@ -20,8 +18,6 @@ class ProjectIndex extends React.Component {
             <ProjectIndexItem key={idx} project={project} />
           ))}
         </ul>
-
-        <Route path="/projects/:projectId" component={ProjectDetailContainer} />
       </section>
     );
   }
