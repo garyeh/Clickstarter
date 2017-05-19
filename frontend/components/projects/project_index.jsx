@@ -2,6 +2,7 @@ import React from 'react';
 import { Route } from 'react-router-dom';
 import Carousel from 'nuka-carousel';
 import ProjectIndexItem from './project_index_item';
+import ProjectDetailContainer from './project_detail_container';
 
 class ProjectIndex extends React.Component {
   componentDidMount() {
@@ -18,11 +19,15 @@ class ProjectIndex extends React.Component {
           <img src="https://cdn.shutterstock.com/shutterstock/videos/9861461/thumb/1.jpg?i10c=img.resize(height:72)" alt="OpenGym" />
           <img src="https://res.cloudinary.com/dbxwu45pr/image/upload/v1495046731/hero-2_hiyzq5.jpg" alt="Prana" />
         </Carousel>
+
+        <h2>Featured projects</h2>
         <ul className="featured">
           {this.props.projects.map((project, idx) => (
             <ProjectIndexItem key={idx} project={project} />
           ))}
         </ul>
+
+        <Route path="/projects/:projectId" component={ProjectDetailContainer} />
       </section>
     );
   }

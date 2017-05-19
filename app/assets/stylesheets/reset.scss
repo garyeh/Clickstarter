@@ -1,5 +1,5 @@
 html, head, body, header,
-nav, h1, a, ul, li, main,
+nav, h1, h2, a, ul, li, main,
 section, p, footer, small {
   margin: 0;
   padding: 0;
@@ -12,6 +12,7 @@ section, p, footer, small {
   vertical-align: inherit;
   box-sizing: inherit;
   background: transparent;
+  font-family: 'Roboto', sans-serif;
 }
 
 header, nav, main, section,
