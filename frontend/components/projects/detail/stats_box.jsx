@@ -2,8 +2,14 @@ import React from 'react';
 import { Route, Link } from 'react-router-dom';
 
 const StatsBox = ({ detail }) => {
-  return (<div>
-      Stats
+  console.log(detail);
+  return (<div className="statbox">
+      <div>
+        <img src={detail.main_image_url} alt={detail.title} />
+      </div>
+      <div>
+        hai
+      </div>
     </div>
   );
 };
