@@ -55,14 +55,12 @@
     font-size: 18px;
     color: #ffffff;
     z-index: 2;
-  }
-
-  a {
-    text-decoration: none;
+    transition: all 0.2s ease-in-out;
   }
 
   button:hover {
     background-color: #05AF3C;
+    transition: all 0.2s ease-in-out;
   }
 }
 
@@ -86,10 +84,11 @@
   margin: 20px;
   border: 1px solid #e6e6e6;
   box-shadow: -1px 4px 6px 1px rgba(0, 0, 0, 0.09);
+  transition: all 0.2s ease-in-out;
 }
 
 .index_item:hover {
-  transform: translateX(1px) translateY(-1px);
+  transform: translateY(-1px);
   box-shadow: -2px 5px 6px 2px rgba(0, 0, 0, 0.09);
   transition: all 0.2s ease-in-out;
 }

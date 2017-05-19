@@ -2,15 +2,12 @@
   display: flex;
   margin: 0 auto;
   position: relative;
-}
-
-.statbox div {
-  padding: 30px;
-  margin: 0px 60px;
+  justify-content: space-around;
 }
 
 .statbox div:first-child {
   width: 60%;
+  margin-left: 60px;
   align-items: center;
 }
 
@@ -18,4 +15,53 @@
   width: 90%;
   height: 70%;
   object-fit: cover;
+}
+
+.statbox div:last-child {
+  border-top: 3px solid #2BDE73;
+  width: 25%;
+  margin-right: 60px;
+}
+
+.statbox div:last-child span {
+  display: block;
+  margin: 5px 0;
+}
+
+.statbox div:last-child span:nth-child(even) {
+  margin-bottom: 15px;
+  font-size: 13px;
+  color: #737373;
+}
+
+.statbox div:last-child span:nth-child(odd) {
+  padding-top: 15px;
+  font-size: 23px;
+}
+
+.statbox div:last-child span:first-child {
+  margin-top: 15px;
+  color: #05AF3C;
+}
+
+.statbox button {
+  cursor: pointer;
+  text-align: center;
+  border: none;
+
+  border-radius: 4px;
+  height: 50px;
+  width: 100%;
+  background-color: #25CB68;
+  font-size: 15px;
+  color: #ffffff;
+  box-shadow: inset 0px 0px 0px 1px #05AF3C;
+  transition: all 0.25s ease-in-out;
+}
+
+.statbox button:hover {
+  transition: all 0.25s ease-in-out;
+  transform: translateY(-1px);
+  background-color: #05AF3C;
+  box-shadow: -1px 2px 3px 1px rgba(0, 0, 0, 0.09);
 }

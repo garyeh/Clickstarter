@@ -9,6 +9,12 @@ class ProjectDetail extends React.Component {
     this.props.fetchProjectDetail(this.props.match.params.projectId);
   }
 
+  componentWillReceiveProps(nextProps) {
+    if (this.props.match.params.projectId !== nextProps.match.params.projectId) {
+      this.props.requestSingleProject(nextProps.match.params.projectId);
+    }
+  }
+
   render() {
     const detail = this.props.projectDetail;
     return (
