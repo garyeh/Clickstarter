@@ -1,5 +1,6 @@
 @projects.each do |project|
   json.set! project.id do
+    json.id project.id
     json.title project.title
     json.main_image_url project.main_image_url
     json.description project.description

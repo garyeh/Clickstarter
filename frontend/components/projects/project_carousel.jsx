@@ -1,14 +1,34 @@
 import React from "react";
-import { Link } from "react-router";
 import Carousel from "nuka-carousel";
 
 const ProjectCarousel = () => (
-  <Carousel className="splash_img" wrapAround={true} autoplay={true} autoplayInterval={5000}>
-    <img src="http://res.cloudinary.com/ds1qfel8a/image/upload/v1495161948/Splash_ebort9.jpg" alt="Website" />
-    <img src="http://res.cloudinary.com/ds1qfel8a/image/upload/v1495161000/Yakety-slack_iajgln.jpg" alt="Yakety-slack" />
-    <img src="http://res.cloudinary.com/ds1qfel8a/image/upload/v1495161001/Pantry_adfpkv.jpg" alt="Pantry" />
-    <img src="http://res.cloudinary.com/ds1qfel8a/image/upload/v1495161000/OpenGym_miycjc.jpg" alt="OpenGym" />
-    <img src="https://res.cloudinary.com/dbxwu45pr/image/upload/v1495046731/hero-2_hiyzq5.jpg" alt="Prana" />
+  <Carousel wrapAround={true} autoplay={true} autoplayInterval={6000}>
+    <div className="project-carousel-slide">
+      <h1>Creators thrive here</h1>
+      <h2>Clickstarter creators pursue bold ideas on their own terms — and make an impact on the world, too.</h2>
+      <img src="http://res.cloudinary.com/ds1qfel8a/image/upload/v1495161948/Splash_ebort9.jpg" />
+    </div>
+
+    <div className="project-carousel-slide">
+      <h1>Yakety-slack</h1>
+      <h2>Whatever work means for you, Yak brings all the pieces and people you need together so you can actually get things done.</h2>
+      <a href="#/projects/3"><button>View project</button></a>
+      <img src="http://res.cloudinary.com/ds1qfel8a/image/upload/v1495161000/Yakety-slack_iajgln.jpg" />
+    </div>
+
+    <div className="project-carousel-slide">
+      <h1>Prana</h1>
+      <h2>Prana is the easiest way for teams to track their work—and get results.</h2>
+      <a href="#/projects/2"><button>View project</button></a>
+      <img src="https://res.cloudinary.com/dbxwu45pr/image/upload/v1495046731/hero-2_hiyzq5.jpg" />
+    </div>
+
+    <div className="project-carousel-slide">
+      <h1>myPantry</h1>
+      <h2>For cooking enthusiasts - a website that keeps track of your pantry so you don't have to!</h2>
+      <a href="#/projects/4"><button>View project</button></a>
+      <img src="http://res.cloudinary.com/ds1qfel8a/image/upload/v1495161001/Pantry_adfpkv.jpg" />
+    </div>
   </Carousel>
 );
 
