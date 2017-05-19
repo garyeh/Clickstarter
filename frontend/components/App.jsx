@@ -5,7 +5,7 @@ import { AuthRoute } from '../util/route_util';
 import SessionFormContainer from './session_form/session_form_container';
 import GreetingContainer from './greeting/greeting_container';
 import ProjectIndexContainer from './projects/project_index_container';
-import ProjectDetailContainer from './projects/project_detail_container';
+import ProjectDetailContainer from './projects/detail/project_detail_container';
 
 const App = () => (
   <div>

@@ -1,0 +1,34 @@
+.titlebox {
+  display: flex;
+  height: 150px;
+  width: 100%;
+  margin: 0 auto;
+  position: relative;
+}
+
+.titlebox div {
+  padding: 30px;
+  margin: 30px;
+}
+
+.titlebox div:first-child {
+  width: 20%;
+  align-items: center;
+}
+
+.titlebox div:nth-child(2) {
+  width: 80%;
+  position: absolute;
+  top: -30px;
+  right: -100px;
+
+}
+
+.titlebox div span span {
+  font-weight: bold;
+}
+
+.titlebox div:nth-child(2) p:first-child {
+  font-size: 40px;
+  margin-bottom: 15px;
+}

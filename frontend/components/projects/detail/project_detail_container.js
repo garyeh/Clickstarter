@@ -1,6 +1,6 @@
 import { connect } from 'react-redux';
 import ProjectDetail from './project_detail';
-import { fetchProjectDetail } from '../../actions/project_actions';
+import { fetchProjectDetail } from '../../../actions/project_actions';
 
 const mapStateToProps = ({ projectDetail }) => ({
   projectDetail
