@@ -1,8 +1,13 @@
 import { connect } from 'react-redux';
 import ExploreCreate from './explore_create';
+import { receiveErrors } from '../../actions/session_actions';
 
 const mapStateToProps = ({ session }) => ({
   currentUser: session.currentUser
 });
 
-export default connect(mapStateToProps, null)(ExploreCreate);
+const mapDispatchToProps = dispatch => ({
+  clearErrors: () => dispatch(receiveErrors([]))
+});
+
+export default connect(mapStateToProps, mapDispatchToProps)(ExploreCreate);

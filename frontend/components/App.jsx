@@ -1,12 +1,13 @@
 import React from 'react';
 import { Route, Redirect, Switch, Link, HashRouter } from 'react-router-dom';
-import { AuthRoute } from '../util/route_util';
+import { AuthRoute, ProtectedRoute } from '../util/route_util';
 
 import SessionFormContainer from './session_form/session_form_container';
 import GreetingContainer from './greeting/greeting_container';
 import ProjectIndexContainer from './projects/project_index_container';
 import ProjectDetailContainer from './projects/detail/project_detail_container';
 import ExploreCreateContainer from './explore_create/explore_create_container';
+import ProjectFormContainer from './project_form/project_form_container';
 
 const App = () => (
   <div>
@@ -27,6 +28,7 @@ const App = () => (
       <Switch>
         <AuthRoute path="/login" component={SessionFormContainer} />
         <AuthRoute path="/signup" component={SessionFormContainer} />
+        <ProtectedRoute path="/projects/new" component={ProjectFormContainer} />
         <Route path="/projects/:projectId" component={ProjectDetailContainer} />
       </Switch>
       <Route exact path="/" component={ProjectIndexContainer} />

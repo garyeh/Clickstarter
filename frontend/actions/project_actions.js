@@ -22,3 +22,8 @@ export const fetchProjectDetail = id => dispatch => (
   APIUtil.fetchProjectDetail(id)
     .then(project => dispatch(receiveProjectDetail(project)))
 );
+
+export const createProject = project => dispatch => (
+  APIUtil.createProject(project)
+    .then(res => dispatch(receiveProjectDetail(res)))
+);

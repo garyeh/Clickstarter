@@ -13,10 +13,14 @@
   position: absolute;
 }
 
-.leftnav span:hover {
+.leftnav span > * {
+  padding: 21px 0;
+  transition: all 0.15s ease;
+}
+
+.leftnav span > *:hover {
   border-bottom: 3px solid #2BDE73;
   transition: all 0.15s ease;
-  cursor: pointer;
 }
 
 .leftnav span:first-child {
