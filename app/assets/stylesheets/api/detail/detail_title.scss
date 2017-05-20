@@ -2,24 +2,24 @@
   display: flex;
   width: 100%;
   margin: 0 auto;
-  position: relative;
 }
 
 .titlebox div {
-  padding: 30px;
-  margin: 60px;
+  padding: 30px 0;
+  margin: 25px 0;
 }
 
 .titlebox div:first-child {
-  width: 22.5%;
+  width: 20%;
+  margin-left: 90px;
+  display: flex;
   align-items: center;
 }
 
 .titlebox div:nth-child(2) {
-  width: 77.5%;
-  position: absolute;
-  top: -35px;
-  right: -100px;
+  width: 80%;
+  margin-right: 90px;
+  margin-bottom: 35px;
 }
 
 .titlebox div span span {
