@@ -4,10 +4,7 @@
 
 [Heroku link][heroku]
 
-[Trello link][trello]
-
 [heroku]: https://clickstarter-gy.herokuapp.com/
-[trello]: https://trello.com/b/7iEXyCqX/clickstarter
 
 ## Description
 
