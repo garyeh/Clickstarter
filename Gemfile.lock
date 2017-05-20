@@ -61,7 +61,6 @@ GEM
       execjs
     coffee-script-source (1.12.2)
     concurrent-ruby (1.0.5)
-    database_cleaner (1.6.1)
     debug_inspector (0.0.3)
     erubis (2.7.0)
     execjs (2.7.0)
@@ -179,7 +178,6 @@ DEPENDENCIES
   binding_of_caller
   byebug
   coffee-rails (~> 4.2)
-  database_cleaner
   figaro
   jbuilder (~> 2.5)
   jquery-rails

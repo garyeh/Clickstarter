@@ -1,5 +1,5 @@
-require 'database_cleaner'
-DatabaseCleaner.clean_with(:truncation)
+User.destroy_all
+Project.destroy_all
 
 guest = User.create(username: "Guest", password: "password")
 
