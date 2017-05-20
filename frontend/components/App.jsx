@@ -6,14 +6,14 @@ import SessionFormContainer from './session_form/session_form_container';
 import GreetingContainer from './greeting/greeting_container';
 import ProjectIndexContainer from './projects/project_index_container';
 import ProjectDetailContainer from './projects/detail/project_detail_container';
+import ExploreCreateContainer from './explore_create/explore_create_container';
 
 const App = () => (
   <div>
     <section>
       <nav className="navbar">
         <div>
-          <span>Explore</span>
-          <span>Start a project</span>
+          <ExploreCreateContainer />
         </div>
         <div>
           <Link to="/">

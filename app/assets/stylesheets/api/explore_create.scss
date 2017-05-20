@@ -1,0 +1,28 @@
+.leftnav {
+  display: flex;
+  align-items: center;
+  position: relative;
+  font-size: 14px;
+  font-family: 'Open Sans', sans-serif;
+  font-weight: bold;
+}
+
+.leftnav span:first-child {
+  width: 150px;
+  position: absolute;
+  left: 50px;
+}
+
+.leftnav span:last-child {
+  width: 150px;
+  position: absolute;
+  left: 140px;
+}
+
+.leftnav img {
+  position: absolute;
+  right: 150px;
+  width: 18px;
+  height: 18px;
+  margin-right: 5px;
+}
