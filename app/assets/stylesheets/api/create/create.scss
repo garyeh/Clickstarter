@@ -1,11 +1,13 @@
 .project-create-form {
-  background-image: url(http://res.cloudinary.com/ds1qfel8a/image/upload/c_scale,w_1920/v1495328945/create_bg_nr9kor.jpg);
-  height: 900px;
-  opacity: 0.6;
+  background-image: url(http://res.cloudinary.com/ds1qfel8a/image/upload/c_scale,w_1920/v1495331172/create_bg_ubhjhl.jpg);
+  opacity: 0.9;
 }
 
-.create-form-content {
-  background-color: white;
+.create-form-contents {
+  display: flex;
+  flex-direction: column;
+  margin: 0 15%;
+  padding: 50px 0;
 }
 
 .form-description {

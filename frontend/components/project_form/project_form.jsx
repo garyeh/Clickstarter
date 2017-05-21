@@ -9,10 +9,10 @@ class ProjectForm extends React.Component {
   render() {
     return (
       <form className="project-create-form" >
-        <div className="create-form-content">
+        <section className="create-form-contents">
           <p>Choose a category:</p>
-          <select name="expertise">
-            <option value="Select a category" disabled="true" selected="true">Select a category</option>
+          <select name="expertise" defaultValue="0">
+            <option value="0" disabled="true">Select a category</option>
             <option value="1">1</option>
             <option value="2">2</option>
             <option value="3">3</option>
@@ -24,14 +24,21 @@ class ProjectForm extends React.Component {
           <input type="text" placeholder="Title" />
 
           <p>Short blurb:</p>
-          <textarea name="review" className="form-description" placeholder="Description"></textarea>
+          <textarea name="Description" className="form-description" placeholder="Description"></textarea>
 
           <p>Upload an image:</p>
 
-          <p>End Date</p>
+          <p>End on date</p>
+          <input type="date" name="end_date" />
+
           <p>Funding Goal</p>
+          <input type="text" placeholder="Title" />
+
           <p>Details (optional)</p>
-        </div>
+          <textarea name="Details" className="form-description" placeholder="Details"></textarea>
+
+          <input type="submit" value="Save Project!" />
+        </section>
       </form>
     );
   }
