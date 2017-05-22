@@ -23,6 +23,7 @@ class ProjectForm extends React.Component {
     };
     this.props.clearErrors();
 
+    this.currentDate = (new Date()).toJSON().slice(0,10);
     this.handleSubmit = this.handleSubmit.bind(this);
     this.handleImageDrop = this.handleImageDrop.bind(this);
   }
@@ -72,7 +73,6 @@ class ProjectForm extends React.Component {
   }
 
   render() {
-    console.log(this.props.currentUser.id);
     return (
       <form className="project-create-form" onSubmit={this.handleSubmit} >
         <div className="create-header">
@@ -122,7 +122,7 @@ class ProjectForm extends React.Component {
           </div>
 
           <div><span>End on date</span>
-            <input type="date" name="end_date" onChange={this.update('end_date')} value={this.state.end_date} />
+            <input type="date" name="end_date" onChange={this.update('end_date')} value={this.state.end_date} min={this.currentDate}/>
           </div>
 
           <div><span>Funding Goal</span>
