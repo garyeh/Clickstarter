@@ -8,7 +8,7 @@ const mapStateToProps = ({ session }) => ({
 });
 
 const mapDispatchToProps = dispatch => ({
-  clearErrors: () => dispatch(receiveErrors([])).then(dispatch(receiveProjectErrors([])))
+  clearErrors: () => dispatch(receiveErrors([]))
 });
 
 export default connect(mapStateToProps, mapDispatchToProps)(ExploreCreate);

@@ -22,6 +22,7 @@ class Project < ApplicationRecord
   validates :title, uniqueness: {scope: :creator_id}
   validates :funding_goal, numericality: true
 
+  has_many :rewards
   belongs_to :creator,
     foreign_key: :creator_id,
     class_name: 'User'

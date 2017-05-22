@@ -31,7 +31,7 @@ title        | string    | not null
 amount       | integer   | not null
 limit        | integer   | not null
 description  | text      | not null
-deliver_date | string    |
+deliver_date | string    | optional
 
 ## pledges
 column name | data type | details

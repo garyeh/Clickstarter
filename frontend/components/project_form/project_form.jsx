@@ -4,19 +4,21 @@ import Dropzone from 'react-dropzone';
 import uploadRequest from 'superagent';
 
 const DEFAULT_PHOTO = "http://res.cloudinary.com/ds1qfel8a/image/upload/v1495403855/sample.jpg";
+const defaultState = (currentUser) => ({
+  title: "",
+  url: "",
+  description: "",
+  end_date: "",
+  main_image_url: "",
+  creator_id: currentUser.id,
+  category_id: 0,
+  funding_goal: 0
+});
 
 class ProjectForm extends React.Component {
   constructor(props) {
     super(props);
-    this.state = {
-      title: "",
-      url: "",
-      description: "",
-      end_date: "",
-      main_image_url: "",
-      creator_id: this.props.currentUser.id,
-      category_id: 0
-    };
+    this.state = defaultState(this.props.currentUser);
     this.upload_preset = window.CLOUDINARY_OPTIONS.upload_preset;
     this.upload_url = `https://api.cloudinary.com/v1_1/${window.CLOUDINARY_OPTIONS.cloud_name}/image/upload`;
 
@@ -33,9 +35,9 @@ class ProjectForm extends React.Component {
     }
   }
 
-  componentWillReceiveProps(nextProps) {
-    if (this.props.match.params.projectId !== nextProps.match.params.projectId) {
-      this.props.fetchProjectDetail(nextProps.match.params.projectId);
+  componentWillUpdate(nextProps, nextState) {
+    if (this.props.match.path === "/projects/:projectId/edit" && nextProps.match.path === "/projects/new") {
+      this.setState(defaultState(this.props.currentUser));
     }
   }
 
@@ -94,8 +96,21 @@ class ProjectForm extends React.Component {
     return (
       <form className="project-create-form" onSubmit={this.handleSubmit} >
         <div className="create-header">
-          <h1>Let's get started.</h1>
-          <p>Make a great first impression with your project’s title and image, and set your funding goal, campaign duration, and project category.</p>
+          {
+            this.props.match.params.projectId ?
+              (
+                <div>
+                  <h1>Edit your project</h1>
+                </div>
+              )
+              :
+              (
+                <div>
+                  <h1>Let's get started.</h1>
+                  <p>Make a great first impression with your project’s title and image, and set your funding goal, campaign duration, and project category.</p>
+                </div>
+              )
+          }
         </div>
         <section className="create-form-contents">
           <ul className="errors" >
