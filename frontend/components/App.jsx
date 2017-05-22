@@ -30,7 +30,7 @@ const App = () => (
         <AuthRoute path="/login" component={SessionFormContainer} />
         <AuthRoute path="/signup" component={SessionFormContainer} />
         <ProtectedRoute path="/projects/new" component={ProjectFormContainer} />
-        <ProtectedRoute path="/projects/:projectId/edit" component={ProjectEditContainer} />
+        <ProtectedRoute path="/projects/:projectId/edit" component={ProjectFormContainer} />
         <Route path="/projects/:projectId" component={ProjectDetailContainer} />
       </Switch>
       <Route exact path="/" component={ProjectIndexContainer} />

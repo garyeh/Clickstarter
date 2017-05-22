@@ -17,7 +17,6 @@ class ProjectForm extends React.Component {
       creator_id: this.props.currentUser.id,
       category_id: 0
     };
-
     this.upload_preset = window.CLOUDINARY_OPTIONS.upload_preset;
     this.upload_url = `https://api.cloudinary.com/v1_1/${window.CLOUDINARY_OPTIONS.cloud_name}/image/upload`;
 
@@ -25,6 +24,19 @@ class ProjectForm extends React.Component {
     this.currentDate = (new Date()).toJSON().slice(0,10);
     this.handleSubmit = this.handleSubmit.bind(this);
     this.handleImageDrop = this.handleImageDrop.bind(this);
+  }
+
+  componentDidMount() {
+    if (this.props.match.params.projectId) {
+      this.props.fetchProjectDetail(this.props.match.params.projectId)
+        .then(()=> {this.setState(this.props.projectDetail);});
+    }
+  }
+
+  componentWillReceiveProps(nextProps) {
+    if (this.props.match.params.projectId !== nextProps.match.params.projectId) {
+      this.props.fetchProjectDetail(nextProps.match.params.projectId);
+    }
   }
 
   update(field) {
@@ -39,9 +51,15 @@ class ProjectForm extends React.Component {
     if (this.state.main_image_url === "") {
       newState.main_image_url = DEFAULT_PHOTO;
     }
-    this.props.createProject(newState)
-      .then(project => this.props.history.push(`/projects/${project.id}`),
-      err => scroll(0,0));
+    if (this.props.match.params.projectId) {
+      this.props.updateProject(newState)
+        .then(project => this.props.history.push(`/projects/${project.id}`),
+        err => scroll(0,0));
+    } else {
+      this.props.createProject(newState)
+        .then(project => this.props.history.push(`/projects/${project.id}`),
+        err => scroll(0,0));
+    }
   }
 
   handleImageDrop(image) {
