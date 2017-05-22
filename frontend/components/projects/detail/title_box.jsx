@@ -6,7 +6,7 @@ const TitleBox = ({ detail }) => {
   return (<div className="titlebox">
       <div>
         <p>By<span>{` ${username}`}</span></p>
-        <a href={detail.url} alt={detail.title}>Visit Website</a>
+        <a href={detail.url} alt={detail.title}><button>Visit website</button></a>
       </div>
       <div>
         <p>{detail.title}</p>

@@ -17,9 +17,10 @@
 #
 
 class Project < ApplicationRecord
-  validates :title, :url, :description, :end_date, :funding_goal, :creator_id, :category_id, presence: true
+  validates :title, :url, :description, :end_date, :creator_id, :category_id, presence: true
   validates :url, uniqueness: true
   validates :title, uniqueness: {scope: :creator_id}
+  validates :funding_goal, numericality: true
 
   belongs_to :creator,
     foreign_key: :creator_id,

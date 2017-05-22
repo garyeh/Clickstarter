@@ -17,7 +17,6 @@ class ProjectForm extends React.Component {
       description: "",
       end_date: "",
       main_image_url: "",
-      funding_goal: 0,
       creator_id: this.props.currentUser.id,
       category_id: 0
     };
@@ -84,6 +83,18 @@ class ProjectForm extends React.Component {
             {this.errors()}
           </ul>
 
+          <div><span>Project Title</span>
+            <input type="text" placeholder="Title" onChange={this.update('title')} value={this.state.title} />
+          </div>
+
+          <div><span>Website URL</span>
+            <input type="text" placeholder="URL" onChange={this.update('url')} value={this.state.url} />
+          </div>
+
+          <div><span>Short description</span>
+            <textarea name="Description" className="form-description" placeholder="Description" onChange={this.update('description')} value={this.state.description}></textarea>
+          </div>
+
           <div><span>Choose a category</span>
             <select name="expertise" onChange={this.update('category_id')} value={this.state.category_id} >
               <option value="0" disabled="true">Select a category</option>
@@ -93,18 +104,6 @@ class ProjectForm extends React.Component {
               <option value="4">4</option>
               <option value="5">5</option>
             </select>
-          </div>
-
-          <div><span>Project Title</span>
-            <input type="text" placeholder="Title" onChange={this.update('title')} value={this.state.title} />
-          </div>
-
-          <div><span>Website URL</span>
-            <input type="text" placeholder="URL" onChange={this.update('url')} value={this.state.url} />
-          </div>
-
-          <div><span>Short blurb</span>
-            <textarea name="Description" className="form-description" placeholder="Description" onChange={this.update('description')} value={this.state.description}></textarea>
           </div>
 
           <div><span>Project image</span>
