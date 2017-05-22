@@ -72,17 +72,17 @@
   height: 50px;
 }
 
-.userButtons button:first-child {
+.userButtons *:first-child button {
   width: 45%;
   float: left;
 }
 
-.userButtons button:last-child {
+.userButtons *:last-child button {
   width: 45%;
   float: right;
   background-color: #ff3333;
 }
 
-.userButtons button:last-child:hover {
+.userButtons *:last-child button:hover {
   background-color: #ff0000;
 }

@@ -5,13 +5,12 @@ const userButtons = (detail, currentUser, deleteProject, history) => {
   let detailId = detail.creator ? detail.creator.id : 0;
   if (detailId === currentUser.id) {
     const destroyProject = () => {
-      deleteProject(detail)
-        .then(res => history.push(`/`));
+      deleteProject(detail);
     };
     return(
       <span className="userButtons">
-        <button>Edit this project</button> &nbsp;
-        <button onClick={ destroyProject }>Delete this project</button>
+        <Link to={`/projects/${detail.id}/edit`}><button>Edit this project</button></Link> &nbsp;
+        <Link to="/"><button onClick={ destroyProject }>Delete this project</button></Link>
       </span>
     );
   } else {
