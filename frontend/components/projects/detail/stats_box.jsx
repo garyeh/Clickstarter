@@ -19,7 +19,7 @@ const StatsBox = ({ detail }) => {
           {`pledged of $${goal} goal`}
         </span>
         <span>
-          499 (Insert total # of pledges)
+          0 (Insert total # of pledges)
         </span>
         <span>
           backers

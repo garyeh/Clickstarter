@@ -1,5 +1,5 @@
 .project-create-form {
-  background-image: url(http://res.cloudinary.com/ds1qfel8a/image/upload/c_scale,w_1920/v1495331172/create_bg_ubhjhl.jpg);
+  background-image: url(http://res.cloudinary.com/ds1qfel8a/image/upload/c_scale,w_1920/v1495331172/Stock/create_bg_ubhjhl.jpg);
   opacity: 0.9;
   padding: 50px 0;
 }
@@ -26,21 +26,22 @@
   background-color: white;
 }
 
-.create-form-contents p {
+.create-form-contents div {
   display: flex;
-  background-color: #F8F9FD;
+  background-color: #f2f2f2;
+  border-radius: 6px;
   margin: 15px;
   padding: 10px;
 }
 
-.create-form-contents p > * {
+.create-form-contents div > * {
   border: 1px solid gray;
-  border-radius: 3px;
+  border-radius: 4px;
   padding: 10px;
   font-size: 13px;
 }
 
-.create-form-contents p span {
+.create-form-contents div span {
   min-width: 25%;
   border: none;
   font-size: 15px;
@@ -59,9 +60,74 @@
 .create-form-contents input[type="submit"] {
   width: 150px;
   text-align: center;
+  color: white;
+  background-color: #25CB68;
+  transition: all 0.2s ease-in-out;
+}
+
+.create-form-contents input[type="submit"]:hover {
+  cursor: pointer;
+  background-color: #05AF3C;
+  transition: all 0.2s ease-in-out;
 }
 
 .form-description {
   height: 70px;
   vertical-align: top;
+}
+
+.dropzone {
+  width: 400px;
+  height: 225px;
+  transition: all 0.25s ease-in-out;
+  position: relative;
+}
+
+.dropzone:hover {
+  cursor: pointer;
+  box-shadow: inset 0px 0px 0px 1px gray;
+  transition: all 0.25s ease-in-out;
+}
+
+.dropzone h3 {
+  margin: 0;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: 1px dashed gray;
+  font-size: 18px;
+}
+
+.dropzone div {
+  width: 400px;
+  height: 225px;
+  padding: 0;
+  margin: 0;
+  border: none;
+}
+
+.dropzone div img {
+  padding: 0;
+  margin: 0;
+  width: 400px;
+  height: 225px;
+  transition: all 0.25s ease-in-out;
+}
+
+.dropzone div img:hover {
+  opacity: 0.5;
+  transition: all 0.25s ease-in-out;
+}
+
+.errors {
+  margin-top: 10px;
+  color: red;
+  text-align: center;
+  font-style: italic;
+  font-size: 12px;
+}
+
+.errors li {
+  padding: 5px;
 }
