@@ -12,8 +12,8 @@
 }
 
 .statbox div img {
-  width: 90%;
-  height: 70%;
+  width: 100%;
+  height: 80%;
   object-fit: cover;
 }
 
@@ -65,4 +65,24 @@
   transform: translateY(-1px);
   background-color: #05AF3C;
   box-shadow: -1px 2px 3px 1px rgba(0, 0, 0, 0.09);
+}
+
+.userButtons {
+  display: float;
+  height: 50px;
+}
+
+.userButtons button:first-child {
+  width: 45%;
+  float: left;
+}
+
+.userButtons button:last-child {
+  width: 45%;
+  float: right;
+  background-color: #ff3333;
+}
+
+.userButtons button:last-child:hover {
+  background-color: #ff0000;
 }

@@ -18,7 +18,7 @@ const ProjectCarousel = () => (
 
     <div className="project-carousel-slide">
       <h1>Prana</h1>
-      <h2>Prana is the easiest way for teams to track their work—and get results.</h2>
+      <h2>Prana is the easiest way for teams to track their work — and get results.</h2>
       <a href="#/projects/2"><button>View project</button></a>
       <img src="https://res.cloudinary.com/dbxwu45pr/image/upload/v1495046731/hero-2_hiyzq5.jpg" />
     </div>

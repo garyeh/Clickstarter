@@ -1,7 +1,18 @@
 import React from 'react';
 import { Route, Link } from 'react-router-dom';
 
-const StatsBox = ({ detail }) => {
+const userButtons = (detail, currentUser) => {
+  let detailId = detail.creator ? detail.creator.id : 0;
+  return (detailId === currentUser.id ?
+    <span className="userButtons">
+      <button>Edit this project</button> &nbsp;
+      <button>Delete this project</button>
+    </span>
+      : ""
+  );
+};
+
+const StatsBox = ({ detail, currentUser }) => {
   let goal = (detail.funding_goal) ? numberWithCommas(detail.funding_goal) : 0;
   let endDate = (detail.end_date) ? new Date(detail.end_date) : new Date();
   let currentDate = new Date();
@@ -33,6 +44,7 @@ const StatsBox = ({ detail }) => {
         <span>
           <button>Back this project</button>
         </span>
+        {userButtons(detail, currentUser)}
       </div>
     </div>
   );

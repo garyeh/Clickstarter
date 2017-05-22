@@ -17,11 +17,12 @@ class ProjectDetail extends React.Component {
 
   render() {
     const detail = this.props.projectDetail;
+    const currentUser = this.props.currentUser;
     return (
       <div>
         <TitleBox detail={detail} />
-        <StatsBox detail={detail} />
-        <RewardsBox detail={detail} />
+        <StatsBox detail={detail} currentUser={currentUser} />
+        <RewardsBox detail={detail} currentUser={currentUser} />
       </div>
     );
   }

@@ -5,7 +5,7 @@
 .header-group img {
   position: absolute;
   right: 0px;
-  top: -35px;
+  top: -36px;
   padding: 10px 24px;
 }
 
@@ -34,14 +34,15 @@
   right: -84px;
   background-color: white;
   border: 1px solid #e6e6e6;
-  min-width: 400px;
+  min-width: 450px;
   box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
   z-index: 1;
+  font-size: 14px;
 }
 
 /* Links inside the dropdown */
 .dropdown-content p {
-  padding: 20px 30px;
+  padding: 12px 24px;
   display: block;
 }
 
@@ -54,7 +55,7 @@
   border: none;
   margin-left: 10px;
   background-color: #e6e6e6;
-  font-size: 15px;
+  font-size: 14px;
   transition: all 0.2s ease;
 }
 

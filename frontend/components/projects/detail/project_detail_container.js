@@ -2,8 +2,9 @@ import { connect } from 'react-redux';
 import ProjectDetail from './project_detail';
 import { fetchProjectDetail } from '../../../actions/project_actions';
 
-const mapStateToProps = ({ projectDetail }) => ({
-  projectDetail
+const mapStateToProps = ({ projectDetail, session }) => ({
+  projectDetail,
+  currentUser: session.currentUser
 });
 
 const mapDispatchToProps = dispatch => ({
