@@ -5,7 +5,8 @@ const TitleBox = ({ detail }) => {
   const username = (detail.creator) ? detail.creator.username : "";
   return (<div className="titlebox">
       <div>
-        <span>By<span>{` ${username}`}</span></span>
+        <p>By<span>{` ${username}`}</span></p>
+        <a href={detail.url} alt={detail.title}>Visit Website</a>
       </div>
       <div>
         <p>{detail.title}</p>

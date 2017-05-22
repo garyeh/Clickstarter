@@ -13,7 +13,8 @@
   width: 20%;
   margin-left: 7%;
   display: flex;
-  align-items: center;
+  flex-direction: column;
+  justify-content: center;
 }
 
 .titlebox div:nth-child(2) {
@@ -22,7 +23,7 @@
   margin-bottom: 35px;
 }
 
-.titlebox div span span {
+.titlebox div p span {
   font-weight: bold;
 }
 
@@ -34,4 +35,19 @@
 .titlebox div:nth-child(2) p:last-child {
   font-size: 18px;
   color: #737373;
+}
+
+.titlebox div:first-child > * {
+  margin: 10px;
+}
+
+.titlebox div:first-child a {
+  width: 93px;
+  color: blue;
+  transition: all 0.2s ease-in-out;
+}
+
+.titlebox div:first-child a:hover {
+  color: black;
+  transition: all 0.2s ease-in-out;
 }
