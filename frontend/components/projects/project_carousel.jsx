@@ -29,6 +29,13 @@ const ProjectCarousel = () => (
       <a href="#/projects/4"><button>View project</button></a>
       <img src="http://res.cloudinary.com/ds1qfel8a/image/upload/v1495161001/Stock/Pantry_adfpkv.jpg" />
     </div>
+
+    <div className="project-carousel-slide">
+      <h1>Linterest</h1>
+      <h2>Your catalog of ideas</h2>
+      <a href="#/projects/1"><button>View project</button></a>
+      <img src="http://res.cloudinary.com/ds1qfel8a/image/upload/v1495418437/Stock/linterest.png" />
+    </div>
   </Carousel>
 );
 

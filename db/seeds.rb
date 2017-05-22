@@ -9,7 +9,7 @@ davidd = User.create(username: "David D.", password: "password")
 miriam = User.create(username: "Miriam", password: "password")
 brandonc = User.create(username: "Brandon C.", password: "password")
 
-linterest = Project.create(title: "Linterest", main_image_url: "http://html5doctor.com/wp-content/uploads/2013/01/Pinterest-Home1.jpg",
+linterest = Project.create(title: "Linterest", main_image_url: "http://res.cloudinary.com/ds1qfel8a/image/upload/v1495418437/Stock/linterest.png",
 url: "https://linterest.herokuapp.com/#/login", description: "Your catalog of ideas", end_date: "09/09/2017", funding_goal: 5000, creator_id: yong.id, category_id: 1)
 prana = Project.create(title: "Prana", main_image_url: "https://res.cloudinary.com/dbxwu45pr/image/upload/v1495046731/hero-2_hiyzq5.jpg",
 url: "https://prana.herokuapp.com/#/", description: "Prana is a project management app that helps you organize your teams, projects, and tasks.", end_date: "08/08/2017", funding_goal: 10000, creator_id: aaron.id, category_id: 2)
