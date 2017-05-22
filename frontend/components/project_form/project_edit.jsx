@@ -3,10 +3,13 @@ import { withRouter } from 'react-router';
 import Dropzone from 'react-dropzone';
 import uploadRequest from 'superagent';
 
+const DEFAULT_PHOTO = "http://res.cloudinary.com/ds1qfel8a/image/upload/v1495403855/sample.jpg";
+
 class ProjectEdit extends React.Component {
 
   render() {
-    return (<div>hai</div>);
+    console.log(this.props);
+    return (<div>Hi</div>);
   }
 }
 

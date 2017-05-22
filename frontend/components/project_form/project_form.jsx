@@ -3,10 +3,7 @@ import { withRouter } from 'react-router';
 import Dropzone from 'react-dropzone';
 import uploadRequest from 'superagent';
 
-const UPLOAD_PRESET = "l6bdce2z";
-const UPLOAD_URL = "https://api.cloudinary.com/v1_1/ds1qfel8a/image/upload";
 const DEFAULT_PHOTO = "http://res.cloudinary.com/ds1qfel8a/image/upload/v1495403855/sample.jpg";
-
 
 class ProjectForm extends React.Component {
   constructor(props) {
@@ -20,8 +17,11 @@ class ProjectForm extends React.Component {
       creator_id: this.props.currentUser.id,
       category_id: 0
     };
-    this.props.clearErrors();
 
+    this.upload_preset = window.CLOUDINARY_OPTIONS.upload_preset;
+    this.upload_url = `https://api.cloudinary.com/v1_1/${window.CLOUDINARY_OPTIONS.cloud_name}/image/upload`;
+
+    this.props.clearErrors();
     this.currentDate = (new Date()).toJSON().slice(0,10);
     this.handleSubmit = this.handleSubmit.bind(this);
     this.handleImageDrop = this.handleImageDrop.bind(this);
@@ -49,8 +49,8 @@ class ProjectForm extends React.Component {
   }
 
   handleImageUpload(image) {
-    let upload = uploadRequest.post(UPLOAD_URL)
-                    .field('upload_preset', UPLOAD_PRESET)
+    let upload = uploadRequest.post(this.upload_url)
+                    .field('upload_preset', this.upload_preset)
                     .field('file', image);
 
     upload.end((err, response) => {

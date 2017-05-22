@@ -16,6 +16,7 @@ class ProjectDetail extends React.Component {
   }
 
   render() {
+    scroll(0,0);
     const detail = this.props.projectDetail;
     const currentUser = this.props.currentUser;
     return (
