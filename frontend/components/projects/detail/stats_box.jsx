@@ -3,7 +3,7 @@ import { Route, Link } from 'react-router-dom';
 
 const userButtons = (detail, currentUser, deleteProject, history) => {
   let detailId = detail.creator ? detail.creator.id : 0;
-  if (detailId === currentUser.id) {
+  if (currentUser && detailId === currentUser.id) {
     const destroyProject = () => {
       deleteProject(detail);
     };
