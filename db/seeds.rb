@@ -1,13 +1,13 @@
 User.destroy_all
 Project.destroy_all
 
-guest = User.create(username: "guest", password: "password")
+guest = User.create(username: "Guest", password: "password")
 
-yong = User.create(username: "yong", password: "password")
-aaron = User.create(username: "aaron", password: "password")
-davidd = User.create(username: "davidd", password: "password")
-miriam = User.create(username: "miriam", password: "password")
-brandonc = User.create(username: "brandonc", password: "password")
+yong = User.create(username: "Yong", password: "password")
+aaron = User.create(username: "Aaron", password: "password")
+dobrynin = User.create(username: "Dobrynin", password: "password")
+miriam = User.create(username: "Miriam", password: "password")
+brandon = User.create(username: "Brandon", password: "password")
 
 linterest = Project.create(title: "Linterest", main_image_url: "http://res.cloudinary.com/ds1qfel8a/image/upload/v1495418437/Stock/linterest.png",
 url: "https://linterest.herokuapp.com/#/login", description: "Your catalog of ideas", end_date: "09/09/2017", funding_goal: 5000, creator_id: yong.id, category_id: 1)

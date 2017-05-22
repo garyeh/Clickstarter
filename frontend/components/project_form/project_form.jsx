@@ -35,10 +35,11 @@ class ProjectForm extends React.Component {
 
   handleSubmit(e) {
     e.preventDefault();
+    let newState = Object.assign({}, this.state);
     if (this.state.main_image_url === "") {
-      this.setState({ main_image_url: DEFAULT_PHOTO });
+      newState.main_image_url = DEFAULT_PHOTO;
     }
-    this.props.createProject(this.state)
+    this.props.createProject(newState)
       .then(project => this.props.history.push(`/projects/${project.id}`),
       err => scroll(0,0));
   }
@@ -97,7 +98,7 @@ class ProjectForm extends React.Component {
 
           <div><span>Choose a category</span>
             <select name="expertise" onChange={this.update('category_id')} value={this.state.category_id} >
-              <option value="0" disabled="true">Select a category</option>
+              <option value="x" disabled="true">Select a category</option>
               <option value="1">1</option>
               <option value="2">2</option>
               <option value="3">3</option>
