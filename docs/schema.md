@@ -28,10 +28,10 @@ column name  | data type | details
 id           | integer   | not null, primary key
 project_id   | integer   | not null, foreign key (references projects), indexed
 title        | string    | not null
-amount       | float     | not null
-limit        | int       | not null
+amount       | integer   | not null
+limit        | integer   | not null
 description  | text      | not null
-deliver_date | string    | not null
+deliver_date | string    |
 
 ## pledges
 column name | data type | details
