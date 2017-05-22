@@ -1,18 +1,25 @@
 import React from 'react';
 import { Route, Link } from 'react-router-dom';
 
-const userButtons = (detail, currentUser) => {
+const userButtons = (detail, currentUser, deleteProject, history) => {
   let detailId = detail.creator ? detail.creator.id : 0;
-  return (detailId === currentUser.id ?
-    <span className="userButtons">
-      <button>Edit this project</button> &nbsp;
-      <button>Delete this project</button>
-    </span>
-      : ""
-  );
+  if (detailId === currentUser.id) {
+    const destroyProject = () => {
+      deleteProject(detail)
+        .then(res => history.push(`/`));
+    };
+    return(
+      <span className="userButtons">
+        <button>Edit this project</button> &nbsp;
+        <button onClick={ destroyProject }>Delete this project</button>
+      </span>
+    );
+  } else {
+    return "";
+  }
 };
 
-const StatsBox = ({ detail, currentUser }) => {
+const StatsBox = ({ detail, currentUser, deleteProject, history }) => {
   let goal = (detail.funding_goal) ? numberWithCommas(detail.funding_goal) : 0;
   let endDate = (detail.end_date) ? new Date(detail.end_date) : new Date();
   let currentDate = new Date();
@@ -44,7 +51,7 @@ const StatsBox = ({ detail, currentUser }) => {
         <span>
           <button>Back this project</button>
         </span>
-        {userButtons(detail, currentUser)}
+        {userButtons(detail, currentUser, deleteProject, history)}
       </div>
     </div>
   );

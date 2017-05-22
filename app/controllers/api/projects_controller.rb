@@ -20,7 +20,16 @@ class Api::ProjectsController < ApplicationController
   def destroy
     @project = Project.find(params[:id])
     @project.destroy
-    render :index
+    render json: @project
+  end
+
+  def update
+    @project = Project.find(params[:id])
+    if @project.update(project_params)
+      render json: @project
+    else
+      render json: @project.errors.full_messages, status: 422
+    end
   end
 
   private
