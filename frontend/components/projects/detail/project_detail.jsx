@@ -22,8 +22,14 @@ class ProjectDetail extends React.Component {
     return (
       <div>
         <TitleBox detail={detail} />
-        <StatsBox detail={detail} currentUser={currentUser} deleteProject={this.props.deleteProject} history={this.props.history} />
-        <RewardsBox detail={detail} currentUser={currentUser} />
+
+        <StatsBox detail={detail} currentUser={currentUser}
+          deleteProject={this.props.deleteProject}
+          history={this.props.history} />
+
+        <RewardsBox detail={detail} currentUser={currentUser}
+          createReward={this.props.createReward}
+          deleteReward={this.props.deleteReward} />
       </div>
     );
   }

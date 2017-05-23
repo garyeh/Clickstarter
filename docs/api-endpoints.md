@@ -21,7 +21,6 @@ Loads React web app
 
 ### Projects
 
-- `GET /api/projects`
 - `POST /api/projects`
 - `GET /api/projects/:projectId`
 - `PATCH /api/projects/:projectId`

@@ -8,7 +8,6 @@ import ProjectIndexContainer from './projects/project_index_container';
 import ProjectDetailContainer from './projects/detail/project_detail_container';
 import ExploreCreateContainer from './explore_create/explore_create_container';
 import ProjectFormContainer from './project_form/project_form_container';
-import ProjectEditContainer from './project_form/project_edit_container';
 
 const App = () => (
   <div>

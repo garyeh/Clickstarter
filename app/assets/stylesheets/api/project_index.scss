@@ -106,17 +106,22 @@
 }
 
 .index_item p:nth-child(2) {
-  padding: 20px;
+  padding: 20px 30px;
 }
 
 .index_item p:nth-child(3) {
-  padding: 0 20px;
+  padding: 0 30px;
 }
 
 .index_item p:nth-child(4) {
-  padding: 20px 20px;
+  padding: 20px 30px;
+  font-size: 13px;
 }
 
 .index_item p:nth-child(3) a {
   font-weight: bold;
+}
+
+.index_item p:nth-child(3) span {
+  color: #808080;
 }
