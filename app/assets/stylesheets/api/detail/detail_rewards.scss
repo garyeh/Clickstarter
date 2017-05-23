@@ -7,11 +7,11 @@
   justify-content: center;
 }
 
-.rewardsBox div {
+.rewardsBox > div {
   padding: 20px;
 }
 
-.rewardsBox div:first-child {
+.rewardsBox > div:first-child {
   width: 60%;
   margin-left: 10%;
 }
@@ -26,7 +26,49 @@
   font-size: 15px;
 }
 
-.rewardsBox div:last-child {
-  width: 20%;
+.rewardsBox > div:last-child {
   margin-right: 10%;
+}
+
+.detailBox {
+  border: 1px solid #e0e4fb;
+  border-radius: 4px;
+  background-color: #F8F9FD;
+  padding: 20px;
+  margin-bottom: 20px;
+}
+
+.detailBox > *:not(#headerLimit) {
+  margin-bottom: 10px;
+}
+
+#headerAmount {
+  color: #0000ff;
+  font-size: 20px;
+  margin-bottom: 20px;
+}
+
+#headerTitle {
+  font-size: 18px;
+  margin-bottom: 15px;
+}
+
+#headerDescription {
+  color: #858585;
+}
+
+#headerDelivery div {
+  font-size: 12px;
+  color: #858585;
+  margin: 0;
+  padding: 0;
+}
+
+#headerDelivery > div:first-child {
+  font-size: 11px;
+}
+
+#headerLimit {
+  color: red;
+  font-size: 11px;
 }

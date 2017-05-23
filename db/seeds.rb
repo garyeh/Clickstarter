@@ -26,10 +26,10 @@ url: "https://opengymvolleyball.herokuapp.com/#/", description: "A Yelp...for gy
 unbottld = Project.create(title: "UNBOTTLD", main_image_url: "http://res.cloudinary.com/dcslgdwha/image/upload/v1495148251/bottles_d4suts.jpg",
 url: "https://unbottld.herokuapp.com/#/", description: "Find your favorite bottle", end_date: "2020-03-30", funding_goal: 50000, creator_id: mark.id, category_id: 3, details: text)
 
-yong_reward1 = Reward.create(title: "1st Tier", amount: 10, limit: 500, description: "You get a personal thank you from me", project_id: linterest.id)
-yong_reward2 = Reward.create(title: "2nd Tier", amount: 20, limit: 250, description: "You get 2 personal thank yous from me", project_id: linterest.id)
-yong_reward3 = Reward.create(title: "3rd Tier", amount: 50, limit: 50, description: "You get 3 personal thank yous from me", project_id: linterest.id)
+yong_reward1 = Reward.create(title: "1st Tier", amount: 10, limit: 500, description: "You get a personal thank you from me", project_id: linterest.id, deliver_date: "2019-01-01")
+yong_reward2 = Reward.create(title: "2nd Tier", amount: 20, limit: 250, description: "You get 2 personal thank yous from me", project_id: linterest.id, deliver_date: "2019-01-01")
+yong_reward3 = Reward.create(title: "3rd Tier", amount: 50, limit: 50, description: "You get 3 personal thank yous from me", project_id: linterest.id, deliver_date: "2019-01-01")
 
-aaron_reward1 = Reward.create(title: "1st Tier", amount: 10, limit: 500, description: "You get a personal thank you from me", project_id: prana.id)
-aaron_reward2 = Reward.create(title: "2nd Tier", amount: 20, limit: 250, description: "You get 2 personal thank yous from me", project_id: prana.id)
-aaron_reward3 = Reward.create(title: "3rd Tier", amount: 50, limit: 50, description: "You get 3 personal thank yous from me", project_id: prana.id)
+aaron_reward1 = Reward.create(title: "1st Tier", amount: 10, limit: 500, description: "You get a personal thank you from me", project_id: prana.id, deliver_date: "2019-01-01")
+aaron_reward2 = Reward.create(title: "2nd Tier", amount: 20, limit: 250, description: "You get 2 personal thank yous from me", project_id: prana.id, deliver_date: "2019-01-01")
+aaron_reward3 = Reward.create(title: "3rd Tier", amount: 50, limit: 50, description: "You get 3 personal thank yous from me", project_id: prana.id, deliver_date: "2019-01-01")

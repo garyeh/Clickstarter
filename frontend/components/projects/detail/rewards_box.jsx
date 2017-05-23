@@ -15,11 +15,11 @@ class RewardsBox extends React.Component {
 
         <div>
           <h2>Support this project</h2>
-          <p>
+          <div>
             {rewards.map(reward => (
-              <RewardDetail reward={reward} deleteReward={this.props.deleteReward} />
+              <RewardDetail key={reward.id} reward={reward} deleteReward={this.props.deleteReward} />
             ))}
-          </p>
+          </div>
         </div>
       </div>
     );
