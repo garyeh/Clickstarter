@@ -12,6 +12,8 @@ class RewardForm extends React.Component {
       limit: "",
       project_id: this.props.match.params.projectId
     };
+
+    this.props.clearErrors();
     this.currentDate = (new Date()).toJSON().slice(0,10);
     this.handleSubmit = this.handleSubmit.bind(this);
   }
@@ -45,6 +47,7 @@ class RewardForm extends React.Component {
   render() {
     return (
       <form className="reward-create-form">
+        <button onClick={this.props.closeModal}>X</button>
         <h2>Create a reward</h2>
         <ul className="rewardErrors">
           {this.errors()}

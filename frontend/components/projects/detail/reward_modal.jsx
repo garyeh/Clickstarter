@@ -21,7 +21,7 @@ const style = {
     right           : '20%',
     bottom          : '100px',
     border          : '1px solid #ccc',
-    padding         : '50px',
+    padding         : '30px',
     zIndex          : 11,
     opacity         : 0,
     transition      : 'opacity 0.4s'
@@ -71,7 +71,8 @@ class RewardModal extends React.Component {
           <RewardForm createReward={this.props.createReward}
             errors={this.props.errors}
             fetchProjectDetail={this.props.fetchProjectDetail}
-            closeModal={this.closeModal} />
+            closeModal={this.closeModal}
+            clearErrors={this.props.clearErrors} />
         </Modal>
       </div>
     );

@@ -31,7 +31,8 @@ class ProjectDetail extends React.Component {
           createReward={this.props.createReward}
           deleteReward={this.props.deleteReward}
           fetchProjectDetail={this.props.fetchProjectDetail}
-          errors={this.props.errors} />
+          errors={this.props.errors}
+          clearErrors={this.props.clearErrors} />
       </div>
     );
   }
