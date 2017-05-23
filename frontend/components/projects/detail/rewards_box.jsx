@@ -1,6 +1,7 @@
 import React from 'react';
 import { Route, Link } from 'react-router-dom';
 import RewardDetail from './reward_detail';
+import RewardModal from './reward_modal';
 
 class RewardsBox extends React.Component {
 
@@ -15,6 +16,14 @@ class RewardsBox extends React.Component {
 
         <div>
           <h2>Support this project</h2>
+          <div>
+            {
+              (this.props.currentUser && this.props.currentUser.username === creator) ?
+              <RewardModal />
+              :
+              null
+            }
+          </div>
           <div>
             {rewards.map(reward => (
               <RewardDetail key={reward.id} reward={reward}

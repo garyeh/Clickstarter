@@ -1,5 +1,4 @@
 import React from 'react';
-import { Link } from 'react-router-dom';
 
 const RewardDetail = ({reward, deleteReward, currentUser, creator, fetchProjectDetail }) => {
   const destroyReward = () => {
