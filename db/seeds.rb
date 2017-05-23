@@ -33,3 +33,11 @@ yong_reward3 = Reward.create(title: "3rd Tier", amount: 50, limit: 50, descripti
 aaron_reward1 = Reward.create(title: "1st Tier", amount: 10, limit: 500, description: "You get a personal thank you from me", project_id: prana.id, deliver_date: "2019-01-01")
 aaron_reward2 = Reward.create(title: "2nd Tier", amount: 20, limit: 250, description: "You get 2 personal thank yous from me", project_id: prana.id, deliver_date: "2019-01-01")
 aaron_reward3 = Reward.create(title: "3rd Tier", amount: 50, limit: 50, description: "You get 3 personal thank yous from me", project_id: prana.id, deliver_date: "2019-01-01")
+
+dobrynin_reward1 = Reward.create(title: "1st Tier", amount: 50, limit: 50, description: "You get 3 personal thank yous from me", project_id: yakety.id, deliver_date: "2019-01-01")
+
+miriam_reward1 = Reward.create(title: "1st Tier", amount: 50, limit: 50, description: "You get 3 personal thank yous from me", project_id: pantry.id, deliver_date: "2019-01-01")
+
+brandon_reward1 = Reward.create(title: "1st Tier", amount: 50, limit: 50, description: "You get 3 personal thank yous from me", project_id: open_gym.id, deliver_date: "2019-01-01")
+
+mark_reward1 = Reward.create(title: "1st Tier", amount: 50, limit: 50, description: "You get 3 personal thank yous from me", project_id: unbottld.id, deliver_date: "2019-01-01")
