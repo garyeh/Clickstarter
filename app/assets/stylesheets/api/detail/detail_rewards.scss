@@ -1,0 +1,32 @@
+.rewardsBox {
+  border-top: 1px solid #bfbfbf;
+  display: flex;
+  margin: 50px auto;
+  padding-top: 40px;
+  position: relative;
+  justify-content: center;
+}
+
+.rewardsBox div {
+  padding: 20px;
+}
+
+.rewardsBox div:first-child {
+  width: 60%;
+  margin-left: 10%;
+}
+
+.rewardsBox div h2 {
+  font-size: 22px;
+  margin-bottom: 30px;
+  text-align: left;
+}
+
+.rewardsBox div p {
+  font-size: 15px;
+}
+
+.rewardsBox div:last-child {
+  width: 20%;
+  margin-right: 10%;
+}
