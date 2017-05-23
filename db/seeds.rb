@@ -11,6 +11,7 @@ aaron = User.create(username: "Aaron", password: "password")
 dobrynin = User.create(username: "Dobrynin", password: "password")
 miriam = User.create(username: "Miriam", password: "password")
 brandon = User.create(username: "Brandon", password: "password")
+mark = User.create(username: "Mark", password: "password")
 
 linterest = Project.create(title: "Linterest", main_image_url: "http://res.cloudinary.com/ds1qfel8a/image/upload/v1495418437/Stock/linterest.png",
 url: "https://linterest.herokuapp.com/#/login", description: "Your catalog of ideas", end_date: "2018-09-09", funding_goal: 5000, creator_id: yong.id, category_id: 1, details: text)
@@ -22,6 +23,8 @@ pantry = Project.create(title: "MyPantry", main_image_url: "http://res.cloudinar
 url: "https://mypantry.herokuapp.com/#/", description: "For cooking enthusiasts - a website that keeps track of your pantry so you don't have to!", end_date: "2019-02-08", funding_goal: 10000, creator_id: miriam.id, category_id: 3, details: text)
 open_gym = Project.create(title: "OpenGym", main_image_url: "http://res.cloudinary.com/ds1qfel8a/image/upload/Stock/v1495161000/OpenGym_miycjc.jpg",
 url: "https://opengymvolleyball.herokuapp.com/#/", description: "A Yelp...for gyms!", end_date: "2019-01-19", funding_goal: 100000, creator_id: brandon.id, category_id: 4, details: text)
+unbottld = Project.create(title: "UNBOTTLD", main_image_url: "http://res.cloudinary.com/dcslgdwha/image/upload/v1495148251/bottles_d4suts.jpg",
+url: "https://unbottld.herokuapp.com/#/", description: "Find your favorite bottle", end_date: "2020-03-30", funding_goal: 50000, creator_id: mark.id, category_id: 3, details: text)
 
 yong_reward1 = Reward.create(title: "1st Tier", amount: 10, limit: 500, description: "You get a personal thank you from me", project_id: linterest.id)
 yong_reward2 = Reward.create(title: "2nd Tier", amount: 20, limit: 250, description: "You get 2 personal thank yous from me", project_id: linterest.id)
