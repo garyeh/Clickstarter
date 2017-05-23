@@ -19,7 +19,9 @@ class RewardsBox extends React.Component {
           <div>
             {
               (this.props.currentUser && this.props.currentUser.username === creator) ?
-              <RewardModal />
+              <RewardModal createReward={this.props.createReward}
+                errors={this.props.errors}
+                fetchProjectDetail={this.props.fetchProjectDetail} />
               :
               null
             }

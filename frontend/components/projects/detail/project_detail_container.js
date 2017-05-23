@@ -3,9 +3,10 @@ import ProjectDetail from './project_detail';
 import { fetchProjectDetail, deleteProject } from '../../../actions/project_actions';
 import { createReward, deleteReward } from '../../../actions/reward_actions';
 
-const mapStateToProps = ({ projectDetail, session }) => ({
+const mapStateToProps = ({ projectDetail, session, errors }) => ({
   projectDetail,
-  currentUser: session.currentUser
+  currentUser: session.currentUser,
+  errors
 });
 
 const mapDispatchToProps = dispatch => ({

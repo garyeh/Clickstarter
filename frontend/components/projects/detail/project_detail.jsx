@@ -30,7 +30,8 @@ class ProjectDetail extends React.Component {
         <RewardsBox detail={detail} currentUser={currentUser}
           createReward={this.props.createReward}
           deleteReward={this.props.deleteReward}
-          fetchProjectDetail={this.props.fetchProjectDetail} />
+          fetchProjectDetail={this.props.fetchProjectDetail}
+          errors={this.props.errors} />
       </div>
     );
   }

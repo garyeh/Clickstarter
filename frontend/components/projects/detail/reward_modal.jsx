@@ -1,5 +1,6 @@
 import React from 'react';
 import Modal from 'react-modal';
+import RewardForm from './reward_form';
 
 const style = {
   overlay : {
@@ -8,19 +9,19 @@ const style = {
     left            : 0,
     right           : 0,
     bottom          : 0,
-    backgroundColor : 'rgba(255, 255, 255, 0.9)',
+    backgroundColor : 'rgba(55, 55, 55, 0.9)',
     zIndex          : 10
   },
   content : {
     display         : 'flex',
-    "justify-content" : 'center',
-    // position        : 'fixed',
-    // top             : '100px',
+    justifyContent  : 'center',
+    position        : 'fixed',
+    top             : '100px',
     left            : '20%',
     right           : '20%',
-    // bottom          : '100px',
+    bottom          : '100px',
     border          : '1px solid #ccc',
-    padding         : '10px',
+    padding         : '50px',
     zIndex          : 11,
     opacity         : 0,
     transition      : 'opacity 0.4s'
@@ -54,9 +55,10 @@ class RewardModal extends React.Component {
   }
 
   render() {
+
     return(
       <div>
-        <button onClick={this.openModal}>
+        <button className="addRewardButton" onClick={this.openModal}>
           Add reward
         </button>
         <Modal
@@ -66,7 +68,10 @@ class RewardModal extends React.Component {
           style = {style}
           contentLabel="Reward Modal">
 
-          <div>hai</div>
+          <RewardForm createReward={this.props.createReward}
+            errors={this.props.errors}
+            fetchProjectDetail={this.props.fetchProjectDetail}
+            closeModal={this.closeModal} />
         </Modal>
       </div>
     );

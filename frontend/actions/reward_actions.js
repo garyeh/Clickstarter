@@ -21,7 +21,10 @@ export const receiveRewardErrors = errors => ({
 
 export const createReward = reward => dispatch => (
   APIUtil.createReward(reward)
-    .then(res => dispatch(receiveReward(res)))
+    .then(res => {
+      dispatch(receiveReward(res));
+      return res;
+    }).fail(err => dispatch(receiveRewardErrors(err.responseJSON)))
 );
 
 export const deleteReward = reward => dispatch => (
