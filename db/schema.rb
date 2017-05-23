@@ -10,10 +10,18 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20170522224204) do
+ActiveRecord::Schema.define(version: 20170523180934) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
+
+  create_table "pledges", force: :cascade do |t|
+    t.integer  "reward_id",  null: false
+    t.integer  "backer_id",  null: false
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.index ["reward_id", "backer_id"], name: "index_pledges_on_reward_id_and_backer_id", unique: true, using: :btree
+  end
 
   create_table "projects", force: :cascade do |t|
     t.string   "title",          null: false

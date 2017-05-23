@@ -49,9 +49,6 @@ class RewardForm extends React.Component {
       <form className="reward-create-form">
         <button onClick={this.props.closeModal}>X</button>
         <h2>Create a reward</h2>
-        <ul className="rewardErrors">
-          {this.errors()}
-        </ul>
 
         <div><span>Title</span>
           <input type="text" placeholder="Title" onChange={this.update('title')} value={this.state.title} />
@@ -73,6 +70,9 @@ class RewardForm extends React.Component {
           <input type="date" name="Deliver_date" onChange={this.update('deliver_date')} value={this.state.deliver_date} min={this.currentDate}/>
         </div>
 
+        <ul className="rewardErrors">
+          {this.errors()}
+        </ul>
 
         <input onClick={this.handleSubmit} type="submit" value="Save" />
 

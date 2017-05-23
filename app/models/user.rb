@@ -18,9 +18,9 @@ class User < ApplicationRecord
   after_initialize :ensure_session_token
   attr_reader :password
 
-  has_many :projects,
-    foreign_key: :creator_id,
-    class_name: 'Project'
+  has_many :projects, foreign_key: :creator_id, class_name: 'Project'
+  has_many :pledges, foreign_key: :backer_id, class_name: 'Pledge'
+  has_many :rewards, through: :pledges, source: :reward
 
   def password=(password)
     @password = password

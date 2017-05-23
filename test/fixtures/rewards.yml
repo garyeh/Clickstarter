@@ -7,7 +7,7 @@
 #  title        :string           not null
 #  amount       :integer          not null
 #  limit        :integer          not null
-#  decsription  :text             not null
+#  description  :text             not null
 #  deliver_date :string
 #  created_at   :datetime         not null
 #  updated_at   :datetime         not null

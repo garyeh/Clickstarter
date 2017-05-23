@@ -24,10 +24,21 @@
 }
 
 .reward-create-form button:first-child {
+  border: none;
+  border-radius: 24px;
   position: absolute;
   top: 0;
   right: 0;
+  font-size: 20px;
   font-weight: 900;
+  transition: all 0.25s ease-in-out;
+}
+
+.reward-create-form button:first-child:hover {
+  background-color: black;
+  color: white;
+  transition: all 0.25s ease-in-out;
+  cursor: pointer;
 }
 
 .reward-create-form h2 {
