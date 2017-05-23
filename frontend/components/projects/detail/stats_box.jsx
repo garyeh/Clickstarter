@@ -36,7 +36,7 @@ const StatsBox = ({ detail, currentUser, deleteProject, history }) => {
           {`pledged of $${goal} goal`}
         </span>
         <span>
-          0
+          0 (Insert total # of pledges)
         </span>
         <span>
           backers

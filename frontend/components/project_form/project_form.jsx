@@ -19,8 +19,8 @@ class ProjectForm extends React.Component {
   constructor(props) {
     super(props);
     this.state = defaultState(this.props.currentUser);
-    this.upload_preset = window.CLOUDINARY_OPTIONS.upload_preset;
-    this.upload_url = `https://api.cloudinary.com/v1_1/${window.CLOUDINARY_OPTIONS.cloud_name}/image/upload`;
+    this.upload_preset = "l6bdce2z";
+    this.upload_url = `https://api.cloudinary.com/v1_1/ds1qfel8a/image/upload`;
 
     this.props.clearErrors();
     this.currentDate = (new Date()).toJSON().slice(0,10);
