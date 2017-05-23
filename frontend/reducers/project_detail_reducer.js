@@ -5,7 +5,6 @@ const projectDetailReducer = (state = {}, action) => {
   Object.freeze(state);
   let nextState;
 
-  let newState = merge({}, state);
   switch(action.type) {
     case RECEIVE_PROJECT_DETAIL:
       return action.project;

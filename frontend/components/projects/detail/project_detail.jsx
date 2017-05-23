@@ -6,6 +6,7 @@ import RewardsBox from './rewards_box';
 
 class ProjectDetail extends React.Component {
   componentDidMount() {
+    scroll(0,0);
     this.props.fetchProjectDetail(this.props.match.params.projectId);
   }
 
@@ -16,7 +17,6 @@ class ProjectDetail extends React.Component {
   }
 
   render() {
-    scroll(0,0);
     const detail = this.props.projectDetail;
     const currentUser = this.props.currentUser;
     return (
@@ -29,7 +29,8 @@ class ProjectDetail extends React.Component {
 
         <RewardsBox detail={detail} currentUser={currentUser}
           createReward={this.props.createReward}
-          deleteReward={this.props.deleteReward} />
+          deleteReward={this.props.deleteReward}
+          fetchProjectDetail={this.props.fetchProjectDetail} />
       </div>
     );
   }
