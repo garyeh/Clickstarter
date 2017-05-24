@@ -23,8 +23,18 @@ const RewardDetail = ({reward, deleteReward, currentUser,
         <h2 id="headerAmount">{`Pledge $${reward.amount}`}</h2>
         <p id="headerTitle">{reward.title}</p>
         <p id="headerDescription">{reward.description}</p>
-        <div>{reward.deliver_date ? <div id="headerDelivery"><div>ESTIMATED DELIVERY</div><div>{reward.deliver_date}</div></div> : ""}</div>
-        <p id="headerLimit">{`Limited (${reward.pledges.length} of ${reward.limit})`}</p>
+        <div>
+          {
+            reward.deliver_date ?
+            <div>
+              <div id="headerDeliveryTitle">ESTIMATED DELIVERY</div>
+              <div id="headerDeliveryText">{reward.deliver_date}</div>
+            </div>
+            : ""
+          }
+        </div>
+        <p id="headerLimit">{`Limited (${reward.limit - reward.pledges.length} left of ${reward.limit})`}</p>
+        <p id="headerBackers">{`${reward.pledges.length} backers`}</p>
       </div>
       <div>
         {

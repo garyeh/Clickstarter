@@ -72,7 +72,7 @@
   transition: all 0.25s ease-in-out;
 }
 
-.detailBox > *:not(#headerLimit) {
+.detailBox > *:not(#headerBackers) {
   margin-bottom: 10px;
 }
 
@@ -98,11 +98,20 @@
   padding: 0;
 }
 
-#headerDelivery > div:first-child {
+#headerDeliveryTitle {
   font-size: 11px;
+}
+
+#headerDeliveryText {
+  font-size: 14px;
 }
 
 #headerLimit {
   color: red;
-  font-size: 11px;
+  font-size: 12px;
+  margin-bottom: 0;
+}
+
+#headerBackers {
+  font-size: 12px;
 }
