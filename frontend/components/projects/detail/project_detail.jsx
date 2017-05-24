@@ -21,7 +21,6 @@ class ProjectDetail extends React.Component {
   }
 
   render() {
-    console.log(this.props);
     const detail = this.props.projectDetail;
     const currentUser = this.props.currentUser;
     return (

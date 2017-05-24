@@ -35,8 +35,8 @@ const ProjectIndexItem = ({ project }) => {
       </div>
       <div className="indexStats">
         <Line percent={percentWithCap}
-          strokeWidth="1" strokeColor="#2BDE73"
-          trailColor="#e6e6e6" trailWidth="1" />
+          strokeWidth="2" strokeColor="#2BDE73"
+          trailColor="#e6e6e6" trailWidth="2" />
         <p><span>{`$${raised} `}</span><span>pledged</span></p>
         <p><span>{`${percentRaised}% `}</span><span>funded</span></p>
         <p><span>{`${remaining} `}</span><span>days to go</span></p>
