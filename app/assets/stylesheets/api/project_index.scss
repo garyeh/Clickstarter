@@ -103,12 +103,14 @@
 }
 
 .indexDetail {
-  height: 175px;
+  height: 172px;
 }
 
 .indexDetail p:nth-child(1) {
   padding: 20px 30px;
-  height: 15px;
+  height: 10px;
+  font-size: 13px;
+  color: #808080;
 }
 
 .indexDetail p:nth-child(2) {

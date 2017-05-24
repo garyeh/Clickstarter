@@ -11,9 +11,9 @@
 #  funding_goal   :integer          not null
 #  details        :text
 #  creator_id     :integer          not null
-#  category_id    :integer          not null
 #  created_at     :datetime         not null
 #  updated_at     :datetime         not null
+#  category       :string
 #
 
 require 'test_helper'

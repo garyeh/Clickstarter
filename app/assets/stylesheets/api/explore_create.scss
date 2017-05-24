@@ -13,7 +13,7 @@
   transition: all 0.15s ease;
 }
 
-.leftnav span:hover {
+.leftnav span:last-child:hover {
   border-bottom: 3px solid #2BDE73;
   transition: all 0.15s ease;
 }
@@ -24,16 +24,27 @@
 
 .leftnav span:first-child {
   width: 49px;
-  left: 27px;
-  top: -32px;
+  left: -1px;
+  top: -54px;
   padding: 20px 0 20px 24px;
   align-items: center;
 }
 
+.leftnav span:first-child a {
+  transition: all 0.15s ease;
+  padding: 21px 0 21px 24px;
+}
+
+.leftnav span:first-child a:hover {
+  transition: all 0.15s ease;
+  border-bottom: 3px solid #2BDE73;
+  cursor: pointer;
+}
+
 .leftnav img {
   position: absolute;
-  right: 50px;
-  top: 1px;
+  right: 23px;
+  top: 23px;
   width: 19px;
   height: 19px;
   padding: 20px 5px 20px 0;

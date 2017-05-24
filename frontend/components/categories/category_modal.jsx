@@ -1,6 +1,5 @@
 import React from 'react';
 import Modal from 'react-modal';
-import PledgeFormContainer from './pledge_form_container';
 
 const style = {
   overlay : {
@@ -16,19 +15,19 @@ const style = {
     display         : 'flex',
     justifyContent  : 'center',
     position        : 'fixed',
-    top             : '35%',
-    left            : '40%',
-    right           : '40%',
-    bottom          : '35%',
+    top             : '20%',
+    left            : '20%',
+    right           : '20%',
+    bottom          : '50%',
     border          : '1px solid #ccc',
-    padding         : '20px',
+    padding         : '30px',
     zIndex          : 11,
     opacity         : 0,
     transition      : 'opacity 0.4s'
   }
 };
 
-class PledgeModal extends React.Component {
+class CategoryModal extends React.Component {
   constructor(props) {
     super(props);
 
@@ -45,13 +44,8 @@ class PledgeModal extends React.Component {
     style.content.opacity = 0;
   }
 
-
   openModal() {
-    if (!this.props.currentUser) {
-      this.props.history.push('/login');
-    } else {
-      this.setState({ modalOpen: true });
-    }
+    this.setState({ modalOpen: true });
   }
 
   afterModalOpen() {
@@ -59,26 +53,25 @@ class PledgeModal extends React.Component {
   }
 
   render() {
+
     return(
       <div>
-        <button onClick={this.openModal}>
-          Back this project
-        </button>
+        <a onClick={this.openModal}>
+          <img src="http://res.cloudinary.com/ds1qfel8a/image/upload/c_scale,w_256/v1495236703/Stock/Compass_rywdvr.png" alt="Explore" />
+          Explore
+        </a>
         <Modal
           isOpen={this.state.modalOpen}
           onAfterOpen={this.afterModalOpen}
           onRequestClose={this.closeModal}
           style = {style}
-          contentLabel="Pledge Modal">
+          contentLabel="Category Modal">
 
-          <PledgeFormContainer detail={this.props.detail}
-            currentUser={this.props.currentUser}
-            errors={this.props.errors}
-            closeModal={this.closeModal} />
+          <div>hi</div>
         </Modal>
       </div>
     );
   }
 }
 
-export default PledgeModal;
+export default CategoryModal;

@@ -26,7 +26,7 @@ class PledgeForm extends React.Component {
   handleSubmit(e) {
     e.preventDefault();
     let newState = Object.assign({}, this.state);
-
+    
     this.props.createPledge(newState)
       .then(() => {
         this.props.fetchProjectDetail(this.props.detail.id);
@@ -50,8 +50,8 @@ class PledgeForm extends React.Component {
     return (
       <form className="pledgeForm">
         <h2>Make a pledge</h2>
-        <select onChange={this.update('reward_id')}>
-          <option key="0" disabled="disabled" selected="true">Select</option>
+        <select onChange={this.update('reward_id')} value={this.state.reward_id}>
+          <option key="0" disabled="disabled">Select</option>
           {
             this.props.detail.rewards.map(reward => (
             <option key={reward.id} value={reward.id} >

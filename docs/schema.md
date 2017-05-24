@@ -20,7 +20,7 @@ end_date           | string    | not null
 funding_goal       | integer   | not null
 details            | text      | optional
 creator_id         | integer   | not null, foreign key (references users), indexed
-category_id        | integer   | not null, foreign key (references categories), indexed
+category           | string    | not null
 
 ## rewards
 column name  | data type | details

@@ -19,7 +19,7 @@ const ProjectIndexItem = ({ project }) => {
       </p>
       <div className="indexDetail">
         <p>
-          {project.category_id}
+          {project.category}
         </p>
         <p>
           <Link to={`/projects/${project.id}`}>

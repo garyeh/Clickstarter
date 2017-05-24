@@ -11,9 +11,28 @@ const defaultState = (currentUser) => ({
   end_date: "",
   main_image_url: "",
   creator_id: currentUser.id,
-  category_id: 0,
+  category: "",
   funding_goal: 0
 });
+
+const categories = [
+  "Art",
+  "Comics",
+  "Crafts",
+  "Dance",
+  "Design",
+  "Fashion",
+  "Film & Video",
+  "Food",
+  "Games",
+  "Journalism",
+  "Music",
+  "Photography",
+  "Publishing",
+  "Sports",
+  "Technology",
+  "Theater"
+];
 
 class ProjectForm extends React.Component {
   constructor(props) {
@@ -130,13 +149,13 @@ class ProjectForm extends React.Component {
           </div>
 
           <div><span>Choose a category</span>
-            <select name="expertise" onChange={this.update('category_id')} value={this.state.category_id} >
+            <select name="expertise" onChange={this.update('category')} value={this.state.category} >
               <option value="x" disabled="true">Select a category</option>
-              <option value="1">1</option>
-              <option value="2">2</option>
-              <option value="3">3</option>
-              <option value="4">4</option>
-              <option value="5">5</option>
+              {
+                categories.map(category => (
+                  <option value={category}>{category}</option>
+                ))
+              }
             </select>
           </div>
 

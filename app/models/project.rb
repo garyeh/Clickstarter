@@ -11,13 +11,13 @@
 #  funding_goal   :integer          not null
 #  details        :text
 #  creator_id     :integer          not null
-#  category_id    :integer          not null
 #  created_at     :datetime         not null
 #  updated_at     :datetime         not null
+#  category       :string
 #
 
 class Project < ApplicationRecord
-  validates :title, :url, :description, :end_date, :creator_id, :category_id, presence: true
+  validates :title, :url, :description, :end_date, :creator_id, :category, presence: true
   validates :url, uniqueness: true
   validates :title, uniqueness: {scope: :creator_id}
   validates :funding_goal, numericality: true
