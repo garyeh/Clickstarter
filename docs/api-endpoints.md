@@ -32,6 +32,10 @@ Loads React web app
 - `POST /api/projects/:projectId/rewards`
 - `DELETE /api/projects/:projectId/rewards/:rewardId`
 
+### pledges
+
+- `POST /api/rewards/:rewardId/pledges`
+
 ### Categories
 
 - `GET /api/categories`

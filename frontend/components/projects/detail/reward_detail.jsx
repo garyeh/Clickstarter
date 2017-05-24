@@ -4,6 +4,7 @@ const RewardDetail = ({reward, deleteReward, currentUser, creator, fetchProjectD
   const destroyReward = () => {
     deleteReward(reward).then(() => fetchProjectDetail(reward.project_id));
   };
+  
   return (
     <section className="detailContainer">
       <div className="detailBox">
@@ -11,7 +12,7 @@ const RewardDetail = ({reward, deleteReward, currentUser, creator, fetchProjectD
         <p id="headerTitle">{reward.title}</p>
         <p id="headerDescription">{reward.description}</p>
         <div>{reward.deliver_date ? <div id="headerDelivery"><div>ESTIMATED DELIVERY</div><div>{reward.deliver_date}</div></div> : ""}</div>
-        <p id="headerLimit">{`Limited (${reward.limit})`}</p>
+        <p id="headerLimit">{`Limited (${reward.pledges.length} of ${reward.limit})`}</p>
       </div>
       <div>
         {

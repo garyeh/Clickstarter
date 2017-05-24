@@ -23,5 +23,6 @@ class Project < ApplicationRecord
   validates :funding_goal, numericality: true
 
   has_many :rewards
+  has_many :backers, through: :rewards, source: :backers
   belongs_to :creator, foreign_key: :creator_id, class_name: 'User'
 end

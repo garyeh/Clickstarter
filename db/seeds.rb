@@ -41,3 +41,9 @@ miriam_reward1 = Reward.create(title: "1st Tier", amount: 50, limit: 50, descrip
 brandon_reward1 = Reward.create(title: "1st Tier", amount: 50, limit: 50, description: "You get 3 personal thank yous from me", project_id: open_gym.id, deliver_date: "2019-01-01")
 
 mark_reward1 = Reward.create(title: "1st Tier", amount: 50, limit: 50, description: "You get 3 personal thank yous from me", project_id: unbottld.id, deliver_date: "2019-01-01")
+
+yong_pledge1 = Pledge.create(reward_id: yong_reward1.id, backer_id: aaron.id)
+yong_pledge2 = Pledge.create(reward_id: yong_reward2.id, backer_id: dobrynin.id)
+yong_pledge3 = Pledge.create(reward_id: yong_reward3.id, backer_id: miriam.id)
+yong_pledge4 = Pledge.create(reward_id: yong_reward3.id, backer_id: brandon.id)
+yong_pledge5 = Pledge.create(reward_id: yong_reward3.id, backer_id: mark.id)

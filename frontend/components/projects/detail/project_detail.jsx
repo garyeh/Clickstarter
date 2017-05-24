@@ -15,7 +15,7 @@ class ProjectDetail extends React.Component {
       this.props.requestSingleProject(nextProps.match.params.projectId);
     }
   }
-
+  
   render() {
     const detail = this.props.projectDetail;
     const currentUser = this.props.currentUser;

@@ -20,6 +20,7 @@ const userButtons = (detail, currentUser, deleteProject, history) => {
 
 const StatsBox = ({ detail, currentUser, deleteProject, history }) => {
   let goal = (detail.funding_goal) ? numberWithCommas(detail.funding_goal) : 0;
+  let raised = (detail.raised) ? numberWithCommas(detail.raised) : 0;
   let endDate = (detail.end_date) ? new Date(detail.end_date) : new Date();
   let currentDate = new Date();
   const remaining = Math.floor((endDate - currentDate) / 86400000);
@@ -30,13 +31,13 @@ const StatsBox = ({ detail, currentUser, deleteProject, history }) => {
       </div>
       <div>
         <span>
-          $0
+          {`$${raised}`}
         </span>
         <span>
           {`pledged of $${goal} goal`}
         </span>
         <span>
-          0 (Insert total # of pledges)
+          {detail.num_backers}
         </span>
         <span>
           backers
