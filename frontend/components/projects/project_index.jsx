@@ -8,6 +8,7 @@ class ProjectIndex extends React.Component {
   }
 
   render() {
+    console.log(this.props);
     return (
       <section className="splash_content">
         <ProjectCarousel />
