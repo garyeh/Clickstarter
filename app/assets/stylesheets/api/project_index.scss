@@ -114,6 +114,7 @@
 .indexDetail p:nth-child(2) {
   padding: 0 30px;
   height: 65px;
+  font-family: 'Open Sans', sans-serif;
 }
 
 .indexDetail p:nth-child(3) {
@@ -138,8 +139,9 @@
 }
 
 .indexStats > * {
-  margin: 7px 0;
+  margin: 4px 0;
   font-size: 14px;
+  font-family: 'Open Sans', sans-serif;
 }
 
 .indexStats p span:first-child {
