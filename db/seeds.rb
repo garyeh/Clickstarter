@@ -2,7 +2,11 @@ User.destroy_all
 Project.destroy_all
 Reward.destroy_all
 
-text = "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum."
+text = "Lorem ipsum dolor sit amet, no vix altera fierent adversarium, no vidisse salutatus ius. Bonorum alienum blandit an mea, vel elitr decore tibique eu. Nec ad quodsi fierent indoctum, putent electram assueverit id vel. Id etiam legere principes pri, sit ne labores oporteat. Cu civibus quaestio mandamus eam.
+Qui ne causae mollis, vis id lobortis sapientem hendrerit. Ex suas assueverit his, qui delectus mandamus ei. Ei amet nonumy vix. Pri animal concludaturque ex, solum timeam dolores mei ex. Atqui quaestio sensibus cu mei, facilisi maluisset at per. Eum te mutat dicat.
+Malis utinam consetetur ne quo, eu vix animal omittantur. At saepe intellegam ullamcorper has, qui nonumes accusamus liberavisse ut, et mei oratio apeirian. Ius te utamur repudiandae, meliore assentior philosophia eos id, mel ex dicit vivendum. Te veri insolens reformidans usu.
+Ad idque veniam timeam per, quo justo definitionem ad, est no tollit labore regione. Noster iuvaret id vim, dolorum antiopam vim in. Vis te conceptam intellegebat, et pro ornatus maluisset moderatius. Convenire dissentiunt philosophia vis ut.
+No ius hinc lobortis mediocrem. Copiosae ponderum eu eam, affert persius cu sea, eu sed stet sonet. Nostrum ocurreret dignissim at vix, sit libris oblique in, pro no fugit definitiones. At paulo dicunt principes eum, erat contentiones ad eam. Exerci homero duo at. At facilisis iudicabit definitionem qui, an reque vidisse vim, quaeque voluptaria eam ne. Cum evertitur urbanitas an, regione suscipit ad usu."
 
 
 guest = User.create(username: "Guest", password: "password")
