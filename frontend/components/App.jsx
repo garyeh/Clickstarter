@@ -31,8 +31,8 @@ const App = () => (
         <ProtectedRoute path="/projects/new" component={ProjectFormContainer} />
         <ProtectedRoute path="/projects/:projectId/edit" component={ProjectFormContainer} />
         <Route path="/projects/:projectId" component={ProjectDetailContainer} />
+        <Route exact path="/" component={ProjectIndexContainer} />
       </Switch>
-      <Route exact path="/" component={ProjectIndexContainer} />
     </section>
 
     <footer>

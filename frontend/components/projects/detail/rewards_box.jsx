@@ -4,7 +4,6 @@ import RewardDetail from './reward_detail';
 import RewardModal from './reward_modal';
 
 class RewardsBox extends React.Component {
-
   render() {
     let rewards = this.props.detail.rewards ? this.props.detail.rewards : [];
     let creator = this.props.detail.creator ? this.props.detail.creator.username : null;
@@ -27,12 +26,19 @@ class RewardsBox extends React.Component {
               null
             }
           </div>
+          <div className="pledgeErrors">
+            {this.props.errors.length !== 0 ?
+              "You have already claimed this reward" : ""
+            }
+          </div>
           <div>
             {rewards.map(reward => (
               <RewardDetail key={reward.id} reward={reward}
                 deleteReward={this.props.deleteReward}
+                createPledge={this.props.createPledge}
                 currentUser={this.props.currentUser}
-                creator={creator}
+                clearPledgeErrors={this.props.clearPledgeErrors}
+                creator={creator} history={this.props.history}
                 fetchProjectDetail={this.props.fetchProjectDetail} />
             ))}
           </div>

@@ -10,10 +10,15 @@ class ProjectDetail extends React.Component {
     this.props.fetchProjectDetail(this.props.match.params.projectId);
   }
 
+
   componentWillReceiveProps(nextProps) {
     if (this.props.match.params.projectId !== nextProps.match.params.projectId) {
       this.props.requestSingleProject(nextProps.match.params.projectId);
     }
+  }
+
+  componentWillUnmount() {
+    this.props.clearPledgeErrors();
   }
 
   render() {
@@ -32,7 +37,10 @@ class ProjectDetail extends React.Component {
           createReward={this.props.createReward}
           deleteReward={this.props.deleteReward}
           fetchProjectDetail={this.props.fetchProjectDetail}
+          createPledge={this.props.createPledge}
+          clearPledgeErrors={this.props.clearPledgeErrors}
           errors={this.props.errors}
+          history={this.props.history}
           clearRewardErrors={this.props.clearRewardErrors} />
       </div>
     );
