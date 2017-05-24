@@ -103,7 +103,7 @@
 }
 
 .indexDetail {
-  height: 170px;
+  height: 175px;
 }
 
 .indexDetail p:nth-child(1) {
@@ -131,4 +131,22 @@
 
 .indexStats {
   padding: 0 30px;
+}
+
+.indexStats > *:first-child {
+  margin-bottom: 15px;
+}
+
+.indexStats > * {
+  margin: 7px 0;
+  font-size: 14px;
+}
+
+.indexStats p span:first-child {
+  font-weight: 900;
+  margin-right: 4px;
+}
+
+.indexStats p span:last-child {
+  color: #808080;
 }

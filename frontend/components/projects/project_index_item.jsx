@@ -3,7 +3,12 @@ import { Link } from 'react-router-dom';
 import { Line } from 'rc-progress';
 
 const ProjectIndexItem = ({ project }) => {
-  const percentRaised = project.raised / project.funding_goal * 100;
+  const percentRaised = Math.floor(project.raised / project.funding_goal * 100);
+  const raised = numberWithCommas(project.raised);
+  const endDate = new Date(project.end_date);
+  const currentDate = new Date();
+  const remaining = Math.floor((endDate - currentDate) / 86400000);
+
   return (
     <li className="indexItem">
       <p>
@@ -31,9 +36,16 @@ const ProjectIndexItem = ({ project }) => {
         <Line percent={percentRaised}
           strokeWidth="1" strokeColor="#2BDE73"
           trailColor="#e6e6e6" trailWidth="1" />
+        <p><span>{`$${raised} `}</span><span>pledged</span></p>
+        <p><span>{`${percentRaised}% `}</span><span>funded</span></p>
+        <p><span>{`${remaining} `}</span><span>days to go</span></p>
       </div>
     </li>
   );
 };
+
+const numberWithCommas = (x) => (
+  x.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ",")
+);
 
 export default ProjectIndexItem;
