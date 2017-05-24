@@ -7,6 +7,7 @@ class RewardsBox extends React.Component {
   render() {
     let rewards = this.props.detail.rewards ? this.props.detail.rewards : [];
     let creator = this.props.detail.creator ? this.props.detail.creator.username : null;
+
     return (<div className="rewardsBox">
         <div>
           <h2>About this project</h2>
@@ -25,11 +26,6 @@ class RewardsBox extends React.Component {
                 clearPledgeErrors={this.props.clearPledgeErrors} />
               :
               null
-            }
-          </div>
-          <div className="pledgeErrors">
-            {this.props.errors.length !== 0 ?
-              "You have already claimed this reward" : ""
             }
           </div>
           <div>

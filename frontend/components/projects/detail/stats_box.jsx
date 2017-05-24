@@ -19,7 +19,7 @@ const userButtons = (detail, currentUser, deleteProject, history) => {
   }
 };
 
-const StatsBox = ({ detail, currentUser, deleteProject, history }) => {
+const StatsBox = ({ detail, currentUser, deleteProject, history, errors }) => {
   let goal = (detail.funding_goal) ? numberWithCommas(detail.funding_goal) : 0;
   let raised = (detail.raised) ? numberWithCommas(detail.raised) : 0;
   let endDate = (detail.end_date) ? new Date(detail.end_date) : new Date();
@@ -50,7 +50,8 @@ const StatsBox = ({ detail, currentUser, deleteProject, history }) => {
           days to go
         </span>
         <span>
-          <PledgeModal />
+          <PledgeModal detail={detail} currentUser={currentUser}
+            errors={errors} history={history} />
         </span>
         {userButtons(detail, currentUser, deleteProject, history)}
       </div>

@@ -16,18 +16,17 @@ const style = {
     display         : 'flex',
     justifyContent  : 'center',
     position        : 'fixed',
-    top             : '100px',
-    left            : '20%',
-    right           : '20%',
-    bottom          : '100px',
+    top             : '35%',
+    left            : '40%',
+    right           : '40%',
+    bottom          : '35%',
     border          : '1px solid #ccc',
-    padding         : '30px',
+    padding         : '20px',
     zIndex          : 11,
     opacity         : 0,
     transition      : 'opacity 0.4s'
   }
 };
-
 
 class PledgeModal extends React.Component {
   constructor(props) {
@@ -45,9 +44,14 @@ class PledgeModal extends React.Component {
     this.setState({ modalOpen: false });
     style.content.opacity = 0;
   }
+  
 
   openModal() {
-    this.setState({ modalOpen: true });
+    if (!this.props.currentUser) {
+      this.props.history.push('/login');
+    } else {
+      this.setState({ modalOpen: true });
+    }
   }
 
   afterModalOpen() {
@@ -55,7 +59,6 @@ class PledgeModal extends React.Component {
   }
 
   render() {
-
     return(
       <div>
         <button onClick={this.openModal}>
@@ -68,7 +71,10 @@ class PledgeModal extends React.Component {
           style = {style}
           contentLabel="Reward Modal">
 
-          <div>Hai</div>
+          <PledgeFormContainer detail={this.props.detail}
+            currentUser={this.props.currentUser}
+            errors={this.props.errors}
+            closeModal={this.closeModal} />
         </Modal>
       </div>
     );

@@ -26,13 +26,6 @@
   font-size: 15px;
 }
 
-.pledgeErrors {
-  color: red;
-  text-align: center;
-  font-style: italic;
-  font-size: 12px;
-}
-
 .rewardsBox > div:last-child {
   margin-right: 10%;
   width: 20%;
@@ -88,6 +81,7 @@
 }
 
 #headerDescription {
+  word-wrap: break-word;
   color: #858585;
 }
 
