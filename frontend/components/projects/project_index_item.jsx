@@ -8,6 +8,7 @@ const ProjectIndexItem = ({ project }) => {
   const endDate = new Date(project.end_date);
   const currentDate = new Date();
   const remaining = Math.floor((endDate - currentDate) / 86400000);
+  const percentWithCap = percentRaised < 100 ? percentRaised : 100;
 
   return (
     <li className="indexItem">
@@ -33,7 +34,7 @@ const ProjectIndexItem = ({ project }) => {
         </p>
       </div>
       <div className="indexStats">
-        <Line percent={percentRaised}
+        <Line percent={percentWithCap}
           strokeWidth="1" strokeColor="#2BDE73"
           trailColor="#e6e6e6" trailWidth="1" />
         <p><span>{`$${raised} `}</span><span>pledged</span></p>
