@@ -1,5 +1,6 @@
 import React from 'react';
 import { Route, Link } from 'react-router-dom';
+import PledgeModal from './pledge_modal';
 
 const userButtons = (detail, currentUser, deleteProject, history) => {
   let detailId = detail.creator ? detail.creator.id : 0;
@@ -49,7 +50,7 @@ const StatsBox = ({ detail, currentUser, deleteProject, history }) => {
           days to go
         </span>
         <span>
-          <button>Back this project</button>
+          <PledgeModal />
         </span>
         {userButtons(detail, currentUser, deleteProject, history)}
       </div>

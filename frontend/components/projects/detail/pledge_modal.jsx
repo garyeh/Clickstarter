@@ -1,6 +1,6 @@
 import React from 'react';
 import Modal from 'react-modal';
-import RewardForm from './reward_form';
+import PledgeFormContainer from './pledge_form_container';
 
 const style = {
   overlay : {
@@ -29,7 +29,7 @@ const style = {
 };
 
 
-class RewardModal extends React.Component {
+class PledgeModal extends React.Component {
   constructor(props) {
     super(props);
 
@@ -58,8 +58,8 @@ class RewardModal extends React.Component {
 
     return(
       <div>
-        <button className="addRewardButton" onClick={this.openModal}>
-          Add reward
+        <button onClick={this.openModal}>
+          Back this project
         </button>
         <Modal
           isOpen={this.state.modalOpen}
@@ -68,16 +68,11 @@ class RewardModal extends React.Component {
           style = {style}
           contentLabel="Reward Modal">
 
-          <RewardForm createReward={this.props.createReward}
-            errors={this.props.errors}
-            fetchProjectDetail={this.props.fetchProjectDetail}
-            closeModal={this.closeModal}
-            clearRewardErrors={this.props.clearRewardErrors}
-            clearPledgeErrors={this.props.clearPledgeErrors} />
+          <div>Hai</div>
         </Modal>
       </div>
     );
   }
 }
 
-export default RewardModal;
+export default PledgeModal;

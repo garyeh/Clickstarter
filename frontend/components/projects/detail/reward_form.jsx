@@ -27,6 +27,7 @@ class RewardForm extends React.Component {
   handleSubmit(e) {
     e.preventDefault();
     let newState = Object.assign({}, this.state);
+
     this.props.createReward(newState).then(() => {
       this.props.fetchProjectDetail(this.state.project_id);
       this.props.closeModal();

@@ -1,6 +1,7 @@
 User.destroy_all
 Project.destroy_all
 Reward.destroy_all
+Pledge.destroy_all
 
 text = "Lorem ipsum dolor sit amet, no vix altera fierent adversarium, no vidisse salutatus ius. Bonorum alienum blandit an mea, vel elitr decore tibique eu. Nec ad quodsi fierent indoctum, putent electram assueverit id vel. Id etiam legere principes pri, sit ne labores oporteat. Cu civibus quaestio mandamus eam.
 Qui ne causae mollis, vis id lobortis sapientem hendrerit. Ex suas assueverit his, qui delectus mandamus ei. Ei amet nonumy vix. Pri animal concludaturque ex, solum timeam dolores mei ex. Atqui quaestio sensibus cu mei, facilisi maluisset at per. Eum te mutat dicat.
@@ -20,7 +21,7 @@ mark = User.create(username: "Mark", password: "password")
 
 
 linterest = Project.create(title: "Linterest", main_image_url: "http://res.cloudinary.com/ds1qfel8a/image/upload/v1495418437/Stock/linterest.png",
-url: "https://linterest.herokuapp.com/#/login", description: "Your catalog of ideas", end_date: "2018-09-09", funding_goal: 5000, creator_id: yong.id, category_id: 1, details: text)
+url: "https://linterest.herokuapp.com/#/login", description: "Your catalog of ideas", end_date: "2018-09-09", funding_goal: 20000, creator_id: yong.id, category_id: 1, details: text)
 prana = Project.create(title: "Prana", main_image_url: "https://res.cloudinary.com/dbxwu45pr/image/upload/v1495046731/hero-2_hiyzq5.jpg",
 url: "https://prana.herokuapp.com/#/", description: "Prana is a project management app that helps you organize your teams, projects, and tasks.", end_date: "2020-08-08", funding_goal: 10000, creator_id: aaron.id, category_id: 2, details: text)
 yakety = Project.create(title: "Yakety-slack", main_image_url: "http://res.cloudinary.com/ds1qfel8a/image/upload/Stock/v1495161000/Yakety-slack_iajgln.jpg",
@@ -87,12 +88,25 @@ yong_pledge2 = Pledge.create(reward_id: yong_reward7.id, backer_id: dobrynin.id)
 yong_pledge3 = Pledge.create(reward_id: yong_reward7.id, backer_id: miriam.id)
 yong_pledge4 = Pledge.create(reward_id: yong_reward5.id, backer_id: brandon.id)
 yong_pledge5 = Pledge.create(reward_id: yong_reward6.id, backer_id: mark.id)
+yong_pledge6 = Pledge.create(reward_id: yong_reward1.id, backer_id: aaron.id)
+yong_pledge7 = Pledge.create(reward_id: yong_reward1.id, backer_id: dobrynin.id)
+yong_pledge8 = Pledge.create(reward_id: yong_reward1.id, backer_id: miriam.id)
+yong_pledge9 = Pledge.create(reward_id: yong_reward2.id, backer_id: brandon.id)
+yong_pledge10 = Pledge.create(reward_id: yong_reward3.id, backer_id: mark.id)
+yong_pledge11 = Pledge.create(reward_id: yong_reward2.id, backer_id: aaron.id)
+yong_pledge12 = Pledge.create(reward_id: yong_reward2.id, backer_id: dobrynin.id)
+yong_pledge13 = Pledge.create(reward_id: yong_reward2.id, backer_id: miriam.id)
+yong_pledge14 = Pledge.create(reward_id: yong_reward3.id, backer_id: brandon.id)
+yong_pledge15 = Pledge.create(reward_id: yong_reward4.id, backer_id: mark.id)
 
-aaron_pledge1 = Pledge.create(reward_id: aaron_reward5.id, backer_id: yong.id)
-aaron_pledge2 = Pledge.create(reward_id: aaron_reward5.id, backer_id: dobrynin.id)
-aaron_pledge3 = Pledge.create(reward_id: aaron_reward3.id, backer_id: miriam.id)
+aaron_pledge1 = Pledge.create(reward_id: aaron_reward6.id, backer_id: yong.id)
+aaron_pledge2 = Pledge.create(reward_id: aaron_reward7.id, backer_id: dobrynin.id)
+aaron_pledge3 = Pledge.create(reward_id: aaron_reward7.id, backer_id: miriam.id)
 aaron_pledge4 = Pledge.create(reward_id: aaron_reward6.id, backer_id: brandon.id)
-aaron_pledge5 = Pledge.create(reward_id: aaron_reward2.id, backer_id: mark.id)
+aaron_pledge5 = Pledge.create(reward_id: aaron_reward7.id, backer_id: mark.id)
+aaron_pledge6 = Pledge.create(reward_id: aaron_reward1.id, backer_id: yong.id)
+aaron_pledge7 = Pledge.create(reward_id: aaron_reward6.id, backer_id: dobrynin.id)
+aaron_pledge8 = Pledge.create(reward_id: aaron_reward4.id, backer_id: miriam.id)
 
 dobrynin_pledge1 = Pledge.create(reward_id: dobrynin_reward1.id, backer_id: yong.id)
 dobrynin_pledge2 = Pledge.create(reward_id: dobrynin_reward5.id, backer_id: aaron.id)
@@ -101,19 +115,39 @@ dobrynin_pledge4 = Pledge.create(reward_id: dobrynin_reward3.id, backer_id: bran
 dobrynin_pledge5 = Pledge.create(reward_id: dobrynin_reward3.id, backer_id: mark.id)
 
 miriam_pledge1 = Pledge.create(reward_id: miriam_reward1.id, backer_id: yong.id)
-miriam_pledge2 = Pledge.create(reward_id: miriam_reward2.id, backer_id: aaron.id)
-miriam_pledge3 = Pledge.create(reward_id: miriam_reward7.id, backer_id: dobrynin.id)
-miriam_pledge4 = Pledge.create(reward_id: miriam_reward3.id, backer_id: brandon.id)
+miriam_pledge2 = Pledge.create(reward_id: miriam_reward1.id, backer_id: aaron.id)
+miriam_pledge3 = Pledge.create(reward_id: miriam_reward1.id, backer_id: dobrynin.id)
+miriam_pledge4 = Pledge.create(reward_id: miriam_reward1.id, backer_id: brandon.id)
 miriam_pledge5 = Pledge.create(reward_id: miriam_reward3.id, backer_id: mark.id)
+miriam_pledge6 = Pledge.create(reward_id: miriam_reward2.id, backer_id: yong.id)
+miriam_pledge7 = Pledge.create(reward_id: miriam_reward2.id, backer_id: aaron.id)
+miriam_pledge8 = Pledge.create(reward_id: miriam_reward2.id, backer_id: dobrynin.id)
+miriam_pledge9 = Pledge.create(reward_id: miriam_reward2.id, backer_id: brandon.id)
+miriam_pledge10 = Pledge.create(reward_id: miriam_reward4.id, backer_id: mark.id)
+miriam_pledge11 = Pledge.create(reward_id: miriam_reward3.id, backer_id: yong.id)
+miriam_pledge12 = Pledge.create(reward_id: miriam_reward5.id, backer_id: aaron.id)
+miriam_pledge13 = Pledge.create(reward_id: miriam_reward3.id, backer_id: dobrynin.id)
+miriam_pledge14 = Pledge.create(reward_id: miriam_reward4.id, backer_id: brandon.id)
+miriam_pledge15 = Pledge.create(reward_id: miriam_reward6.id, backer_id: mark.id)
+miriam_pledge16 = Pledge.create(reward_id: miriam_reward5.id, backer_id: yong.id)
+miriam_pledge17 = Pledge.create(reward_id: miriam_reward4.id, backer_id: aaron.id)
+miriam_pledge18 = Pledge.create(reward_id: miriam_reward6.id, backer_id: dobrynin.id)
 
 brandon_pledge1 = Pledge.create(reward_id: brandon_reward1.id, backer_id: yong.id)
-brandon_pledge2 = Pledge.create(reward_id: brandon_reward2.id, backer_id: aaron.id)
-brandon_pledge3 = Pledge.create(reward_id: brandon_reward3.id, backer_id: dobrynin.id)
-brandon_pledge4 = Pledge.create(reward_id: brandon_reward7.id, backer_id: miriam.id)
-brandon_pledge5 = Pledge.create(reward_id: brandon_reward3.id, backer_id: mark.id)
+brandon_pledge2 = Pledge.create(reward_id: brandon_reward4.id, backer_id: aaron.id)
+brandon_pledge3 = Pledge.create(reward_id: brandon_reward7.id, backer_id: miriam.id)
+brandon_pledge4 = Pledge.create(reward_id: brandon_reward3.id, backer_id: mark.id)
 
 mark_pledge1 = Pledge.create(reward_id: mark_reward7.id, backer_id: yong.id)
 mark_pledge2 = Pledge.create(reward_id: mark_reward2.id, backer_id: aaron.id)
 mark_pledge3 = Pledge.create(reward_id: mark_reward6.id, backer_id: dobrynin.id)
 mark_pledge4 = Pledge.create(reward_id: mark_reward1.id, backer_id: miriam.id)
-mark_pledge5 = Pledge.create(reward_id: mark_reward3.id, backer_id: brandon.id)
+mark_pledge5 = Pledge.create(reward_id: mark_reward4.id, backer_id: brandon.id)
+mark_pledge6 = Pledge.create(reward_id: mark_reward2.id, backer_id: yong.id)
+mark_pledge7 = Pledge.create(reward_id: mark_reward1.id, backer_id: aaron.id)
+mark_pledge8 = Pledge.create(reward_id: mark_reward3.id, backer_id: dobrynin.id)
+mark_pledge9 = Pledge.create(reward_id: mark_reward4.id, backer_id: miriam.id)
+mark_pledge10 = Pledge.create(reward_id: mark_reward5.id, backer_id: brandon.id)
+mark_pledge11 = Pledge.create(reward_id: mark_reward6.id, backer_id: miriam.id)
+mark_pledge12 = Pledge.create(reward_id: mark_reward1.id, backer_id: brandon.id)
+mark_pledge13 = Pledge.create(reward_id: mark_reward4.id, backer_id: yong.id)

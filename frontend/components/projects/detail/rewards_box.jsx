@@ -21,7 +21,8 @@ class RewardsBox extends React.Component {
               <RewardModal createReward={this.props.createReward}
                 errors={this.props.errors}
                 clearRewardErrors={this.props.clearRewardErrors}
-                fetchProjectDetail={this.props.fetchProjectDetail} />
+                fetchProjectDetail={this.props.fetchProjectDetail}
+                clearPledgeErrors={this.props.clearPledgeErrors} />
               :
               null
             }
