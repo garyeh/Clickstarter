@@ -72,7 +72,7 @@ class RewardModal extends React.Component {
             errors={this.props.errors}
             fetchProjectDetail={this.props.fetchProjectDetail}
             closeModal={this.closeModal}
-            clearErrors={this.props.clearErrors} />
+            clearRewardErrors={this.props.clearRewardErrors} />
         </Modal>
       </div>
     );

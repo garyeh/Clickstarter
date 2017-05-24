@@ -15,8 +15,9 @@ class ProjectDetail extends React.Component {
       this.props.requestSingleProject(nextProps.match.params.projectId);
     }
   }
-  
+
   render() {
+    console.log(this.props);
     const detail = this.props.projectDetail;
     const currentUser = this.props.currentUser;
     return (
@@ -32,7 +33,7 @@ class ProjectDetail extends React.Component {
           deleteReward={this.props.deleteReward}
           fetchProjectDetail={this.props.fetchProjectDetail}
           errors={this.props.errors}
-          clearErrors={this.props.clearErrors} />
+          clearRewardErrors={this.props.clearRewardErrors} />
       </div>
     );
   }

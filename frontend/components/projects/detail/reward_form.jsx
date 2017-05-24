@@ -13,7 +13,7 @@ class RewardForm extends React.Component {
       project_id: this.props.match.params.projectId
     };
 
-    this.props.clearErrors();
+    this.props.clearRewardErrors();
     this.currentDate = (new Date()).toJSON().slice(0,10);
     this.handleSubmit = this.handleSubmit.bind(this);
   }
