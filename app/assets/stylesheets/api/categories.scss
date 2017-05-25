@@ -4,9 +4,10 @@
 
 .categoryList h2 {
   border-bottom: 1px solid #e6e6e6;
-  margin: 20px 0;
-  padding: 20px 0;
+  margin: 10px 0;
+  padding: 0 0 20px 0;
   color: #05AF3C;
+  width: 100%;
 }
 
 .categoryList button {
@@ -22,6 +23,31 @@
 }
 
 .categoryList li {
-  margin: 15px 0;
+  margin-bottom: 15px;
   transition: all 0.15s ease-in-out;
+}
+
+.categoryList li:first-child {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-family: 'Nunito', sans-serif;
+  position: relative;
+}
+
+.categoryList li:first-child button {
+  position: absolute;
+  right: -8px;
+  top: 12px;
+  color: #05AF3C;
+  height: 0;
+  width: 0;
+}
+
+.categoryList li:first-child img {
+  position: absolute;
+  width: 15px;
+  height: 15px;
+  right: 0px;
+  top: 0px;
 }

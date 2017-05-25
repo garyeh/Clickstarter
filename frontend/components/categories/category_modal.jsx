@@ -34,10 +34,10 @@ const style = {
     display         : 'flex',
     justifyContent  : 'center',
     position        : 'fixed',
-    top             : '5%',
-    left            : '5%',
-    right           : '5%',
-    bottom          : '5%',
+    top             : 0,
+    left            : 0,
+    right           : 0,
+    bottom          : 0,
     border          : '1px solid #ccc',
     padding         : '30px',
     zIndex          : 11,
@@ -55,6 +55,7 @@ class CategoryModal extends React.Component {
       category: ""
     };
 
+    this.pathChange = false;
     this.closeModal = this.closeModal.bind(this);
     this.openModal = this.openModal.bind(this);
     this.displayIndexByCategory = this.displayIndexByCategory.bind(this);
@@ -67,6 +68,10 @@ class CategoryModal extends React.Component {
 
   openModal() {
     this.setState({ modalOpen: true });
+    if (this.props.history.location.pathname !== "/") {
+      this.props.history.push("/");
+      this.pathChange = true;
+    }
   }
 
   afterModalOpen() {
@@ -84,6 +89,13 @@ class CategoryModal extends React.Component {
     };
   }
 
+  goBack() {
+    this.closeModal();
+    if (this.pathChange === true) {
+      this.props.history.goBack();
+    }
+  }
+
   render() {
     return(
       <div>
@@ -99,7 +111,9 @@ class CategoryModal extends React.Component {
           contentLabel="Category Modal">
 
           <ul className="categoryList">
-            <li><h2>Categories</h2></li>
+            <li><h2>Categories</h2>
+              <button onClick={this.goBack.bind(this)}><img src="http://res.cloudinary.com/ds1qfel8a/image/upload/v1495687648/x-categories_jlstnk.png" /></button>
+            </li>
             {categories.map(category => (
               <li key={category}><button onClick={this.displayIndexByCategory(category)}>{category}</button></li>
             ))}
