@@ -32,7 +32,7 @@ Loads React web app
 - `POST /api/projects/:projectId/rewards`
 - `DELETE /api/projects/:projectId/rewards/:rewardId`
 
-### pledges
+### Pledges
 
 - `POST /api/rewards/:rewardId/pledges`
 

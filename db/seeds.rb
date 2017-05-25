@@ -22,6 +22,7 @@ winber = User.create(username: "Winber", password: "password")
 vu = User.create(username: "Vu", password: "password")
 jill = User.create(username: "Jill", password: "password")
 ranelle = User.create(username: "Ranelle", password: "password")
+jon = User.create(username: "Jon", password: "password")
 
 
 linterest = Project.create(title: "Linterest", main_image_url: "http://res.cloudinary.com/ds1qfel8a/image/upload/v1495418437/Stock/linterest.png",
@@ -44,6 +45,8 @@ events_in_town = Project.create(title: "EventsInTown", main_image_url: "http://r
 url: "http://eventsintown.herokuapp.com/#/", description: "Find your next experience", end_date: "2021-07-01", funding_goal: 1500, creator_id: jill.id, category: "Technology", details: text)
 chill_cloud = Project.create(title: "ChillCloud", main_image_url: "https://s3-us-west-1.amazonaws.com/chillcloud-dev/albumDefault.png",
 url: "https://chillcloud.herokuapp.com/#/", description: "Listen & chill", end_date: "2022-02-12", funding_goal: 2000, creator_id: ranelle.id, category: "Music", details: text)
+upshift = Project.create(title: "UpShift", main_image_url: "https://d2ppvlu71ri8gs.cloudfront.net/items/080X0N0j262f3c0E0Z1d/Screen%20Shot%202017-05-25%20at%201.39.51%20PM.png",
+url: "https://upshiftapp.herokuapp.com/#/", description: "A new way to buy used cars", end_date: "2018-10-10", funding_goal: 8000, creator_id: jon.id, category: "Autos", details: text)
 
 
 yong_reward1 = Reward.create(title: "1st Tier", amount: 10, limit: 500, description: "You get a personal thank you from me", project_id: linterest.id, deliver_date: "2019-01-01")
@@ -103,6 +106,10 @@ jill_reward1 = Reward.create(title: "1st Tier", amount: 245, limit: 30, descript
 
 ranelle_reward1 = Reward.create(title: "1st Tier", amount: 139, limit: 100, description: "You get a free drink from me", project_id: chill_cloud.id, deliver_date: "2022-02-16")
 ranelle_reward2 = Reward.create(title: "2nd Tier", amount: 399, limit: 60, description: "You get 2 free drinks from me", project_id: chill_cloud.id, deliver_date: "2022-02-17")
+
+jon_reward1 = Reward.create(title: "1st Tier", amount: 199, limit: 400, description: "You get a free ride from me", project_id: upshift.id, deliver_date: "2019-02-02")
+jon_reward2 = Reward.create(title: "2nd Tier", amount: 800, limit: 300, description: "You get 2 free rides from me", project_id: upshift.id, deliver_date: "2019-02-02")
+jon_reward3 = Reward.create(title: "3rd Tier", amount: 1500, limit: 200, description: "You get 3 free rides from me", project_id: upshift.id, deliver_date: "2019-02-02")
 
 
 yong_pledge1 = Pledge.create(reward_id: yong_reward7.id, backer_id: aaron.id)
@@ -186,3 +193,8 @@ jill_pledge1 = Pledge.create(reward_id: jill_reward1.id, backer_id: dobrynin.id)
 ranelle_pledge1 = Pledge.create(reward_id: ranelle_reward1.id, backer_id: winber.id)
 ranelle_pledge2 = Pledge.create(reward_id: ranelle_reward1.id, backer_id: brandon.id)
 ranelle_pledge3 = Pledge.create(reward_id: ranelle_reward2.id, backer_id: brandon.id)
+
+jon_pledge1 = Pledge.create(reward_id: jon_reward1.id, backer_id: winber.id)
+jon_pledge2 = Pledge.create(reward_id: jon_reward2.id, backer_id: winber.id)
+jon_pledge3 = Pledge.create(reward_id: jon_reward2.id, backer_id: brandon.id)
+jon_pledge4 = Pledge.create(reward_id: jon_reward3.id, backer_id: yong.id)
