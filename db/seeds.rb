@@ -20,6 +20,7 @@ brandon = User.create(username: "Brandon", password: "password")
 mark = User.create(username: "Mark", password: "password")
 winber = User.create(username: "Winber", password: "password")
 vu = User.create(username: "Vu", password: "password")
+jill = User.create(username: "Jill", password: "password")
 
 
 linterest = Project.create(title: "Linterest", main_image_url: "http://res.cloudinary.com/ds1qfel8a/image/upload/v1495418437/Stock/linterest.png",
@@ -38,6 +39,8 @@ vibe = Project.create(title: "Vibe", main_image_url: "https://res.cloudinary.com
 url: "https://vibemusic.herokuapp.com/", description: "Discover, stream, and share a constantly expanding mix of music from emerging and major artists around the world.", end_date: "2018-11-21", funding_goal: 14000, creator_id: winber.id, category: "Music", details: text)
 artsie = Project.create(title: "Artsie", main_image_url: "http://res.cloudinary.com/ds1qfel8a/image/upload/c_scale,w_1080/v1495691012/Stock/artsie_chzdl2.png",
 url: "http://artsie.herokuapp.com/#/", description: "Original artworks from artists for artists", end_date: "2020-03-03", funding_goal: 7000, creator_id: vu.id, category: "Art", details: text)
+events_in_town = Project.create(title: "EventsInTown", main_image_url: "http://res.cloudinary.com/ds1qfel8a/image/upload/c_scale,w_1080/v1495692580/Stock/eventsintown_fcavw1.png",
+url: "http://eventsintown.herokuapp.com/#/", description: "Find your next experience", end_date: "2021-07-01", funding_goal: 1500, creator_id: jill.id, category: "Technology", details: text)
 
 
 yong_reward1 = Reward.create(title: "1st Tier", amount: 10, limit: 500, description: "You get a personal thank you from me", project_id: linterest.id, deliver_date: "2019-01-01")
@@ -93,6 +96,7 @@ winber_reward2 = Reward.create(title: "2nd Tier", amount: 5000, limit: 50, descr
 
 vu_reward1 = Reward.create(title: "1st Tier", amount: 1100, limit: 50, description: "You get a free hug from me", project_id: artsie.id, deliver_date: "2021-06-04")
 
+jill_reward1 = Reward.create(title: "1st Tier", amount: 245, limit: 30, description: "You get a text from me", project_id: events_in_town.id, deliver_date: "2022-01-01")
 
 yong_pledge1 = Pledge.create(reward_id: yong_reward7.id, backer_id: aaron.id)
 yong_pledge2 = Pledge.create(reward_id: yong_reward7.id, backer_id: dobrynin.id)
@@ -169,3 +173,5 @@ winber_pledge2 = Pledge.create(reward_id: winber_reward1.id, backer_id: miriam.i
 vu_pledge1 = Pledge.create(reward_id: vu_reward1.id, backer_id: winber.id)
 vu_pledge2 = Pledge.create(reward_id: vu_reward1.id, backer_id: mark.id)
 vu_pledge3 = Pledge.create(reward_id: vu_reward1.id, backer_id: brandon.id)
+
+jill_pledge1 = Pledge.create(reward_id: jill_reward1.id, backer_id: dobrynin.id)

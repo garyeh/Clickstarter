@@ -90,10 +90,10 @@ class CategoryModal extends React.Component {
   }
 
   goBack() {
-    this.closeModal();
     if (this.pathChange === true) {
       this.props.history.goBack();
     }
+    this.closeModal();
   }
 
   render() {

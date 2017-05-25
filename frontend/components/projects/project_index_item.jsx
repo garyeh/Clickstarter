@@ -7,7 +7,7 @@ const ProjectIndexItem = ({ project }) => {
   const raised = numberWithCommas(project.raised);
   const endDate = new Date(project.end_date);
   const currentDate = new Date();
-  const remaining = Math.floor((endDate - currentDate) / 86400000);
+  const remaining = numberWithCommas(Math.floor((endDate - currentDate) / 86400000));
   const percentWithCap = Math.min(percentRaised, 100);
 
   return (
