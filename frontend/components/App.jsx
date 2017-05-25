@@ -22,7 +22,7 @@ const App = () => (
           </a>
         </div>
         <div>
-          <img src="http://res.cloudinary.com/ds1qfel8a/image/upload/c_scale,w_64/v1495735849/Stock/search_jsyw2o.png" />
+          
           <GreetingContainer />
         </div>
       </nav>

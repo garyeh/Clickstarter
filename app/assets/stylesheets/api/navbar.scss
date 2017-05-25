@@ -7,20 +7,27 @@
   position: relative;
 }
 
-.navbar > div:last-child > img {
+#searchIcon {
   display: flex;
   position: absolute;
   width: 18px;
   height: 18px;
   padding: 9px;
-  right: 200px;
-  top: 12px;
+  top: -8px;
 }
 
-.navbar > div:last-child > img:hover {
+#searchIcon:hover {
   cursor: pointer;
   transition: 1s;
   transform: rotate3d(1,1,0,1080deg);
+}
+
+.login-signup #searchIcon {
+  right: 200px;
+}
+
+.header-group #searchIcon {
+  right: 110px;
 }
 
 #title span:first-child {
@@ -57,7 +64,7 @@
   transition: all 0.15s ease;
 }
 
-.login-signup span:first-child {
+.login-signup span:nth-child(2) {
   right: 110px;
   top: -20px;
   width: 60px;
