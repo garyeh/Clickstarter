@@ -4,6 +4,23 @@
   align-items: center;
   height: 60px;
   box-shadow: -1px 4px 6px 1px rgba(0, 0, 0, 0.09);
+  position: relative;
+}
+
+.navbar > div:last-child > img {
+  display: flex;
+  position: absolute;
+  width: 18px;
+  height: 18px;
+  padding: 9px;
+  right: 200px;
+  top: 12px;
+}
+
+.navbar > div:last-child > img:hover {
+  cursor: pointer;
+  transition: 1s;
+  transform: rotate3d(1,1,0,1080deg);
 }
 
 #title span:first-child {
