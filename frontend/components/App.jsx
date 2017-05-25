@@ -17,9 +17,9 @@ const App = () => (
           <ExploreCreateContainer />
         </div>
         <div>
-          <Link to="/">
+          <a href="/">
             <h2 id="title"><span>CLICK</span><span>STARTER</span></h2>
-          </Link>
+          </a>
         </div>
         <div>
           <GreetingContainer />

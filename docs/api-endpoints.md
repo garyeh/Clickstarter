@@ -39,6 +39,5 @@ Loads React web app
 ### Categories
 
 - `GET /api/categories`
-- `POST /api/categories`
 - `GET /api/categories/:categoryId`
 - `GET /api/categories/:categoryId/projects`

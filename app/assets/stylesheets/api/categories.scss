@@ -1,0 +1,27 @@
+.categoryList {
+  width: 90%;
+}
+
+.categoryList h2 {
+  border-bottom: 1px solid #e6e6e6;
+  margin: 20px 0;
+  padding: 20px 0;
+  color: #05AF3C;
+}
+
+.categoryList button {
+  font-size: 35px;
+  border: none;
+  background-color: white;
+}
+
+.categoryList button:hover {
+  color: #05AF3C;
+  cursor: pointer;
+  transition: all 0.15s ease-in-out;
+}
+
+.categoryList li {
+  margin: 15px 0;
+  transition: all 0.15s ease-in-out;
+}

@@ -1,6 +1,10 @@
 class Api::ProjectsController < ApplicationController
   def index
-    @projects = Project.all
+    if params[:category]
+      @projects = Project.where(category: params[:category])
+    else
+      @projects = Project.all
+    end
   end
 
   def show

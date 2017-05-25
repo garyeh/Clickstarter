@@ -1,6 +1,25 @@
 import React from 'react';
 import Modal from 'react-modal';
 
+const categories = [
+  "Art",
+  "Comics",
+  "Crafts",
+  "Dance",
+  "Design",
+  "Fashion",
+  "Film & Video",
+  "Food",
+  "Games",
+  "Journalism",
+  "Music",
+  "Photography",
+  "Publishing",
+  "Sports",
+  "Technology",
+  "Theater"
+];
+
 const style = {
   overlay : {
     position        : 'fixed',
@@ -15,10 +34,10 @@ const style = {
     display         : 'flex',
     justifyContent  : 'center',
     position        : 'fixed',
-    top             : '20%',
-    left            : '20%',
-    right           : '20%',
-    bottom          : '50%',
+    top             : '5%',
+    left            : '5%',
+    right           : '5%',
+    bottom          : '5%',
     border          : '1px solid #ccc',
     padding         : '30px',
     zIndex          : 11,
@@ -33,10 +52,12 @@ class CategoryModal extends React.Component {
 
     this.state = {
       modalOpen: false,
+      category: ""
     };
 
     this.closeModal = this.closeModal.bind(this);
     this.openModal = this.openModal.bind(this);
+    this.displayIndexByCategory = this.displayIndexByCategory.bind(this);
   }
 
   closeModal() {
@@ -52,8 +73,18 @@ class CategoryModal extends React.Component {
     style.content.opacity = 100;
   }
 
-  render() {
+  displayIndexByCategory(category) {
+    return e => {
+      this.closeModal();
+      this.setState({category: category}, () => {
+        const categoryProjects = this.state;
+        this.props.fetchCategoryProjects(categoryProjects)
+          .then(() => scrollTo(0,611));
+      });
+    };
+  }
 
+  render() {
     return(
       <div>
         <a onClick={this.openModal}>
@@ -67,7 +98,12 @@ class CategoryModal extends React.Component {
           style = {style}
           contentLabel="Category Modal">
 
-          <div>hi</div>
+          <ul className="categoryList">
+            <li><h2>Categories</h2></li>
+            {categories.map(category => (
+              <li key={category}><button onClick={this.displayIndexByCategory(category)}>{category}</button></li>
+            ))}
+          </ul>
         </Modal>
       </div>
     );

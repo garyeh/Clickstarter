@@ -6,7 +6,7 @@ const ProjectCarousel = () => (
     <div className="project-carousel-slide">
       <h1>Creators thrive here</h1>
       <h2>Clickstarter creators pursue bold ideas on their own terms — and make an impact on the world, too.</h2>
-      <img src="http://res.cloudinary.com/ds1qfel8a/image/upload/c_scale,w_1920/v1495216601/Stock/Splash_emwijn.jpg" />
+      <img src="http://res.cloudinary.com/ds1qfel8a/image/upload/c_scale,w_1080/v1495216601/Stock/Splash_emwijn.jpg" />
     </div>
 
     <div className="project-carousel-slide">
@@ -27,14 +27,14 @@ const ProjectCarousel = () => (
       <h1>MyPantry</h1>
       <h2>For cooking enthusiasts - a website that keeps track of your pantry so you don't have to!</h2>
       <a href="#/projects/4"><button>View project</button></a>
-      <img src="http://res.cloudinary.com/ds1qfel8a/image/upload/c_scale,w_1920/v1495161001/Stock/Pantry_adfpkv.jpg" />
+      <img src="http://res.cloudinary.com/ds1qfel8a/image/upload/c_scale,w_1080/v1495161001/Stock/Pantry_adfpkv.jpg" />
     </div>
 
     <div className="project-carousel-slide">
       <h1>Linterest</h1>
       <h2>Your catalog of ideas</h2>
       <a href="#/projects/1"><button>View project</button></a>
-      <img src="http://res.cloudinary.com/ds1qfel8a/image/upload/c_scale,w_1920/v1495418437/Stock/linterest.png" />
+      <img src="http://res.cloudinary.com/ds1qfel8a/image/upload/c_scale,w_1080/v1495418437/Stock/linterest.png" />
     </div>
   </Carousel>
 );

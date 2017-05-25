@@ -1,4 +1,5 @@
 import * as APIUtil from '../util/project_api_util';
+import * as CategoryUtil from '../util/category_api_util';
 
 export const RECEIVE_PROJECTS = 'RECEIVE_PROJECTS';
 export const RECEIVE_PROJECT_DETAIL = 'RECEIVE_PROJECT_DETAIL';
@@ -28,6 +29,11 @@ export const removeProject = project => ({
 export const fetchProjects = () => dispatch => (
   APIUtil.fetchProjects()
     .then(projects => dispatch(receiveProjects(projects)))
+);
+
+export const fetchCategoryProjects = (category) => dispatch => (
+  CategoryUtil.fetchCategoryProjects(category)
+    .then(res => dispatch(receiveProjects(res)))
 );
 
 export const fetchProjectDetail = id => dispatch => (
