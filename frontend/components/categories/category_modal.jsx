@@ -112,7 +112,7 @@ class CategoryModal extends React.Component {
 
           <ul className="categoryList">
             <li><h2>Categories</h2>
-              <button onClick={this.goBack.bind(this)}><img src="http://res.cloudinary.com/ds1qfel8a/image/upload/v1495687648/x-categories_jlstnk.png" /></button>
+              <button onClick={this.goBack.bind(this)}><img src="http://res.cloudinary.com/ds1qfel8a/image/upload/v1495687648/Stock/x-categories_jlstnk.png" /></button>
             </li>
             {categories.map(category => (
               <li key={category}><button onClick={this.displayIndexByCategory(category)}>{category}</button></li>

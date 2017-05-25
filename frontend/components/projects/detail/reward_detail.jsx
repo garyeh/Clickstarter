@@ -2,9 +2,13 @@ import React from 'react';
 
 const RewardDetail = ({reward, deleteReward, currentUser,
   creator, fetchProjectDetail, createPledge, clearPledgeErrors, history }) => {
+  const dateFormatted = (reward.deliver_date) ?
+    `${reward.deliver_date.slice(5)}-${reward.deliver_date.slice(0,4)}` : "";
+
   const destroyReward = () => {
     deleteReward(reward).then(() => fetchProjectDetail(reward.project_id));
   };
+
   const makePledge = () => {
     if (reward && currentUser) {
       createPledge({ reward_id: reward.id, backer_id: currentUser.id })
@@ -28,7 +32,7 @@ const RewardDetail = ({reward, deleteReward, currentUser,
             reward.deliver_date ?
             <div>
               <div id="headerDeliveryTitle">ESTIMATED DELIVERY</div>
-              <div id="headerDeliveryText">{reward.deliver_date}</div>
+              <div id="headerDeliveryText">{dateFormatted}</div>
             </div>
             : ""
           }

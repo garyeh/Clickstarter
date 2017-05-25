@@ -18,6 +18,8 @@ dobrynin = User.create(username: "Dobrynin", password: "password")
 miriam = User.create(username: "Miriam", password: "password")
 brandon = User.create(username: "Brandon", password: "password")
 mark = User.create(username: "Mark", password: "password")
+winber = User.create(username: "Winber", password: "password")
+vu = User.create(username: "Vu", password: "password")
 
 
 linterest = Project.create(title: "Linterest", main_image_url: "http://res.cloudinary.com/ds1qfel8a/image/upload/v1495418437/Stock/linterest.png",
@@ -32,31 +34,35 @@ open_gym = Project.create(title: "OpenGym", main_image_url: "http://res.cloudina
 url: "https://opengymvolleyball.herokuapp.com/#/", description: "A Yelp...for gyms!", end_date: "2019-01-19", funding_goal: 100000, creator_id: brandon.id, category: "Sports", details: text)
 unbottld = Project.create(title: "UNBOTTLD", main_image_url: "http://res.cloudinary.com/dcslgdwha/image/upload/v1495148251/bottles_d4suts.jpg",
 url: "https://unbottld.herokuapp.com/#/", description: "Find your favorite bottle", end_date: "2020-03-30", funding_goal: 50000, creator_id: mark.id, category: "Food", details: text)
+vibe = Project.create(title: "Vibe", main_image_url: "https://res.cloudinary.com/winber1/image/upload/v1495573229/homepage_aatiwt.jpg",
+url: "https://vibemusic.herokuapp.com/", description: "Discover, stream, and share a constantly expanding mix of music from emerging and major artists around the world.", end_date: "2018-11-21", funding_goal: 14000, creator_id: winber.id, category: "Music", details: text)
+artsie = Project.create(title: "Artsie", main_image_url: "http://res.cloudinary.com/ds1qfel8a/image/upload/c_scale,w_1080/v1495691012/Stock/artsie_chzdl2.png",
+url: "http://artsie.herokuapp.com/#/", description: "Original artworks from artists for artists", end_date: "2020-03-03", funding_goal: 7000, creator_id: vu.id, category: "Art", details: text)
 
 
 yong_reward1 = Reward.create(title: "1st Tier", amount: 10, limit: 500, description: "You get a personal thank you from me", project_id: linterest.id, deliver_date: "2019-01-01")
-yong_reward2 = Reward.create(title: "2nd Tier", amount: 20, limit: 400, description: "You get 2 personal thank yous from me", project_id: linterest.id, deliver_date: "2019-01-01")
-yong_reward3 = Reward.create(title: "3rd Tier", amount: 50, limit: 300, description: "You get 3 personal thank yous from me", project_id: linterest.id, deliver_date: "2019-01-01")
-yong_reward4 = Reward.create(title: "4th Tier", amount: 100, limit: 250, description: "You get 4 personal thank yous from me", project_id: linterest.id, deliver_date: "2019-01-01")
-yong_reward5 = Reward.create(title: "5th Tier", amount: 250, limit: 200, description: "You get 10 personal thank yous from me", project_id: linterest.id, deliver_date: "2019-01-01")
-yong_reward6 = Reward.create(title: "6th Tier", amount: 500, limit: 150, description: "You get 20 personal thank yous from me", project_id: linterest.id, deliver_date: "2019-01-01")
-yong_reward7 = Reward.create(title: "7th Tier", amount: 1000, limit: 100, description: "You get 30 personal thank yous from me", project_id: linterest.id, deliver_date: "2019-01-01")
+yong_reward2 = Reward.create(title: "2nd Tier", amount: 20, limit: 400, description: "You get 2 personal thank yous from me", project_id: linterest.id, deliver_date: "2019-01-02")
+yong_reward3 = Reward.create(title: "3rd Tier", amount: 50, limit: 300, description: "You get 3 personal thank yous from me", project_id: linterest.id, deliver_date: "2019-03-01")
+yong_reward4 = Reward.create(title: "4th Tier", amount: 100, limit: 250, description: "You get 4 personal thank yous from me", project_id: linterest.id, deliver_date: "2019-03-04")
+yong_reward5 = Reward.create(title: "5th Tier", amount: 250, limit: 200, description: "You get 10 personal thank yous from me", project_id: linterest.id, deliver_date: "2019-04-01")
+yong_reward6 = Reward.create(title: "6th Tier", amount: 500, limit: 150, description: "You get 20 personal thank yous from me", project_id: linterest.id, deliver_date: "2019-04-06")
+yong_reward7 = Reward.create(title: "7th Tier", amount: 1000, limit: 100, description: "You get 30 personal thank yous from me", project_id: linterest.id, deliver_date: "2019-08-01")
 
-aaron_reward1 = Reward.create(title: "1st Tier", amount: 20, limit: 500, description: "You get a cat from me", project_id: prana.id, deliver_date: "2019-01-01")
-aaron_reward2 = Reward.create(title: "2nd Tier", amount: 40, limit: 400, description: "You get 2 cats from me", project_id: prana.id, deliver_date: "2019-01-01")
-aaron_reward3 = Reward.create(title: "3rd Tier", amount: 90, limit: 300, description: "You get 3 cats from me", project_id: prana.id, deliver_date: "2019-01-01")
-aaron_reward4 = Reward.create(title: "4th Tier", amount: 199, limit: 250, description: "You get 4 cats from me", project_id: prana.id, deliver_date: "2019-01-01")
-aaron_reward5 = Reward.create(title: "5th Tier", amount: 250, limit: 200, description: "You get 10 cats from me", project_id: prana.id, deliver_date: "2019-01-01")
-aaron_reward6 = Reward.create(title: "6th Tier", amount: 999, limit: 150, description: "You get 20 cats from me", project_id: prana.id, deliver_date: "2019-01-01")
-aaron_reward7 = Reward.create(title: "7th Tier", amount: 2500, limit: 100, description: "You get 30 cats from me", project_id: prana.id, deliver_date: "2019-01-01")
+aaron_reward1 = Reward.create(title: "1st Tier", amount: 20, limit: 500, description: "You get a cat from me", project_id: prana.id, deliver_date: "2019-01-06")
+aaron_reward2 = Reward.create(title: "2nd Tier", amount: 40, limit: 400, description: "You get 2 cats from me", project_id: prana.id, deliver_date: "2019-04-01")
+aaron_reward3 = Reward.create(title: "3rd Tier", amount: 90, limit: 300, description: "You get 3 cats from me", project_id: prana.id, deliver_date: "2019-04-01")
+aaron_reward4 = Reward.create(title: "4th Tier", amount: 199, limit: 250, description: "You get 4 cats from me", project_id: prana.id, deliver_date: "2019-05-01")
+aaron_reward5 = Reward.create(title: "5th Tier", amount: 250, limit: 200, description: "You get 10 cats from me", project_id: prana.id, deliver_date: "2019-06-01")
+aaron_reward6 = Reward.create(title: "6th Tier", amount: 999, limit: 150, description: "You get 20 cats from me", project_id: prana.id, deliver_date: "2019-08-04")
+aaron_reward7 = Reward.create(title: "7th Tier", amount: 2500, limit: 100, description: "You get 30 cats from me", project_id: prana.id, deliver_date: "2019-09-08")
 
 dobrynin_reward1 = Reward.create(title: "1st Tier", amount: 2, limit: 500, description: "You get a puppy from me", project_id: yakety.id, deliver_date: "2019-01-01")
-dobrynin_reward2 = Reward.create(title: "2nd Tier", amount: 50, limit: 400, description: "You get 2 puppies from me", project_id: yakety.id, deliver_date: "2019-01-01")
-dobrynin_reward3 = Reward.create(title: "3rd Tier", amount: 70, limit: 300, description: "You get 3 puppies from me", project_id: yakety.id, deliver_date: "2019-01-01")
-dobrynin_reward4 = Reward.create(title: "4th Tier", amount: 129, limit: 250, description: "You get 4 puppies from me", project_id: yakety.id, deliver_date: "2019-01-01")
-dobrynin_reward5 = Reward.create(title: "5th Tier", amount: 299, limit: 200, description: "You get 10 puppies from me", project_id: yakety.id, deliver_date: "2019-01-01")
-dobrynin_reward6 = Reward.create(title: "6th Tier", amount: 550, limit: 150, description: "You get 20 puppies from me", project_id: yakety.id, deliver_date: "2019-01-01")
-dobrynin_reward7 = Reward.create(title: "7th Tier", amount: 1000, limit: 100, description: "You get 30 puppies from me", project_id: yakety.id, deliver_date: "2019-01-01")
+dobrynin_reward2 = Reward.create(title: "2nd Tier", amount: 50, limit: 400, description: "You get 2 puppies from me", project_id: yakety.id, deliver_date: "2019-01-04")
+dobrynin_reward3 = Reward.create(title: "3rd Tier", amount: 70, limit: 300, description: "You get 3 puppies from me", project_id: yakety.id, deliver_date: "2019-01-11")
+dobrynin_reward4 = Reward.create(title: "4th Tier", amount: 129, limit: 250, description: "You get 4 puppies from me", project_id: yakety.id, deliver_date: "2019-01-31")
+dobrynin_reward5 = Reward.create(title: "5th Tier", amount: 299, limit: 200, description: "You get 10 puppies from me", project_id: yakety.id, deliver_date: "2019-11-01")
+dobrynin_reward6 = Reward.create(title: "6th Tier", amount: 550, limit: 150, description: "You get 20 puppies from me", project_id: yakety.id, deliver_date: "2019-11-30")
+dobrynin_reward7 = Reward.create(title: "7th Tier", amount: 1000, limit: 100, description: "You get 30 puppies from me", project_id: yakety.id, deliver_date: "2020-01-31")
 
 miriam_reward1 = Reward.create(title: "1st Tier", amount: 6, limit: 500, description: "You get a skype call from me", project_id: pantry.id, deliver_date: "2019-01-01")
 miriam_reward2 = Reward.create(title: "2nd Tier", amount: 24, limit: 400, description: "You get 2 min skype call from me", project_id: pantry.id, deliver_date: "2019-01-01")
@@ -81,6 +87,11 @@ mark_reward4 = Reward.create(title: "4th Tier", amount: 299, limit: 250, descrip
 mark_reward5 = Reward.create(title: "5th Tier", amount: 1600, limit: 200, description: "You get 10 fist bumps from me", project_id: unbottld.id, deliver_date: "2019-01-01")
 mark_reward6 = Reward.create(title: "6th Tier", amount: 2900, limit: 150, description: "You get 20 fist bumps from me", project_id: unbottld.id, deliver_date: "2019-01-01")
 mark_reward7 = Reward.create(title: "7th Tier", amount: 10000, limit: 100, description: "You get 30 fist bumps from me", project_id: unbottld.id, deliver_date: "2019-01-01")
+
+winber_reward1 = Reward.create(title: "1st Tier", amount: 2999, limit: 50, description: "You get a fist pump from me", project_id: vibe.id, deliver_date: "2019-01-01")
+winber_reward2 = Reward.create(title: "2nd Tier", amount: 5000, limit: 50, description: "You get 2 fist pumps from me", project_id: vibe.id, deliver_date: "2019-01-01")
+
+vu_reward1 = Reward.create(title: "1st Tier", amount: 1100, limit: 50, description: "You get a free hug from me", project_id: artsie.id, deliver_date: "2021-06-04")
 
 
 yong_pledge1 = Pledge.create(reward_id: yong_reward7.id, backer_id: aaron.id)
@@ -112,7 +123,7 @@ dobrynin_pledge1 = Pledge.create(reward_id: dobrynin_reward1.id, backer_id: yong
 dobrynin_pledge2 = Pledge.create(reward_id: dobrynin_reward5.id, backer_id: aaron.id)
 dobrynin_pledge3 = Pledge.create(reward_id: dobrynin_reward1.id, backer_id: miriam.id)
 dobrynin_pledge4 = Pledge.create(reward_id: dobrynin_reward3.id, backer_id: brandon.id)
-dobrynin_pledge5 = Pledge.create(reward_id: dobrynin_reward3.id, backer_id: mark.id)
+dobrynin_pledge5 = Pledge.create(reward_id: dobrynin_reward3.id, backer_id: winber.id)
 
 miriam_pledge1 = Pledge.create(reward_id: miriam_reward1.id, backer_id: yong.id)
 miriam_pledge2 = Pledge.create(reward_id: miriam_reward1.id, backer_id: aaron.id)
@@ -134,7 +145,7 @@ miriam_pledge17 = Pledge.create(reward_id: miriam_reward4.id, backer_id: aaron.i
 miriam_pledge18 = Pledge.create(reward_id: miriam_reward6.id, backer_id: dobrynin.id)
 
 brandon_pledge1 = Pledge.create(reward_id: brandon_reward1.id, backer_id: yong.id)
-brandon_pledge2 = Pledge.create(reward_id: brandon_reward4.id, backer_id: aaron.id)
+brandon_pledge2 = Pledge.create(reward_id: brandon_reward4.id, backer_id: winber.id)
 brandon_pledge3 = Pledge.create(reward_id: brandon_reward7.id, backer_id: miriam.id)
 brandon_pledge4 = Pledge.create(reward_id: brandon_reward3.id, backer_id: mark.id)
 
@@ -151,3 +162,10 @@ mark_pledge10 = Pledge.create(reward_id: mark_reward5.id, backer_id: brandon.id)
 mark_pledge11 = Pledge.create(reward_id: mark_reward6.id, backer_id: miriam.id)
 mark_pledge12 = Pledge.create(reward_id: mark_reward1.id, backer_id: brandon.id)
 mark_pledge13 = Pledge.create(reward_id: mark_reward4.id, backer_id: yong.id)
+
+winber_pledge1 = Pledge.create(reward_id: winber_reward1.id, backer_id: yong.id)
+winber_pledge2 = Pledge.create(reward_id: winber_reward1.id, backer_id: miriam.id)
+
+vu_pledge1 = Pledge.create(reward_id: vu_reward1.id, backer_id: winber.id)
+vu_pledge2 = Pledge.create(reward_id: vu_reward1.id, backer_id: mark.id)
+vu_pledge3 = Pledge.create(reward_id: vu_reward1.id, backer_id: brandon.id)
