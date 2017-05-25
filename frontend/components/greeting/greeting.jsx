@@ -1,12 +1,13 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
+import SearchBar from './search/search_bar';
 import SearchModal from './search/search_modal';
 
 const sessionLinks = (clearErrors) => (
   <nav className="login-signup">
-    <p onClick={clearErrors}>
-      <SearchModal />
-    </p>
+    <div onClick={clearErrors}>
+      <SearchBar />
+    </div>
     <span onClick={clearErrors}><Link to="/login">Log in</Link></span>
     &nbsp;
     <span onClick={clearErrors}><Link to="/signup">Sign up</Link></span>
@@ -15,7 +16,7 @@ const sessionLinks = (clearErrors) => (
 
 const personalGreeting = (currentUser, logout) => (
   <hgroup className="header-group">
-    <SearchModal />
+    <SearchBar />
     <div className="dropdown">
       <img src="http://res.cloudinary.com/ds1qfel8a/image/upload/v1495160455/Stock/nav_dropdown_ren7yn.png"
       alt="User icon" height="40" width="40" className="dropbtn" />

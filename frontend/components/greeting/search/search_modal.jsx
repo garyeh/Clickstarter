@@ -3,7 +3,7 @@ import Modal from 'react-modal';
 
 const style = {
   overlay : {
-    position        : 'fixed',
+    position        : 'relative',
     top             : 0,
     left            : 0,
     right           : 0,
@@ -14,13 +14,14 @@ const style = {
   content : {
     display         : 'flex',
     justifyContent  : 'center',
-    position        : 'fixed',
-    top             :  0,
+    position        : 'absolute',
+    top             :  '100px',
     left            :  0,
     right           :  0,
-    bottom          :  '913px',
+    bottom          :  0,
     border          : 'none',
-    padding         : '30px',
+    padding         : 0,
+    margin          : 0,
     zIndex          : 11,
     opacity         : 0,
     transition      : 'opacity 0.4s'
@@ -67,7 +68,7 @@ class SearchModal extends React.Component {
           style = {style}
           contentLabel="Search Modal">
 
-          <div>hai</div>
+          <input id="modal" type="text" value="wey" />
         </Modal>
       </div>
     );
