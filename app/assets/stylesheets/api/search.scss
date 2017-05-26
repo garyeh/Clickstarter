@@ -36,7 +36,6 @@
   border-right: 1px solid #bfbfbf;
   border-left: 1px solid #bfbfbf;
   border-bottom: 1px solid #bfbfbf;
-  font-size: 18px;
 }
 
 .login-signup .searchResults {
@@ -50,6 +49,9 @@
 }
 
 .searchResults > div {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
   border-bottom: 1px solid #e6e6e6;
   padding: 15px;
 }
@@ -57,4 +59,18 @@
 .searchResults > div:hover {
   cursor: pointer;
   background-color: #90EE90;
+}
+
+.searchResults > div  {
+  border-bottom: 1px solid #e6e6e6;
+  padding: 15px;
+}
+
+.searchResults > div span:first-child {
+  font-weight: bold;
+  font-size: 16px;
+}
+
+.searchResults > div span:last-child {
+  font-size: 12px;
 }

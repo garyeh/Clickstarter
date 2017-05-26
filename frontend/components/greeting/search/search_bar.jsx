@@ -45,12 +45,13 @@ class SearchBar extends React.Component {
         {
           this.state.toggle ?
             <div className="searchContainer">
-              <input type="text" placeholder="Search projects"
+              <input type="text" placeholder="Search by title or description"
                 onChange={this.update('value')} value={this.state.value} />
               <div className="searchResults">
                 {this.state.projectList.map(project => (
                   <div key={project.id} onClick={this.handleClick(project)}>
                     <span>{project.title}</span>
+                    <span>{project.category}</span>
                   </div>
                 ))}
               </div>
