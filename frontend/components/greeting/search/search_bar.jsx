@@ -1,23 +1,39 @@
 import React from 'react';
+import { Link, withRouter } from 'react-router';
 
 class SearchBar extends React.Component {
   constructor(props) {
     super(props);
-    
     this.state = {toggle: false, value: "", projectList: []};
     this.handleToggle = this.handleToggle.bind(this);
+    this.handleClick = this.handleClick.bind(this);
   }
 
   handleToggle(e) {
     e.preventDefault();
-    this.setState({ toggle: !this.state.toggle });
+    if (this.state.toggle === true) {
+      this.setState({ toggle: !this.state.toggle, value: "", projectList: [] });
+    } else {
+      this.setState({ toggle: !this.state.toggle });
+    }
   }
 
   update(field) {
+    return e => {
+      let newVal = e.currentTarget.value;
+      if (this.state.value !== newVal) {
+        this.props.fetchSearchProjects(newVal)
+          .then(res => this.setState({ projectList: res.projects, [field]: newVal }));
+      }
+    };
+  }
 
-    return e => this.setState({
-      [field]: e.currentTarget.value
-    });
+  handleClick(project) {
+    return e => {
+      e.preventDefault();
+      this.props.history.push(`/projects/${project.id}`);
+      this.setState({ projectList: [], toggle: !this.state.toggle });
+    };
   }
 
   render() {
@@ -28,9 +44,16 @@ class SearchBar extends React.Component {
         </div>
         {
           this.state.toggle ?
-            <div>
+            <div className="searchContainer">
               <input type="text" placeholder="Search projects"
                 onChange={this.update('value')} value={this.state.value} />
+              <div className="searchResults">
+                {this.state.projectList.map(project => (
+                  <div key={project.id} onClick={this.handleClick(project)}>
+                    <span>{project.title}</span>
+                  </div>
+                ))}
+              </div>
             </div>
           :
             ""
@@ -40,4 +63,4 @@ class SearchBar extends React.Component {
   }
 }
 
-export default SearchBar;
+export default withRouter(SearchBar);

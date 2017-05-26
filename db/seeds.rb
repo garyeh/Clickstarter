@@ -122,7 +122,7 @@ gary_reward5 = Reward.create(title: "5th Tier", amount: 350, limit: 200, descrip
 gary_reward6 = Reward.create(title: "6th Tier", amount: 800, limit: 150, description: "You get 20 personal shoutouts from me", project_id: clickstarter.id, deliver_date: "2019-04-06")
 gary_reward7 = Reward.create(title: "7th Tier", amount: 2000, limit: 100, description: "You get 30 personal shoutouts from me", project_id: clickstarter.id, deliver_date: "2019-08-01")
 gary_reward8 = Reward.create(title: "8th Tier", amount: 6500, limit: 50, description: "You get 50 personal shoutouts from me", project_id: clickstarter.id, deliver_date: "2019-08-01")
-gary_reward9 = Reward.create(title: "9th Tier", amount: 13000, limit: 10, description: "You get 100 personal shoutouts from me", project_id: clickstarter.id, deliver_date: "2019-08-01")
+gary_reward9 = Reward.create(title: "9th Tier", amount: 16000, limit: 10, description: "You get 100 personal shoutouts from me", project_id: clickstarter.id, deliver_date: "2019-08-01")
 
 
 yong_pledge1 = Pledge.create(reward_id: yong_reward7.id, backer_id: aaron.id)

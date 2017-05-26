@@ -12,7 +12,7 @@ class ProjectDetail extends React.Component {
 
   componentWillReceiveProps(nextProps) {
     if (this.props.match.params.projectId !== nextProps.match.params.projectId) {
-      this.props.requestSingleProject(nextProps.match.params.projectId);
+      this.props.fetchProjectDetail(nextProps.match.params.projectId);
     }
   }
 

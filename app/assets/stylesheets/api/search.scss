@@ -21,3 +21,40 @@
   right: 165px;
   width: 270px;
 }
+
+.searchContainer {
+  position: relative;
+}
+
+.searchResults {
+  display: flex;
+  flex-direction: column;
+  z-index: 1;
+  position: absolute;
+  top: 25px;
+  background-color: white;
+  border-right: 1px solid #bfbfbf;
+  border-left: 1px solid #bfbfbf;
+  border-bottom: 1px solid #bfbfbf;
+  font-size: 18px;
+}
+
+.login-signup .searchResults {
+  right: 260px;
+  width: 241px;
+}
+
+.header-group .searchResults {
+  right: 165px;
+  width: 281px;
+}
+
+.searchResults > div {
+  border-bottom: 1px solid #e6e6e6;
+  padding: 15px;
+}
+
+.searchResults > div:hover {
+  cursor: pointer;
+  background-color: #90EE90;
+}

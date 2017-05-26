@@ -45,7 +45,7 @@
   margin-left: 150px;
 }
 
-.login-signup span {
+.login-signup > span {
   position: absolute;
   font-family: 'Open Sans', sans-serif;
   font-weight: bold;
@@ -54,23 +54,23 @@
   text-align: center;
 }
 
-.login-signup span > * {
+.login-signup> span > * {
   padding: 21px 0;
   transition: all 0.15s ease;
 }
 
-.login-signup span > *:hover {
+.login-signup > span > *:hover {
   border-bottom: 3px solid #2BDE73;
   transition: all 0.15s ease;
 }
 
-.login-signup span:nth-child(2) {
+.login-signup > span:nth-child(2) {
   right: 110px;
   top: -20px;
   width: 60px;
 }
 
-.login-signup span:last-child {
+.login-signup > span:last-child {
   right: 20px;
   top: -20px;
   width: 60px;

@@ -5,9 +5,7 @@ import SearchModal from './search/search_modal';
 
 const sessionLinks = (clearErrors, fetchSearchProjects) => (
   <nav className="login-signup">
-    <div onClick={clearErrors}>
-      <SearchBar fetchSearchProjects={fetchSearchProjects} />
-    </div>
+    <SearchBar fetchSearchProjects={fetchSearchProjects} />
     <span onClick={clearErrors}><Link to="/login">Log in</Link></span>
     &nbsp;
     <span onClick={clearErrors}><Link to="/signup">Sign up</Link></span>
@@ -31,8 +29,9 @@ const personalGreeting = (currentUser, logout, fetchSearchProjects) => (
   </hgroup>
 );
 
-const Greeting = ({ currentUser, logout, clearErrors }) => (
-  currentUser ? personalGreeting(currentUser, logout) : sessionLinks(clearErrors)
+const Greeting = ({ currentUser, logout, clearErrors, fetchSearchProjects }) => (
+  currentUser ? personalGreeting(currentUser, logout, fetchSearchProjects)
+  : sessionLinks(clearErrors, fetchSearchProjects)
 );
 
 export default Greeting;
