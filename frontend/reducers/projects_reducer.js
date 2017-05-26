@@ -3,6 +3,7 @@ import { merge } from 'lodash';
 
 const projectsReducer = (state = {}, action) => {
   Object.freeze(state);
+
   let newState = merge({}, state);
   switch(action.type) {
     case RECEIVE_PROJECTS:

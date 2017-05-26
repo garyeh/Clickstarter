@@ -1,7 +1,6 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 import SearchBar from './search/search_bar';
-import SearchModal from './search/search_modal';
 
 const sessionLinks = (clearErrors, fetchSearchProjects) => (
   <nav className="login-signup">

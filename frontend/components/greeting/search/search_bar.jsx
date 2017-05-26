@@ -11,11 +11,7 @@ class SearchBar extends React.Component {
 
   handleToggle(e) {
     e.preventDefault();
-    if (this.state.toggle === true) {
-      this.setState({ toggle: !this.state.toggle, value: "", projectList: [] });
-    } else {
-      this.setState({ toggle: !this.state.toggle });
-    }
+    this.setState({ toggle: !this.state.toggle, value: "", projectList: [] });
   }
 
   update(field) {
@@ -23,7 +19,7 @@ class SearchBar extends React.Component {
       let newVal = e.currentTarget.value;
       if (this.state.value !== newVal) {
         this.props.fetchSearchProjects(newVal)
-          .then(res => this.setState({ projectList: res.projects, [field]: newVal }));
+          .then(res => this.setState({ projectList: res.search, [field]: newVal }));
       }
     };
   }

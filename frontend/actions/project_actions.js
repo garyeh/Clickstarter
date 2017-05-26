@@ -5,10 +5,16 @@ export const RECEIVE_PROJECTS = 'RECEIVE_PROJECTS';
 export const RECEIVE_PROJECT_DETAIL = 'RECEIVE_PROJECT_DETAIL';
 export const REMOVE_PROJECT = 'REMOVE_PROJECT';
 export const RECEIVE_PROJECT_ERRORS = 'RECEIVE_PROJECT_ERRORS';
+export const RECEIVE_SEARCH_PROJECTS = 'RECEIVE_SEARCH_PROJECTS';
 
 export const receiveProjects = projects => ({
   type: RECEIVE_PROJECTS,
   projects
+});
+
+export const receiveSearchProjects = search => ({
+  type: RECEIVE_SEARCH_PROJECTS,
+  search
 });
 
 export const receiveProjectDetail = project => ({
@@ -33,7 +39,7 @@ export const fetchProjects = () => dispatch => (
 
 export const fetchSearchProjects = value => dispatch => (
   CategoryUtil.fetchSearchProjects(value)
-    .then(res => dispatch(receiveProjects(res)))
+    .then(res => dispatch(receiveSearchProjects(res)))
 );
 
 export const fetchCategoryProjects = category => dispatch => (
