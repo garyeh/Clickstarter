@@ -2,6 +2,10 @@
 
 Clickstarter uses React and Redux to manage the application state.
 
+## React & Redux
+
+All React components, Redux action creators, reducers, store, and API utilities are located in the [frontend](../frontend) directory.
+
 ## npm
 
 Node package manager (npm) is used to install all the frontend dependencies.
@@ -9,10 +13,6 @@ Node package manager (npm) is used to install all the frontend dependencies.
 ## Webpack
 
 Webpack is the bundler for all frontend components. The bundled file is located in `/app/assets/javascripts` and is included in `application.js`.
-
-## React & Redux
-
-All React components, Redux action creators, reducers, store, and API utilities are located in the [frontend](../frontend) directory.
 
 ## jQuery
 
@@ -33,4 +33,6 @@ Other frontend dependencies include:
 
 ## Styling & Seed Data
 
-Site layout and styling is written in SCSS and located in the `/app/assets/stylesheets` directory. Flex boxes were a major help in the design process. Video playlists are embedded from youtube, all images used are from either unsplash.com, pexels.com, another CC0 designated source, or copyright Katarina Rossi. Waterlogue, Prisma, and Photoshop were used to emulate artwork. Major fonts used include Lato, Open Sans, and Bromello for the logo and decorative touches.
+Site layout and styling is written in SCSS and located in the `/app/assets/stylesheets` directory. All images used are from either unsplash.com or directly from the website owner's assets with permission. Major fonts used include Open Sans and Roboto.
+
+Seed data is sourced from other projects with the creator's permission.

@@ -18,10 +18,8 @@ const defaultState = (currentUser) => ({
 const categories = [
   "Art",
   "Autos",
-  "Crafts",
   "Entertainment",
   "Food",
-  "Games",
   "Music",
   "Photography",
   "Productivity",

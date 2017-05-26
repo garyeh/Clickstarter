@@ -1,12 +1,22 @@
 # Clickstarter
 
-[Clickstarter][website] is a crowd-funding web application inspired by Kickstarter and built on Ruby on Rails and React-Redux. Its projects consist of other websites, which users can back at various reward levels and must reach at least 100% funding within a given timeframe.
+[Clickstarter][website] is a crowd-funding web application inspired by Kickstarter and built on Ruby on Rails and React-Redux. Users can create projects of their websites which other users can back at various reward levels.
 
 Clickstarter is a personal project by Gary Yeh.
+
+![Clickstarter splash][splash]
+![Clickstarter home index][index]
 
 ## Features
 
 - User accounts with secure authentication
+- Creating, editing, and deleting projects
+- Adding removing, and backing rewards in a project
+- Image attachments for projects
+- Filtering by category of projects
+- Autocomplete search for projects (by title and description)
+
+![Clickstarter project page][project page]
 
 ## Project Design
 
@@ -21,17 +31,24 @@ Clickstarter is a single-page application built on a Rails backend and React.js 
 
 ## Future Implementations
 
+#### User profile
+
+Users can view and edit their profile which includes a list of their pledges.
+
 #### Likes
 
-Users can "like" projects, and view all "liked" projects in a user profile.
+Users can "like" projects, and view all "liked" projects in the user profile.
 
-#### Credit card Payments
+#### Credit card payments
 
-Users must pay to submit a pledge, using credit card API.
+Users must pay to submit a pledge, via credit card API.
 
 
+[splash]: ./docs/images/splash.png "Clickstarter splash"
+[index]: ./docs/images/home_index.png
+[project page]: ./docs/images/project_page.png "Clickstarter project page"
 [backend]: docs/backend.md
 [frontend]: docs/frontend.md
 [website]: https://clickstarter-gy.herokuapp.com/
-[proposal]: ./docs/README.md
-[schema]: ./docs/schema.md
+[proposal]: docs/README.md
+[schema]: docs/schema.md

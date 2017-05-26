@@ -22,7 +22,7 @@ class ProjectIndex extends React.Component {
 
     return (
       <section>
-        <ProjectCarousel />
+        <ProjectCarousel projects={projects} />
 
         <div className="featured">
           {

@@ -4,10 +4,8 @@ import Modal from 'react-modal';
 const categories = [
   "Art",
   "Autos",
-  "Crafts",
   "Entertainment",
   "Food",
-  "Games",
   "Music",
   "Photography",
   "Productivity",

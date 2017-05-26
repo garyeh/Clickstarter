@@ -79,7 +79,7 @@ dobrynin_reward5 = Reward.create(title: "5th Tier", amount: 299, limit: 200, des
 dobrynin_reward6 = Reward.create(title: "6th Tier", amount: 550, limit: 150, description: "You get 20 puppies from me", project_id: yakety.id, deliver_date: "2019-11-30")
 dobrynin_reward7 = Reward.create(title: "7th Tier", amount: 1000, limit: 100, description: "You get 30 puppies from me", project_id: yakety.id, deliver_date: "2020-01-31")
 
-miriam_reward1 = Reward.create(title: "1st Tier", amount: 6, limit: 500, description: "You get a skype call from me", project_id: pantry.id, deliver_date: "2019-01-01")
+miriam_reward1 = Reward.create(title: "1st Tier", amount: 6, limit: 500, description: "You get a 1 min skype call from me", project_id: pantry.id, deliver_date: "2019-01-01")
 miriam_reward2 = Reward.create(title: "2nd Tier", amount: 24, limit: 400, description: "You get 2 min skype call from me", project_id: pantry.id, deliver_date: "2019-01-01")
 miriam_reward3 = Reward.create(title: "3rd Tier", amount: 60, limit: 300, description: "You get 3 min skype call from me", project_id: pantry.id, deliver_date: "2019-01-01")
 miriam_reward4 = Reward.create(title: "4th Tier", amount: 100, limit: 250, description: "You get 4 min skype call from me", project_id: pantry.id, deliver_date: "2019-01-01")
@@ -234,4 +234,4 @@ gary_pledge13 = Pledge.create(reward_id: gary_reward3.id, backer_id: yong.id)
 
 tyler_pledge1 = Pledge.create(reward_id: tyler_reward1.id, backer_id: yong.id)
 tyler_pledge2 = Pledge.create(reward_id: tyler_reward1.id, backer_id: miriam.id)
-tyler_pledge3 = Pledge.create(reward_id: tyler_reward2.id, backer_id: gary.id)
+tyler_pledge3 = Pledge.create(reward_id: tyler_reward2.id, backer_id: winber.id)
