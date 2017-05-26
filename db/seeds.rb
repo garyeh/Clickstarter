@@ -23,18 +23,19 @@ vu = User.create(username: "Vu", password: "password")
 jill = User.create(username: "Jill", password: "password")
 ranelle = User.create(username: "Ranelle", password: "password")
 jon = User.create(username: "Jon", password: "password")
+gary = User.create(username: "Gary", password: "password")
 
 
 linterest = Project.create(title: "Linterest", main_image_url: "http://res.cloudinary.com/ds1qfel8a/image/upload/v1495418437/Stock/linterest.png",
 url: "https://linterest.herokuapp.com/#/login", description: "Your catalog of ideas", end_date: "2018-09-09", funding_goal: 20000, creator_id: yong.id, category: "Photography", details: text)
 prana = Project.create(title: "Prana", main_image_url: "https://res.cloudinary.com/dbxwu45pr/image/upload/v1495046731/hero-2_hiyzq5.jpg",
-url: "https://prana.herokuapp.com/#/", description: "Prana is a project management app that helps you organize your teams, projects, and tasks.", end_date: "2020-08-08", funding_goal: 10000, creator_id: aaron.id, category: "Technology", details: text)
+url: "https://prana.herokuapp.com/#/", description: "Prana is a project management app that helps you organize your teams, projects, and tasks.", end_date: "2020-08-08", funding_goal: 10000, creator_id: aaron.id, category: "Productivity", details: text)
 yakety = Project.create(title: "Yakety-slack", main_image_url: "http://res.cloudinary.com/ds1qfel8a/image/upload/Stock/v1495161000/Yakety-slack_iajgln.jpg",
-url: "https://yakety-slack.herokuapp.com/#/", description: "Where work happens.", end_date: "2018-12-01", funding_goal: 600, creator_id: dobrynin.id, category: "Technology", details: text)
+url: "https://yakety-slack.herokuapp.com/#/", description: "Where work happens.", end_date: "2018-12-01", funding_goal: 600, creator_id: dobrynin.id, category: "Productivity", details: text)
 pantry = Project.create(title: "MyPantry", main_image_url: "http://res.cloudinary.com/ds1qfel8a/image/upload/Stock/v1495161001/Pantry_adfpkv.jpg",
 url: "https://mypantry.herokuapp.com/#/", description: "For cooking enthusiasts - a website that keeps track of your pantry so you don't have to!", end_date: "2019-02-08", funding_goal: 10000, creator_id: miriam.id, category: "Food", details: text)
 open_gym = Project.create(title: "OpenGym", main_image_url: "http://res.cloudinary.com/ds1qfel8a/image/upload/Stock/v1495161000/OpenGym_miycjc.jpg",
-url: "https://opengymvolleyball.herokuapp.com/#/", description: "A Yelp...for gyms!", end_date: "2019-01-19", funding_goal: 100000, creator_id: brandon.id, category: "Sports", details: text)
+url: "https://opengymvolleyball.herokuapp.com/#/", description: "A Yelp...for volleyball gyms!", end_date: "2019-01-19", funding_goal: 100000, creator_id: brandon.id, category: "Sports", details: text)
 unbottld = Project.create(title: "UNBOTTLD", main_image_url: "http://res.cloudinary.com/dcslgdwha/image/upload/v1495148251/bottles_d4suts.jpg",
 url: "https://unbottld.herokuapp.com/#/", description: "Find your favorite bottle", end_date: "2020-03-30", funding_goal: 50000, creator_id: mark.id, category: "Food", details: text)
 vibe = Project.create(title: "Vibe", main_image_url: "https://res.cloudinary.com/winber1/image/upload/v1495573229/homepage_aatiwt.jpg",
@@ -42,11 +43,13 @@ url: "https://vibemusic.herokuapp.com/", description: "Discover, stream, and sha
 artsie = Project.create(title: "Artsie", main_image_url: "http://res.cloudinary.com/ds1qfel8a/image/upload/c_scale,w_1080/v1495691012/Stock/artsie_chzdl2.png",
 url: "http://artsie.herokuapp.com/#/", description: "Original artworks from artists for artists", end_date: "2020-03-03", funding_goal: 7000, creator_id: vu.id, category: "Art", details: text)
 events_in_town = Project.create(title: "EventsInTown", main_image_url: "http://res.cloudinary.com/ds1qfel8a/image/upload/c_scale,w_1080/v1495692580/Stock/eventsintown_fcavw1.png",
-url: "http://eventsintown.herokuapp.com/#/", description: "Find your next experience", end_date: "2021-07-01", funding_goal: 1500, creator_id: jill.id, category: "Technology", details: text)
+url: "http://eventsintown.herokuapp.com/#/", description: "Find your next experience", end_date: "2021-07-01", funding_goal: 1500, creator_id: jill.id, category: "Entertainment", details: text)
 chill_cloud = Project.create(title: "ChillCloud", main_image_url: "https://s3-us-west-1.amazonaws.com/chillcloud-dev/albumDefault.png",
 url: "https://chillcloud.herokuapp.com/#/", description: "Listen & chill", end_date: "2022-02-12", funding_goal: 2000, creator_id: ranelle.id, category: "Music", details: text)
 upshift = Project.create(title: "UpShift", main_image_url: "https://d2ppvlu71ri8gs.cloudfront.net/items/080X0N0j262f3c0E0Z1d/Screen%20Shot%202017-05-25%20at%201.39.51%20PM.png",
 url: "https://upshiftapp.herokuapp.com/#/", description: "A new way to buy used cars", end_date: "2018-10-10", funding_goal: 8000, creator_id: jon.id, category: "Autos", details: text)
+clickstarter = Project.create(title: "Clickstarter", main_image_url: "http://res.cloudinary.com/ds1qfel8a/image/upload/c_scale,w_1080/v1495216601/Stock/Splash_emwijn.jpg",
+url: "https://clickstarter-gy.herokuapp.com/#/", description: "Pursue bold ideas on your own terms - and make an impact on the world too", end_date: "2019-08-08", funding_goal: 35000, creator_id: gary.id, category: "Technology", details: text)
 
 
 yong_reward1 = Reward.create(title: "1st Tier", amount: 10, limit: 500, description: "You get a personal thank you from me", project_id: linterest.id, deliver_date: "2019-01-01")
@@ -110,6 +113,16 @@ ranelle_reward2 = Reward.create(title: "2nd Tier", amount: 399, limit: 60, descr
 jon_reward1 = Reward.create(title: "1st Tier", amount: 199, limit: 400, description: "You get a free ride from me", project_id: upshift.id, deliver_date: "2019-02-02")
 jon_reward2 = Reward.create(title: "2nd Tier", amount: 800, limit: 300, description: "You get 2 free rides from me", project_id: upshift.id, deliver_date: "2019-02-02")
 jon_reward3 = Reward.create(title: "3rd Tier", amount: 1500, limit: 200, description: "You get 3 free rides from me", project_id: upshift.id, deliver_date: "2019-02-02")
+
+gary_reward1 = Reward.create(title: "1st Tier", amount: 12, limit: 500, description: "You get a personal shoutout from me", project_id: clickstarter.id, deliver_date: "2019-01-01")
+gary_reward2 = Reward.create(title: "2nd Tier", amount: 25, limit: 400, description: "You get 2 personal shoutouts from me", project_id: clickstarter.id, deliver_date: "2019-01-02")
+gary_reward3 = Reward.create(title: "3rd Tier", amount: 60, limit: 300, description: "You get 3 personal shoutouts from me", project_id: clickstarter.id, deliver_date: "2019-03-01")
+gary_reward4 = Reward.create(title: "4th Tier", amount: 150, limit: 250, description: "You get 4 personal shoutouts from me", project_id: clickstarter.id, deliver_date: "2019-03-04")
+gary_reward5 = Reward.create(title: "5th Tier", amount: 350, limit: 200, description: "You get 10 personal shoutouts from me", project_id: clickstarter.id, deliver_date: "2019-04-01")
+gary_reward6 = Reward.create(title: "6th Tier", amount: 800, limit: 150, description: "You get 20 personal shoutouts from me", project_id: clickstarter.id, deliver_date: "2019-04-06")
+gary_reward7 = Reward.create(title: "7th Tier", amount: 2000, limit: 100, description: "You get 30 personal shoutouts from me", project_id: clickstarter.id, deliver_date: "2019-08-01")
+gary_reward8 = Reward.create(title: "8th Tier", amount: 6500, limit: 50, description: "You get 50 personal shoutouts from me", project_id: clickstarter.id, deliver_date: "2019-08-01")
+gary_reward9 = Reward.create(title: "9th Tier", amount: 13000, limit: 10, description: "You get 100 personal shoutouts from me", project_id: clickstarter.id, deliver_date: "2019-08-01")
 
 
 yong_pledge1 = Pledge.create(reward_id: yong_reward7.id, backer_id: aaron.id)
@@ -198,3 +211,17 @@ jon_pledge1 = Pledge.create(reward_id: jon_reward1.id, backer_id: winber.id)
 jon_pledge2 = Pledge.create(reward_id: jon_reward2.id, backer_id: winber.id)
 jon_pledge3 = Pledge.create(reward_id: jon_reward2.id, backer_id: brandon.id)
 jon_pledge4 = Pledge.create(reward_id: jon_reward3.id, backer_id: yong.id)
+
+gary_pledge1 = Pledge.create(reward_id: gary_reward1.id, backer_id: winber.id)
+gary_pledge2 = Pledge.create(reward_id: gary_reward2.id, backer_id: mark.id)
+gary_pledge3 = Pledge.create(reward_id: gary_reward4.id, backer_id: brandon.id)
+gary_pledge4 = Pledge.create(reward_id: gary_reward7.id, backer_id: yong.id)
+gary_pledge5 = Pledge.create(reward_id: gary_reward9.id, backer_id: winber.id)
+gary_pledge6 = Pledge.create(reward_id: gary_reward8.id, backer_id: ranelle.id)
+gary_pledge7 = Pledge.create(reward_id: gary_reward1.id, backer_id: brandon.id)
+gary_pledge8 = Pledge.create(reward_id: gary_reward1.id, backer_id: mark.id)
+gary_pledge9 = Pledge.create(reward_id: gary_reward4.id, backer_id: yong.id)
+gary_pledge10 = Pledge.create(reward_id: gary_reward5.id, backer_id: aaron.id)
+gary_pledge11 = Pledge.create(reward_id: gary_reward9.id, backer_id: miriam.id)
+gary_pledge12 = Pledge.create(reward_id: gary_reward4.id, backer_id: dobrynin.id)
+gary_pledge13 = Pledge.create(reward_id: gary_reward3.id, backer_id: yong.id)

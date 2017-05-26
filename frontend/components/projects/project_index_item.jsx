@@ -4,7 +4,7 @@ import { Line } from 'rc-progress';
 
 const ProjectIndexItem = ({ project }) => {
   const percentRaised = Math.floor(project.raised / project.funding_goal * 100);
-  const raised = numberWithCommas(project.raised);
+  const raised = project.raised ? numberWithCommas(project.raised) : 0;
   const endDate = new Date(project.end_date);
   const currentDate = new Date();
   const remaining = numberWithCommas(Math.floor((endDate - currentDate) / 86400000));

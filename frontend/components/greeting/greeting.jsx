@@ -3,10 +3,10 @@ import { Link } from 'react-router-dom';
 import SearchBar from './search/search_bar';
 import SearchModal from './search/search_modal';
 
-const sessionLinks = (clearErrors) => (
+const sessionLinks = (clearErrors, fetchSearchProjects) => (
   <nav className="login-signup">
     <div onClick={clearErrors}>
-      <SearchBar />
+      <SearchBar fetchSearchProjects={fetchSearchProjects} />
     </div>
     <span onClick={clearErrors}><Link to="/login">Log in</Link></span>
     &nbsp;
@@ -14,9 +14,9 @@ const sessionLinks = (clearErrors) => (
   </nav>
 );
 
-const personalGreeting = (currentUser, logout) => (
+const personalGreeting = (currentUser, logout, fetchSearchProjects) => (
   <hgroup className="header-group">
-    <SearchBar />
+    <SearchBar fetchSearchProjects={fetchSearchProjects} />
     <div className="dropdown">
       <img src="http://res.cloudinary.com/ds1qfel8a/image/upload/v1495160455/Stock/nav_dropdown_ren7yn.png"
       alt="User icon" height="40" width="40" className="dropbtn" />

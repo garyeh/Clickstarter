@@ -8,6 +8,7 @@ Rails.application.routes.draw do
     end
     resources :users, only: [:create]
     resource :session, only: [:create, :destroy]
+    get "/search", to: "projects#search"
   end
 
   root "static_pages#root"

@@ -3,14 +3,21 @@ import React from 'react';
 class SearchBar extends React.Component {
   constructor(props) {
     super(props);
-
-    this.state = {toggle: false};
+    
+    this.state = {toggle: false, value: "", projectList: []};
     this.handleToggle = this.handleToggle.bind(this);
   }
 
   handleToggle(e) {
     e.preventDefault();
     this.setState({ toggle: !this.state.toggle });
+  }
+
+  update(field) {
+
+    return e => this.setState({
+      [field]: e.currentTarget.value
+    });
   }
 
   render() {
@@ -22,7 +29,8 @@ class SearchBar extends React.Component {
         {
           this.state.toggle ?
             <div>
-              <input type="text" placeholder="Search projects" />
+              <input type="text" placeholder="Search projects"
+                onChange={this.update('value')} value={this.state.value} />
             </div>
           :
             ""

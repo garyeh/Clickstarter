@@ -5,3 +5,11 @@ export const fetchCategoryProjects = category => (
     data: category
   })
 );
+
+export const fetchSearchProjects = value => (
+  $.ajax({
+    method: 'GET',
+    url: '/api/search',
+    data: {value}
+  })
+);

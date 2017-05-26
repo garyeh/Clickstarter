@@ -4,6 +4,9 @@ const RewardDetail = ({reward, deleteReward, currentUser,
   creator, fetchProjectDetail, createPledge, clearPledgeErrors, history }) => {
   const dateFormatted = (reward.deliver_date) ?
     `${reward.deliver_date.slice(5)}-${reward.deliver_date.slice(0,4)}` : "";
+  const backerIds = reward.pledges.map(pledge => pledge.backer_id);
+  const alreadyBackedMessage = (currentUser && backerIds.includes(currentUser.id)) ?
+    "You are a backer" : "";
 
   const destroyReward = () => {
     deleteReward(reward).then(() => fetchProjectDetail(reward.project_id));
@@ -38,7 +41,10 @@ const RewardDetail = ({reward, deleteReward, currentUser,
           }
         </div>
         <p id="headerLimit">{`Limited (${reward.limit - reward.pledges.length} left of ${reward.limit})`}</p>
-        <p id="headerBackers">{`${reward.pledges.length} backers`}</p>
+        <p id="headerBackers">
+          <span>{`${reward.pledges.length} backers`}</span>
+          <span>{alreadyBackedMessage}</span>
+        </p>
       </div>
       <div>
         {

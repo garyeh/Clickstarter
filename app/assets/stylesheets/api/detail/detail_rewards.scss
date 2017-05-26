@@ -110,4 +110,11 @@
 #headerBackers {
   color: #858585;
   font-size: 12px;
+  display: flex;
+  justify-content: space-between;
+}
+
+#headerBackers span:last-child {
+  font-style: italic;
+  color: #05AF3C;
 }
