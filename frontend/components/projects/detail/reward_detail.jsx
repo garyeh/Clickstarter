@@ -6,7 +6,7 @@ const RewardDetail = ({reward, deleteReward, currentUser,
     `${reward.deliver_date.slice(5)}-${reward.deliver_date.slice(0,4)}` : "";
   const backerIds = reward.pledges.map(pledge => pledge.backer_id);
   const alreadyBackedMessage = (currentUser && backerIds.includes(currentUser.id)) ?
-    "You are a backer" : "";
+    "You backed this reward" : "";
 
   const destroyReward = () => {
     deleteReward(reward).then(() => fetchProjectDetail(reward.project_id));
