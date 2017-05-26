@@ -4,21 +4,15 @@ import Modal from 'react-modal';
 const categories = [
   "Art",
   "Autos",
-  "Comics",
   "Crafts",
-  "Dance",
-  "Design",
   "Entertainment",
-  "Fashion",
-  "Film & Video",
   "Food",
   "Games",
   "Music",
   "Photography",
   "Productivity",
   "Sports",
-  "Technology",
-  "Theater"
+  "Technology"
 ];
 
 const style = {

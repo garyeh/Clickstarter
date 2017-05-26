@@ -55,6 +55,7 @@
 
 .create-form-contents select {
   width: 75%;
+  background-color: white;
 }
 
 .create-form-contents input[type="submit"] {
@@ -130,4 +131,8 @@
 
 .errors li {
   padding: 5px;
+}
+
+#projectDate {
+  font-family: "Open Sans", sans-serif;
 }

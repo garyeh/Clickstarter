@@ -24,6 +24,7 @@ jill = User.create(username: "Jill", password: "password")
 ranelle = User.create(username: "Ranelle", password: "password")
 jon = User.create(username: "Jon", password: "password")
 gary = User.create(username: "Gary", password: "password")
+tyler = User.create(username: "Tyler", password: "password")
 
 
 linterest = Project.create(title: "Linterest", main_image_url: "http://res.cloudinary.com/ds1qfel8a/image/upload/v1495418437/Stock/linterest.png",
@@ -50,6 +51,8 @@ upshift = Project.create(title: "UpShift", main_image_url: "https://d2ppvlu71ri8
 url: "https://upshiftapp.herokuapp.com/#/", description: "A new way to buy used cars", end_date: "2018-10-10", funding_goal: 8000, creator_id: jon.id, category: "Autos", details: text)
 clickstarter = Project.create(title: "Clickstarter", main_image_url: "http://res.cloudinary.com/ds1qfel8a/image/upload/c_scale,w_1080/v1495216601/Stock/Splash_emwijn.jpg",
 url: "https://clickstarter-gy.herokuapp.com/#/", description: "Pursue bold ideas on your own terms - and make an impact on the world too", end_date: "2019-08-08", funding_goal: 35000, creator_id: gary.id, category: "Technology", details: text)
+whenevernote = Project.create(title: "Whenevernote", main_image_url: "http://res.cloudinary.com/ds1qfel8a/image/upload/c_scale,w_1080/v1495821840/Stock/whenevernote_zh2tbt.png",
+url: "https://whenevernote.herokuapp.com/#/", description: "Whenevernote lets you capture and nurture ideas whenevever you have them.", end_date: "2018-10-05", funding_goal: 16000, creator_id: tyler.id, category: "Productivity", details: text)
 
 
 yong_reward1 = Reward.create(title: "1st Tier", amount: 10, limit: 500, description: "You get a personal thank you from me", project_id: linterest.id, deliver_date: "2019-01-01")
@@ -123,6 +126,9 @@ gary_reward6 = Reward.create(title: "6th Tier", amount: 800, limit: 150, descrip
 gary_reward7 = Reward.create(title: "7th Tier", amount: 2000, limit: 100, description: "You get 30 personal shoutouts from me", project_id: clickstarter.id, deliver_date: "2019-08-01")
 gary_reward8 = Reward.create(title: "8th Tier", amount: 6500, limit: 50, description: "You get 50 personal shoutouts from me", project_id: clickstarter.id, deliver_date: "2019-08-01")
 gary_reward9 = Reward.create(title: "9th Tier", amount: 16000, limit: 10, description: "You get 100 personal shoutouts from me", project_id: clickstarter.id, deliver_date: "2019-08-01")
+
+tyler_reward1 = Reward.create(title: "1st Tier", amount: 42, limit: 400, description: "You get a coffee from me", project_id: whenevernote.id, deliver_date: "2022-05-03")
+tyler_reward2 = Reward.create(title: "2ns Tier", amount: 2200, limit: 100, description: "You get 2 coffees from me", project_id: whenevernote.id, deliver_date: "2022-05-03")
 
 
 yong_pledge1 = Pledge.create(reward_id: yong_reward7.id, backer_id: aaron.id)
@@ -225,3 +231,7 @@ gary_pledge10 = Pledge.create(reward_id: gary_reward5.id, backer_id: aaron.id)
 gary_pledge11 = Pledge.create(reward_id: gary_reward9.id, backer_id: miriam.id)
 gary_pledge12 = Pledge.create(reward_id: gary_reward4.id, backer_id: dobrynin.id)
 gary_pledge13 = Pledge.create(reward_id: gary_reward3.id, backer_id: yong.id)
+
+tyler_pledge1 = Pledge.create(reward_id: tyler_reward1.id, backer_id: yong.id)
+tyler_pledge2 = Pledge.create(reward_id: tyler_reward1.id, backer_id: miriam.id)
+tyler_pledge3 = Pledge.create(reward_id: tyler_reward2.id, backer_id: gary.id)

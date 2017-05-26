@@ -15,6 +15,7 @@
   transition: all 0.25s ease-in-out;
 }
 
+
 .reward-create-form {
   width: 100%;
   display: flex;
@@ -25,19 +26,18 @@
 
 .reward-create-form button:first-child {
   border: none;
-  border-radius: 24px;
+  background-color: white;
   position: absolute;
   top: 0;
   right: 0;
-  font-size: 20px;
-  font-weight: 900;
-  transition: all 0.25s ease-in-out;
 }
 
-.reward-create-form button:first-child:hover {
-  background-color: black;
-  color: white;
-  transition: all 0.25s ease-in-out;
+.reward-create-form img {
+  height: 15px;
+  width: 15px;
+}
+
+.reward-create-form img:hover {
   cursor: pointer;
 }
 
@@ -106,4 +106,8 @@
 
 .rewardErrors li {
   padding: 2px;
+}
+
+#rewardDate {
+  font-family: "Open Sans", sans-serif;
 }

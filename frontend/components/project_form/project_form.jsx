@@ -17,21 +17,16 @@ const defaultState = (currentUser) => ({
 
 const categories = [
   "Art",
-  "Comics",
+  "Autos",
   "Crafts",
-  "Dance",
-  "Design",
-  "Fashion",
-  "Film & Video",
+  "Entertainment",
   "Food",
   "Games",
-  "Journalism",
   "Music",
   "Photography",
-  "Publishing",
+  "Productivity",
   "Sports",
-  "Technology",
-  "Theater"
+  "Technology"
 ];
 
 class ProjectForm extends React.Component {
@@ -174,10 +169,10 @@ class ProjectForm extends React.Component {
           </div>
 
           <div><span>End on date</span>
-            <input type="date" name="end_date" onChange={this.update('end_date')} value={this.state.end_date} min={this.currentDate}/>
+            <input type="date" id="projectDate" name="end_date" onChange={this.update('end_date')} value={this.state.end_date} min={this.currentDate}/>
           </div>
 
-          <div><span>Funding Goal</span>
+          <div><span>Funding Goal ($)</span>
             <input type="text" placeholder="$" onChange={this.update('funding_goal')} value={this.state.funding_goal} />
           </div>
 

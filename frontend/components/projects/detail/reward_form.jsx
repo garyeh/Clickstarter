@@ -48,7 +48,9 @@ class RewardForm extends React.Component {
   render() {
     return (
       <form className="reward-create-form">
-        <button onClick={this.props.closeModal}>X</button>
+        <button onClick={this.props.closeModal}>
+          <img src="http://res.cloudinary.com/ds1qfel8a/image/upload/v1495687648/Stock/x-categories_jlstnk.png" />
+        </button>
         <h2>Create a reward</h2>
 
         <div><span>Title</span>
@@ -68,7 +70,7 @@ class RewardForm extends React.Component {
         </div>
 
         <div><span>Deliver date</span>
-          <input type="date" name="Deliver_date" onChange={this.update('deliver_date')} value={this.state.deliver_date} min={this.currentDate}/>
+          <input type="date" id="rewardDate" name="Deliver_date" onChange={this.update('deliver_date')} value={this.state.deliver_date} min={this.currentDate}/>
         </div>
 
         <ul className="rewardErrors">
