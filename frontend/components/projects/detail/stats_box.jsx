@@ -24,7 +24,7 @@ const StatsBox = ({ detail, currentUser, deleteProject, history, errors }) => {
   let raised = (detail.raised) ? numberWithCommas(detail.raised) : 0;
   let endDate = (detail.end_date) ? new Date(detail.end_date) : new Date();
   let currentDate = new Date();
-  const remaining = Math.floor((endDate - currentDate) / 86400000);
+  const remaining = Math.ceil((endDate - currentDate) / 86400000);
 
   return (<div className="statbox">
       <div>
