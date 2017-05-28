@@ -76,8 +76,7 @@ class CategoryModal extends React.Component {
       this.closeModal();
       this.setState({category: category}, () => {
         const categoryProjects = this.state;
-        this.props.fetchCategoryProjects(categoryProjects)
-          .then(() => scrollTo(0,611));
+        this.props.fetchCategoryProjects(categoryProjects);
       });
     };
   }
