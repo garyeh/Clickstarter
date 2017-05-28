@@ -64,7 +64,10 @@ class CategoryModal extends React.Component {
     if (this.props.history.location.pathname !== "/") {
       this.props.history.push("/");
       this.pathChange = true;
+    } else {
+      this.pathChange = false;
     }
+    console.log(this.pathChange);
   }
 
   afterModalOpen() {
