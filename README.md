@@ -49,6 +49,6 @@ Users must pay to submit a pledge, via credit card API.
 [project page]: ./docs/images/project_page.png "Clickstarter project page"
 [backend]: docs/backend.md
 [frontend]: docs/frontend.md
-[website]: https://clickstarter-gy.herokuapp.com/
+[website]: http://clickstarter.me
 [proposal]: docs/README.md
 [schema]: docs/schema.md
