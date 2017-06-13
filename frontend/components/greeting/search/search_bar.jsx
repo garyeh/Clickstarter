@@ -44,12 +44,15 @@ class SearchBar extends React.Component {
               <input type="text" placeholder="Search by title or description"
                 onChange={this.update('value')} value={this.state.value} />
               <div className="searchResults">
-                {this.state.projectList.map(project => (
+                {
+                  this.state.projectList.length === 0 ? <div>No results found</div> :
+                  this.state.projectList.map(project => (
                   <div key={project.id} onClick={this.handleClick(project)}>
                     <span>{project.title}</span>
                     <span>{project.category}</span>
                   </div>
-                ))}
+                  ))
+                }
               </div>
             </div>
           :

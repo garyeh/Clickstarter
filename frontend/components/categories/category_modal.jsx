@@ -67,7 +67,6 @@ class CategoryModal extends React.Component {
     } else {
       this.pathChange = false;
     }
-    console.log(this.pathChange);
   }
 
   afterModalOpen() {
