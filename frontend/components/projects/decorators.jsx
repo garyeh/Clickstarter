@@ -6,9 +6,9 @@ const Decorators = [
       render() {
         return (
           <button
-            style={this.getButtonStyles(this.props.currentSlide === 0 && !this.props.wrapAround)}
-            onClick={this.handleClick}>
-            <img src="http://res.cloudinary.com/ds1qfel8a/image/upload/v1497369678/left_qdsoo8.png" id="leftButton"/>
+            style={this.getButtonStyles(this.props.currentSlide === 0 && !this.props.wrapAround)} >
+            <img src="http://res.cloudinary.com/ds1qfel8a/image/upload/v1497369678/left_qdsoo8.png"
+              id="leftButton" onClick={this.handleClick} />
           </button>
         );
       },
@@ -24,7 +24,6 @@ const Decorators = [
           padding: 10,
           outline: 0,
           opacity: disabled ? 0.3 : 1,
-          cursor: 'pointer'
         };
       }
     }),
@@ -35,9 +34,9 @@ const Decorators = [
       render() {
         return (
           <button
-            style={this.getButtonStyles(this.props.currentSlide + this.props.slidesToScroll >= this.props.slideCount && !this.props.wrapAround)}
-            onClick={this.handleClick}>
-            <img src="http://res.cloudinary.com/ds1qfel8a/image/upload/v1497369678/right_kamca8.png" id="rightButton"/>
+            style={this.getButtonStyles(this.props.currentSlide + this.props.slidesToScroll >= this.props.slideCount && !this.props.wrapAround)} >
+            <img src="http://res.cloudinary.com/ds1qfel8a/image/upload/v1497369678/right_kamca8.png"
+              id="rightButton" onClick={this.handleClick} />
           </button>
         );
       },
@@ -53,7 +52,6 @@ const Decorators = [
           padding: 10,
           outline: 0,
           opacity: disabled ? 0.3 : 1,
-          cursor: 'pointer'
         };
       }
     }),

@@ -167,6 +167,7 @@
 #leftButton, #rightButton {
   width: 30px;
   height: 75px;
+  transition: all 0.15s ease-in-out;
 }
 
 #leftButton {
@@ -175,4 +176,10 @@
 
 #rightButton {
   margin-right: 20px;
+}
+
+#leftButton:hover, #rightButton:hover {
+  transition: all 0.15s ease-in-out;
+  opacity: 0.5;
+  cursor: pointer;
 }
