@@ -4,14 +4,14 @@ import { Link, withRouter } from 'react-router';
 class SearchBar extends React.Component {
   constructor(props) {
     super(props);
-    this.state = {toggle: false, value: "", projectList: []};
+    this.state = {typed: false, toggle: false, value: "", projectList: []};
     this.handleToggle = this.handleToggle.bind(this);
     this.handleClick = this.handleClick.bind(this);
   }
 
   handleToggle(e) {
     e.preventDefault();
-    this.setState({ toggle: !this.state.toggle, value: "", projectList: [] });
+    this.setState({ toggle: !this.state.toggle, value: "", projectList: [], typed: false });
   }
 
   update(field) {
@@ -19,7 +19,7 @@ class SearchBar extends React.Component {
       let newVal = e.currentTarget.value;
       if (this.state.value !== newVal) {
         this.props.fetchSearchProjects(newVal)
-          .then(res => this.setState({ projectList: res.search, [field]: newVal }));
+          .then(res => this.setState({ projectList: res.search, [field]: newVal, typed: true }));
       }
     };
   }
@@ -45,7 +45,9 @@ class SearchBar extends React.Component {
                 onChange={this.update('value')} value={this.state.value} />
               <div className="searchResults">
                 {
-                  this.state.projectList.length === 0 ? <div>No results found</div> :
+                  this.state.projectList.length === 0 && this.state.typed ?
+                  <p>No results found</p>
+                    :
                   this.state.projectList.map(project => (
                   <div key={project.id} onClick={this.handleClick(project)}>
                     <span>{project.title}</span>
