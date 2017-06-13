@@ -163,3 +163,16 @@
 .indexStats p span:last-child {
   color: #808080;
 }
+
+#leftButton, #rightButton {
+  width: 30px;
+  height: 75px;
+}
+
+#leftButton {
+  margin-left: 20px;
+}
+
+#rightButton {
+  margin-right: 20px;
+}

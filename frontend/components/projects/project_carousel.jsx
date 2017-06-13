@@ -1,8 +1,9 @@
 import React from "react";
 import Carousel from "nuka-carousel";
+import Decorators from "./decorators";
 
 const ProjectCarousel = () => (
-  <Carousel wrapAround={true} autoplay={true} autoplayInterval={6000}>
+  <Carousel wrapAround={true} autoplay={true} autoplayInterval={6000} decorators={Decorators}>
     <div className="project-carousel-slide">
       <h1>Creators thrive here</h1>
       <h2>Clickstarter creators pursue bold ideas on their own terms — and make an impact on the world, too.</h2>
