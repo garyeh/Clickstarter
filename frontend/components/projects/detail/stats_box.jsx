@@ -1,6 +1,7 @@
 import React from 'react';
 import { Route, Link } from 'react-router-dom';
 import PledgeModal from './pledge_modal';
+import { Line } from 'rc-progress';
 
 const userButtons = (detail, currentUser, deleteProject, history) => {
   let detailId = detail.creator ? detail.creator.id : 0;
@@ -24,13 +25,18 @@ const StatsBox = ({ detail, currentUser, deleteProject, history, errors }) => {
   let raised = (detail.raised) ? numberWithCommas(detail.raised) : 0;
   let endDate = (detail.end_date) ? new Date(detail.end_date) : new Date();
   let currentDate = new Date();
+  let percentRaised = Math.floor(detail.raised / detail.funding_goal * 100);
+  let percentWithCap = Math.min(percentRaised, 100);
   const remaining = Math.ceil((endDate - currentDate) / 86400000);
-
+  console.log(percentWithCap)
   return (<div className="statbox">
       <div>
         <img src={detail.main_image_url} alt={detail.title} />
       </div>
       <div>
+        <Line percent={percentWithCap}
+          strokeWidth="1" strokeColor="#2BDE73"
+          trailColor="#e6e6e6" trailWidth="1" id="statboxLine" />
         <span>
           {`$${raised}`}
         </span>

@@ -19,9 +19,9 @@
 }
 
 .statbox > div:last-child {
-  border-top: 3px solid #2BDE73;
   width: 23%;
   margin-right: 60px;
+  position: relative;
 }
 
 .statbox > div:last-child span {
@@ -29,20 +29,24 @@
   margin: 5px 0;
 }
 
-.statbox > div:last-child span:nth-child(even) {
+.statbox > div:last-child span:nth-child(odd) {
   margin-bottom: 15px;
   font-size: 13px;
   color: #737373;
 }
 
-.statbox > div:last-child span:nth-child(odd) {
+.statbox > div:last-child span:nth-child(even) {
   padding-top: 15px;
   font-size: 24px;
 }
 
-.statbox > div:last-child span:first-child {
+.statbox > div:last-child span:nth-child(2) {
   margin-top: 15px;
   color: #05AF3C;
+}
+
+#statboxLine {
+  position: absolute;
 }
 
 .statbox button {
