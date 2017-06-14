@@ -26,7 +26,7 @@ class PledgeForm extends React.Component {
   handleSubmit(e) {
     e.preventDefault();
     let newState = Object.assign({}, this.state);
-    
+
     this.props.createPledge(newState)
       .then(() => {
         this.props.fetchProjectDetail(this.props.detail.id);
@@ -59,12 +59,12 @@ class PledgeForm extends React.Component {
             </option>
           ))}
         </select>
-        <input type="submit" onClick={this.handleSubmit} value="Submit pledge" />
         <div className="pledgeErrors">
           {this.props.errors.length !== 0 ?
             "You have already claimed this reward" : ""
           }
         </div>
+        <input type="submit" onClick={this.handleSubmit} value="Submit pledge" />
       </form>
     );
   }

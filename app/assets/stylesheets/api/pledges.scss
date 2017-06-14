@@ -3,7 +3,8 @@
   text-align: center;
   font-style: italic;
   font-size: 12px;
-  margin-top: 20px;
+  position: absolute;
+  top: 100px;
 }
 
 .pledgeForm {
@@ -12,6 +13,7 @@
   align-items: center;
   margin: 0 auto;
   width: 100%;
+  position: relative;
 }
 
 .pledgeForm > * {
@@ -26,7 +28,6 @@
 }
 
 .pledgeForm select {
-  margin-bottom: 20px;
   height: 40px;
   font-size: 15px;
 }
@@ -38,6 +39,7 @@
 
   height: 50px;
   width: 100%;
+  margin-top: 50px;
   background-color: #25CB68;
   font-size: 15px;
   color: #ffffff;

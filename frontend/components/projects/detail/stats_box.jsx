@@ -28,7 +28,7 @@ const StatsBox = ({ detail, currentUser, deleteProject, history, errors }) => {
   let percentRaised = Math.floor(detail.raised / detail.funding_goal * 100);
   let percentWithCap = Math.min(percentRaised, 100);
   const remaining = Math.ceil((endDate - currentDate) / 86400000);
-  console.log(percentWithCap)
+
   return (<div className="statbox">
       <div>
         <img src={detail.main_image_url} alt={detail.title} />
