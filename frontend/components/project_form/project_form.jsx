@@ -3,7 +3,7 @@ import { withRouter } from 'react-router';
 import Dropzone from 'react-dropzone';
 import uploadRequest from 'superagent';
 
-const DEFAULT_PHOTO = "http://res.cloudinary.com/ds1qfel8a/image/upload/v1495403855/sample.jpg";
+const DEFAULT_PHOTO = "http://res.cloudinary.com/ds1qfel8a/image/upload/c_scale,w_1080/v1495403855/sample.jpg";
 const defaultState = (currentUser) => ({
   title: "",
   url: "",
