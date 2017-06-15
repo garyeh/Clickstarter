@@ -154,7 +154,7 @@ class ProjectForm extends React.Component {
 
           <div><span>Project image</span>
             <Dropzone multiple={false} accept="image/*"
-              onDrop={this.handleImageDrop} className="dropzone">
+              onDrop={this.handleImageDrop} className="dropzone" id="zone">
               {
                 this.state.main_image_url === "" ?
                   <h3>Choose an image from your computer</h3>
