@@ -9,6 +9,9 @@ const ProjectIndexItem = ({ project }) => {
   const currentDate = new Date();
   const remaining = numberWithCommas(Math.ceil((endDate - currentDate) / 86400000));
   const percentWithCap = Math.min(percentRaised, 100);
+  const description = project.description ? project.description : "";
+  const truncated = (project.title + description).length < 130 ?
+    description : description.slice(0, 130 - project.title.length) + "...";
 
   return (
     <li className="indexItem">
@@ -26,7 +29,7 @@ const ProjectIndexItem = ({ project }) => {
             {`${project.title}:`}
           </Link>
           <span>
-            {` ${project.description}`}
+            {` ${truncated}`}
           </span>
         </p>
         <p>

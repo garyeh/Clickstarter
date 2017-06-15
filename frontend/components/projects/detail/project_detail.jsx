@@ -23,6 +23,7 @@ class ProjectDetail extends React.Component {
   render() {
     const detail = this.props.projectDetail;
     const currentUser = this.props.currentUser;
+    
     return (
       <div>
         <TitleBox detail={detail} />
