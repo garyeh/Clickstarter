@@ -7,7 +7,7 @@ const Decorators = [
         return (
           <button
             style={this.getButtonStyles(this.props.currentSlide === 0 && !this.props.wrapAround)} >
-            <img src="http://res.cloudinary.com/ds1qfel8a/image/upload/v1497369678/left_qdsoo8.png"
+            <img src="http://res.cloudinary.com/ds1qfel8a/image/upload/v1497369678/Stock/left_qdsoo8.png"
               id="leftButton" onClick={this.handleClick} />
           </button>
         );
@@ -35,7 +35,7 @@ const Decorators = [
         return (
           <button
             style={this.getButtonStyles(this.props.currentSlide + this.props.slidesToScroll >= this.props.slideCount && !this.props.wrapAround)} >
-            <img src="http://res.cloudinary.com/ds1qfel8a/image/upload/v1497369678/right_kamca8.png"
+            <img src="http://res.cloudinary.com/ds1qfel8a/image/upload/v1497369678/Stock/right_kamca8.png"
               id="rightButton" onClick={this.handleClick} />
           </button>
         );

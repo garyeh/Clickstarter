@@ -20,6 +20,7 @@ ranelle_text = "ChillCloud is a web application modeled after SoundCloud and pro
 jon_text = "UpShift is a full-stack web application created by Jon Jaffe, who enjoys writing in the third person. On the front-end, it uses React.js and Redux. On the back-end, it utilizes Ruby on Rails, a PostgreSQL database and jBuilder to build the data feeds. The app's core features include: Encrypted account creation and login, car index view, instantly responsive searching and filtering, favoriting/unfavoriting, and test drive scheduling."
 gary_text = "Clickstarter is a crowd-funding web application inspired by Kickstarter and built on Ruby on Rails and React-Redux. Users can create projects of their websites which other users can back at various reward levels. Site layout and styling is written in SCSS and located in the /app/assets/stylesheets directory. All images used are from either unsplash.com or directly from the website owner's assets with permission. Major fonts used include Open Sans and Roboto."
 tyler_text = "Whenevernote is a full-stack web application inspired by Evernote built using Ruby on Rails and React/Redux with PostgreSQL. Whenevernote allows users to take notes, create to-do lists, and quickly write down their thoughts. These notes can be tagged and stored in notebooks for quick lookup whenever needed. Whenevernote was built using Ruby on Rails and is hosted on Heroku. The different rails controllers send back the proper JSON responses depending on which API route was hit. PostgreSQL is used to manage the database locally and remotely. Whenevernote's frontend was built using the React framework and Flux/Redux cycle. These design choices were made so there would be an unidirectional data flow and all necessary data is stored in one source."
+stephen_text = "MeetApps is a social events full stack web application where users can browse, search, create, and join groups and events; inspired by MeetUp. Group can be created, joined, edited and destroyed through the API and belong to a User. Events belong to a Group and can be created, joined, edited and destroyed through the API. Events and groups should be search-able based on location and description."
 
 
 guest = User.create(username: "Guest", password: "password")
@@ -37,6 +38,7 @@ ranelle = User.create(username: "Ranelle", password: "password")
 jon = User.create(username: "Jon", password: "password")
 gary = User.create(username: "Gary", password: "password")
 tyler = User.create(username: "Tyler", password: "password")
+stephen = User.create(username: "Stephen", password: "password")
 
 
 linterest = Project.create(title: "Linterest", main_image_url: "http://res.cloudinary.com/ds1qfel8a/image/upload/c_scale,w_1080/v1495418437/Stock/linterest.png",
@@ -65,6 +67,8 @@ clickstarter = Project.create(title: "Clickstarter", main_image_url: "http://res
 url: "https://clickstarter-gy.herokuapp.com/#/", description: "Pursue bold ideas on your own terms - and make an impact on the world too. Users can create projects of their websites which other users can back at various reward levels.", end_date: "2019-08-08", funding_goal: 35000, creator_id: gary.id, category: "Technology", details: gary_text)
 whenevernote = Project.create(title: "Whenevernote", main_image_url: "http://res.cloudinary.com/ds1qfel8a/image/upload/c_scale,w_1080/v1495821840/Stock/whenevernote_zh2tbt.png",
 url: "https://whenevernote.herokuapp.com/#/", description: "Whenevernote lets you capture and nurture ideas whenevever you have them. Whenevernote is a full-stack web application inspired by Evernote built using Ruby on Rails and React/Redux with PostgreSQL.", end_date: "2018-10-05", funding_goal: 16000, creator_id: tyler.id, category: "Productivity", details: tyler_text)
+meetapp = Project.create(title: "MeetApp", main_image_url: "http://res.cloudinary.com/ds1qfel8a/image/upload/c_scale,w_1080/v1497558495/Stock/meetApp_wy8ymi.png",
+url: "https://meetsapp.herokuapp.com/#/", description: "MeetApps is a social events full stack web application where users can browse, search, create, and join groups and events; inspired by MeetUp. Group can be created, joined, edited and destroyed through the API and belong to a User.", end_date: "2019-12-22", funding_goal: 17500, creator_id: stephen.id, category: "Technology", details: stephen_text)
 
 
 yong_reward1 = Reward.create(title: "1st Tier", amount: 10, limit: 500, description: "You get a personal thank you from me", project_id: linterest.id, deliver_date: "2019-01-01")
@@ -140,7 +144,12 @@ gary_reward8 = Reward.create(title: "8th Tier", amount: 6500, limit: 50, descrip
 gary_reward9 = Reward.create(title: "9th Tier", amount: 16000, limit: 10, description: "You get 100 personal shoutouts from me", project_id: clickstarter.id, deliver_date: "2019-08-01")
 
 tyler_reward1 = Reward.create(title: "1st Tier", amount: 42, limit: 400, description: "You get a coffee from me", project_id: whenevernote.id, deliver_date: "2022-05-03")
-tyler_reward2 = Reward.create(title: "2ns Tier", amount: 2200, limit: 100, description: "You get 2 coffees from me", project_id: whenevernote.id, deliver_date: "2022-05-03")
+tyler_reward2 = Reward.create(title: "2nd Tier", amount: 2200, limit: 100, description: "You get 2 coffees from me", project_id: whenevernote.id, deliver_date: "2022-05-03")
+
+stephen_reward1 = Reward.create(title: "1st Tier", amount: 41, limit: 500, description: "You get a tea from me", project_id: meetapp.id, deliver_date: "2023-05-13")
+stephen_reward2 = Reward.create(title: "2nd Tier", amount: 99, limit: 400, description: "You get 2 teas from me", project_id: meetapp.id, deliver_date: "2023-05-13")
+stephen_reward3 = Reward.create(title: "3rd Tier", amount: 210, limit: 200, description: "You get 3 teas from me", project_id: meetapp.id, deliver_date: "2023-05-13")
+stephen_reward4 = Reward.create(title: "4th Tier", amount: 1200, limit: 100, description: "You get 4 teas from me", project_id: meetapp.id, deliver_date: "2023-05-13")
 
 
 yong_pledge1 = Pledge.create(reward_id: yong_reward7.id, backer_id: aaron.id)
@@ -247,3 +256,10 @@ gary_pledge13 = Pledge.create(reward_id: gary_reward3.id, backer_id: yong.id)
 tyler_pledge1 = Pledge.create(reward_id: tyler_reward1.id, backer_id: yong.id)
 tyler_pledge2 = Pledge.create(reward_id: tyler_reward1.id, backer_id: miriam.id)
 tyler_pledge3 = Pledge.create(reward_id: tyler_reward2.id, backer_id: winber.id)
+
+stephen_pledge1 = Pledge.create(reward_id: stephen_reward1.id, backer_id: yong.id)
+stephen_pledge2 = Pledge.create(reward_id: stephen_reward1.id, backer_id: miriam.id)
+stephen_pledge3 = Pledge.create(reward_id: stephen_reward2.id, backer_id: winber.id)
+stephen_pledge4 = Pledge.create(reward_id: stephen_reward3.id, backer_id: gary.id)
+stephen_pledge5 = Pledge.create(reward_id: stephen_reward1.id, backer_id: ranelle.id)
+stephen_pledge6 = Pledge.create(reward_id: stephen_reward4.id, backer_id: winber.id)
