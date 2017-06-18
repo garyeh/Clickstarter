@@ -115,32 +115,34 @@
   height: 172px;
 }
 
-.indexDetail p:nth-child(1) {
+.indexDetail > p:nth-child(1) {
   padding: 20px 30px;
   height: 10px;
   font-size: 13px;
   color: #808080;
 }
 
-.indexDetail p:nth-child(2) {
+.indexDetail > p:nth-child(2) {
   padding: 0 30px;
   height: 65px;
   font-size: 15px;
   font-family: 'Open Sans', sans-serif;
 }
 
-.indexDetail p:nth-child(3) {
+.indexDetail > p:nth-child(3) {
   padding: 20px 30px;
   font-size: 13px;
 }
 
-.indexDetail p:nth-child(2) a {
+.indexDetail > p:nth-child(2) a {
   font-weight: bold;
 }
 
-.indexDetail p:nth-child(2) span {
+#indexDetailText {
   color: #808080;
   line-height: 22px;
+  max-height: 65px;
+  overflow: hidden;
 }
 
 .indexStats {

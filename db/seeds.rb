@@ -21,6 +21,7 @@ jon_text = "UpShift is a full-stack web application created by Jon Jaffe, who en
 gary_text = "Clickstarter is a crowd-funding web application inspired by Kickstarter and built on Ruby on Rails and React-Redux. Users can create projects of their websites which other users can back at various reward levels. Site layout and styling is written in SCSS and located in the /app/assets/stylesheets directory. All images used are from either unsplash.com or directly from the website owner's assets with permission. Major fonts used include Open Sans and Roboto."
 tyler_text = "Whenevernote is a full-stack web application inspired by Evernote built using Ruby on Rails and React/Redux with PostgreSQL. Whenevernote allows users to take notes, create to-do lists, and quickly write down their thoughts. These notes can be tagged and stored in notebooks for quick lookup whenever needed. Whenevernote was built using Ruby on Rails and is hosted on Heroku. The different rails controllers send back the proper JSON responses depending on which API route was hit. PostgreSQL is used to manage the database locally and remotely. Whenevernote's frontend was built using the React framework and Flux/Redux cycle. These design choices were made so there would be an unidirectional data flow and all necessary data is stored in one source."
 stephen_text = "MeetApps is a social events full stack web application where users can browse, search, create, and join groups and events; inspired by MeetUp. Group can be created, joined, edited and destroyed through the API and belong to a User. Events belong to a Group and can be created, joined, edited and destroyed through the API. Events and groups should be search-able based on location and description."
+sam_text = "Aperture is a web application inspired by Flickr built using Ruby on Rails and React/Redux. It utilizes the following technologies: Ruby on Rails backend, PostgreSQL database, and React.js with a Redux architectural framework frontend. Photos are rendered in two different components: the PhotoList component, which shows photos and their respective heading in a scrollable list format, and the PhotoIndex component, displays photos in a justified gallery view. In both components, photos can be viewed using React Modals."
 
 
 guest = User.create(username: "Guest", password: "password")
@@ -39,11 +40,12 @@ jon = User.create(username: "Jon", password: "password")
 gary = User.create(username: "Gary", password: "password")
 tyler = User.create(username: "Tyler", password: "password")
 stephen = User.create(username: "Stephen", password: "password")
+sam = User.create(username: "Sam", password: "password")
 
 
 linterest = Project.create(title: "Linterest", main_image_url: "http://res.cloudinary.com/ds1qfel8a/image/upload/c_scale,w_1080/v1495418437/Stock/linterest.png",
 url: "https://linterest.herokuapp.com/#/login", description: "Your catalog of ideas. Inspired by Pinterest and built using Ruby on Rails and React/Redux. Pins are organized using the React Masonry Components and are responsive when the window is resized with flex-wrap.", end_date: "2018-09-09", funding_goal: 20000, creator_id: yong.id, category: "Photography", details: yong_text)
-prana = Project.create(title: "Prana", main_image_url: "https://res.cloudinary.com/dbxwu45pr/image/upload/v1495046731/hero-2_hiyzq5.jpg",
+prana = Project.create(title: "Prana", main_image_url: "http://res.cloudinary.com/ds1qfel8a/image/upload/c_scale,w_1080/v1497805549/Stock/prana_msjlsv.png",
 url: "https://prana.herokuapp.com/#/", description: "Prana is a project management app that helps you organize your teams, projects, and tasks. Inspired by the popular task management website Asana.", end_date: "2020-08-08", funding_goal: 10000, creator_id: aaron.id, category: "Productivity", details: aaron_text)
 yakety = Project.create(title: "Yakety-slack", main_image_url: "http://res.cloudinary.com/ds1qfel8a/image/upload/c_scale,w_1080/v1495161000/Stock/Yakety-slack_iajgln.jpg",
 url: "https://yakety-slack.herokuapp.com/#/", description: "Where work happens. A Slack-inspired full-stack web application. It utilizes the React.js and Redux libraries on the frontend with a Ruby on Rails backend and a PostgreSQL database.", end_date: "2018-12-01", funding_goal: 600, creator_id: dobrynin.id, category: "Productivity", details: dobrynin_text)
@@ -69,6 +71,8 @@ whenevernote = Project.create(title: "Whenevernote", main_image_url: "http://res
 url: "https://whenevernote.herokuapp.com/#/", description: "Whenevernote lets you capture and nurture ideas whenevever you have them. Whenevernote is a full-stack web application inspired by Evernote built using Ruby on Rails and React/Redux with PostgreSQL.", end_date: "2018-10-05", funding_goal: 16000, creator_id: tyler.id, category: "Productivity", details: tyler_text)
 meetapp = Project.create(title: "MeetApp", main_image_url: "http://res.cloudinary.com/ds1qfel8a/image/upload/c_scale,w_1080/v1497558495/Stock/meetApp_wy8ymi.png",
 url: "https://meetsapp.herokuapp.com/#/", description: "MeetApps is a social events full stack web application where users can browse, search, create, and join groups and events; inspired by MeetUp. Group can be created, joined, edited and destroyed through the API and belong to a User.", end_date: "2019-12-22", funding_goal: 17500, creator_id: stephen.id, category: "Technology", details: stephen_text)
+aperture = Project.create(title: "Aperture", main_image_url: "http://res.cloudinary.com/ds1qfel8a/image/upload/c_scale,w_1080/v1497803814/Stock/aperture_m3dqvs.png",
+url: "http://www.aperture.world/#/", description: "Discover the world through photography. Join the Aperture community, share your story, and stay inspired. Inspired by Flickr and built using Ruby on Rails and React/Redux.", end_date: "2020-04-02", funding_goal: 21000, creator_id: sam.id, category: "Photography", details: sam_text)
 
 
 yong_reward1 = Reward.create(title: "1st Tier", amount: 10, limit: 500, description: "You get a personal thank you from me", project_id: linterest.id, deliver_date: "2019-01-01")
@@ -150,6 +154,12 @@ stephen_reward1 = Reward.create(title: "1st Tier", amount: 41, limit: 500, descr
 stephen_reward2 = Reward.create(title: "2nd Tier", amount: 99, limit: 400, description: "You get 2 teas from me", project_id: meetapp.id, deliver_date: "2023-05-13")
 stephen_reward3 = Reward.create(title: "3rd Tier", amount: 210, limit: 200, description: "You get 3 teas from me", project_id: meetapp.id, deliver_date: "2023-05-13")
 stephen_reward4 = Reward.create(title: "4th Tier", amount: 1200, limit: 100, description: "You get 4 teas from me", project_id: meetapp.id, deliver_date: "2023-05-13")
+
+sam_reward1 = Reward.create(title: "1st Tier", amount: 21, limit: 500, description: "You get a meme from me", project_id: aperture.id, deliver_date: "2023-03-13")
+sam_reward2 = Reward.create(title: "2nd Tier", amount: 59, limit: 400, description: "You get 2 memes from me", project_id: aperture.id, deliver_date: "2023-03-13")
+sam_reward3 = Reward.create(title: "3rd Tier", amount: 150, limit: 200, description: "You get 3 memes from me", project_id: aperture.id, deliver_date: "2023-03-13")
+sam_reward4 = Reward.create(title: "4th Tier", amount: 900, limit: 50, description: "You get 4 memes from me", project_id: aperture.id, deliver_date: "2023-03-13")
+sam_reward5 = Reward.create(title: "5th Tier", amount: 3000, limit: 10, description: "You get 5 memes from me", project_id: aperture.id, deliver_date: "2023-03-13")
 
 
 yong_pledge1 = Pledge.create(reward_id: yong_reward7.id, backer_id: aaron.id)
@@ -263,3 +273,9 @@ stephen_pledge3 = Pledge.create(reward_id: stephen_reward2.id, backer_id: winber
 stephen_pledge4 = Pledge.create(reward_id: stephen_reward3.id, backer_id: gary.id)
 stephen_pledge5 = Pledge.create(reward_id: stephen_reward1.id, backer_id: ranelle.id)
 stephen_pledge6 = Pledge.create(reward_id: stephen_reward4.id, backer_id: winber.id)
+
+sam_pledge1 = Pledge.create(reward_id: sam_reward1.id, backer_id: aaron.id)
+sam_pledge2 = Pledge.create(reward_id: sam_reward2.id, backer_id: winber.id)
+sam_pledge3 = Pledge.create(reward_id: sam_reward3.id, backer_id: gary.id)
+sam_pledge4 = Pledge.create(reward_id: sam_reward1.id, backer_id: ranelle.id)
+sam_pledge5 = Pledge.create(reward_id: sam_reward4.id, backer_id: yong.id)
