@@ -11,7 +11,7 @@ class RewardsBox extends React.Component {
     return (<div className="rewardsBox">
         <div>
           <h2>About this project</h2>
-          <p>{this.props.detail.details}</p>
+          <p id="detailText">{this.props.detail.details}</p>
         </div>
 
         <div>
