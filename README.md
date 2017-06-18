@@ -45,7 +45,7 @@ This is achieved through my implementation of Auth routes (routes that cannot be
 
 ### Projects
 
-When fetching all the attributes of a project from the backend, a few important details ('current funds raised' and 'number of backers') can be retrieved through associations and a few mathematical operations. This obviates the need for projects to have these two columns at the model level.
+When fetching all the attributes of a project from the backend, a few important details ('current funds raised' and 'number of backers') can be retrieved through associations and a few mathematical operations. This obviates the need for projects to have these two columns at the database level.
 ```ruby
 json.extract! project, :title, :url, :description,
   :main_image_url, :end_date, :funding_goal, :details,
@@ -64,7 +64,7 @@ json.extract! project, :title, :url, :description,
   json.num_backers project.rewards.map {|reward| reward.pledges.count }.reduce(:+)
 ```
 
-To calculate the number of days remaining, one takes the difference between the user-specified end date and the current date. Since the difference of two JS Date objects is an integer value in milliseconds, simply convert this to 'days' by dividing by the conversion factor of 86400000. Finally we can use a regex 'numberWithCommas' to insert commas for large numbers to enhance readability.
+To calculate the number of days remaining in a project, one takes the difference between the user-specified end date and the current date. Since the difference of two JS Date objects is an integer value in milliseconds, simply convert this to 'days' by dividing by the conversion factor of 86400000. Finally we can use a regex 'numberWithCommas' to insert commas for large numbers to enhance readability.
 
 ```js
 let endDate = new Date(detail.end_date);
@@ -76,6 +76,63 @@ const remaining = numberWithCommas(
 const numberWithCommas = (x) => (
   x.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ",")
 );
+```
+
+### Categories
+
+The 'Explore' button opens a modal which in turn leads back to an index with a filtered list by the selected category. To achieve this without creating a separate route for categories and filtered results, I applied a few additional rules to the modal:
+
+- Opening the modal redirects the underlying component to the index page, no matter where the user may have been (the modal can be accessed from any page since it is part of the nav bar).
+
+```js
+openModal() {
+  this.setState({ modalOpen: true });
+  if (this.props.history.location.pathname !== "/") {
+    this.props.history.push("/");
+    this.pathChange = true;
+  } else {
+    this.pathChange = false;
+  }
+}
+```
+
+This speeds up the rendering of filtered results because the filtered results and the full index page share the same component. The user does not notice this re-rendering because the modal covers the entire page.
+
+- Closing the modal will send the user back to the page they were on when they opened the modal (if it wasn't already the index page).
+
+```js
+goBack() {
+  if (this.pathChange === true) {
+    this.props.history.goBack();
+  }
+  this.closeModal();
+}
+
+closeModal() {
+  this.setState({ modalOpen: false });
+  style.content.opacity = 0;
+}
+```
+
+- Clicking on any of the categories on the modal calls a filter on the current results and triggers a re-rendering.
+
+```js
+displayIndexByCategory(category) {
+  return e => {
+    this.closeModal();
+    this.setState({category: category}, () => {
+      const categoryProjects = this.state;
+      this.props.fetchCategoryProjects(categoryProjects);
+    });
+  };
+}
+```
+Note that the carousel does not display when filtered results are shown.
+
+```js
+// project_index.jsx
+isSingleCategory(projects.map(project => project.category)) ? "" :
+<ProjectCarousel projects={projects} />
 ```
 
 ## Technology
