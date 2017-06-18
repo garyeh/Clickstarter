@@ -46,6 +46,7 @@ This is achieved through my implementation of Auth routes (routes that cannot be
 ### Projects
 
 When fetching all the attributes of a project from the backend, a few important details ('current funds raised' and 'number of backers') can be retrieved through associations and a few mathematical operations. This obviates the need for projects to have these two columns at the database level.
+
 ```ruby
 json.extract! project, :title, :url, :description,
   :main_image_url, :end_date, :funding_goal, :details,
@@ -96,7 +97,7 @@ openModal() {
 }
 ```
 
-This speeds up the rendering of filtered results because the filtered results and the full index page share the same component. The user does not notice this re-rendering because the modal covers the entire page.
+This speeds up the rendering of filtered results because the full index page and the filtered results page share the same component. The user does not see this re-rendering because the modal covers the entire page.
 
 - Closing the modal will send the user back to the page they were on when they opened the modal (if it wasn't already the index page).
 
@@ -127,6 +128,7 @@ displayIndexByCategory(category) {
   };
 }
 ```
+
 Note that the carousel does not display when filtered results are shown.
 
 ```js
