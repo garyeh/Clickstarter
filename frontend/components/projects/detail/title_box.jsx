@@ -12,7 +12,7 @@ const TitleBox = ({ detail }) => {
       </div>
       <div>
         <p>{detail.title}</p>
-        <p>{detail.description}</p>
+        <p id="descriptionText">{detail.description}</p>
       </div>
     </div>
   );
