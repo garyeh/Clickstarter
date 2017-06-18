@@ -45,7 +45,7 @@ This is achieved through my implementation of Auth routes (routes that cannot be
 
 ### Projects
 
-When fetching all the attributes of a project from the backend, its reward details can also be retrieved through associations. Some important details ('current funds raised' and 'number of backers') require a combination of associations and enumerable/mathematical operations. This obviates the need for projects to have extraneous columns at the database level.
+When fetching all the attributes of a project from the backend, its reward details will also be retrieved through associations. Some important details ('current funds raised' and 'number of backers') utilize a combination of associations and enumerable/mathematical operations. This obviates the need for projects to have extraneous columns at the database level.
 
 ```ruby
 json.extract! project, :title, :url, :description,
