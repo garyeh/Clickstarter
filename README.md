@@ -27,8 +27,8 @@ Clickstarter was designed and built in 2 weeks. View the original [proposal][pro
 ### User Authentication
 
 - Users must be logged in to create a project or make a pledge. Clicking these buttons while logged out will redirect you to the login page. All other navigation (viewing a project page, search, etc.) is available even when logged out.
-- Guest login is available if one does not wish to create an account.
 - 'Edit' and 'delete' options for a project or its rewards are unavailable unless the project owner is signed in.
+- Attempting to access the login page while already logged in causes a redirect to the index page.
 
 This is achieved through my implementation of Auth routes (routes that cannot be visited once logged in) and Protected routes (routes that cannot be visited unless logged in). React DOM makes this easy by componentizing every route under a switch.
 
@@ -44,7 +44,6 @@ This is achieved through my implementation of Auth routes (routes that cannot be
 ```
 
 ### Projects
-
 
 When fetching all the attributes of a project from the backend, a few important details ('current funds raised' and 'number of backers') can be retrieved through associations and a few mathematical operations. This obviates the need for projects to have these two columns at the model level.
 ```ruby
@@ -65,6 +64,19 @@ json.extract! project, :title, :url, :description,
   json.num_backers project.rewards.map {|reward| reward.pledges.count }.reduce(:+)
 ```
 
+To calculate the number of days remaining, one takes the difference between the user-specified end date and the current date. Since the difference of two JS Date objects is an integer value in milliseconds, simply convert this to 'days' by dividing by the conversion factor of 86400000. Finally we can use a regex 'numberWithCommas' to insert commas for large numbers to enhance readability.
+
+```js
+let endDate = new Date(detail.end_date);
+let currentDate = new Date();
+const remaining = numberWithCommas(
+                  Math.ceil(
+                  (endDate - currentDate) / 86400000));
+
+const numberWithCommas = (x) => (
+  x.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ",")
+);
+```
 
 ## Technology
 
@@ -82,11 +94,9 @@ Clickstarter is a single-page application built on the following technologies:
 - React DOM
 - React Router
 - jQuery to make AJAX calls to the Rails server.
-- Redux Thunk
 - Nuka Carousel
 - React Modal
 - React Component Progress (for the progress bar)
-- Babel
 - Webpack as the bundler for all frontend components. The bundled file is located in `/app/assets/javascripts` and is included in `application.js`.
 
 ### Styling & Seed Data
