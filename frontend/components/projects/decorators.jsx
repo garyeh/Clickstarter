@@ -99,13 +99,13 @@ const Decorators = [
         return {
           listStyleType: 'none',
           display: 'inline-block'
-        }
+        };
       },
       getButtonStyles(active) {
         return {
           border: 0,
           background: 'transparent',
-          color: 'black',
+          color: 'white',
           cursor: 'pointer',
           padding: 10,
           outline: 0,
