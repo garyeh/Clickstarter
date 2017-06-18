@@ -81,7 +81,7 @@ const numberWithCommas = (x) => (
 
 ### Categories
 
-The 'Explore' button opens a modal which in turn leads back to an index with a filtered list by the selected category. To achieve this without creating a separate route for categories and filtered results, I applied a few additional rules to the modal:
+The 'Explore' button opens a modal which in turn leads back to an index with a filtered list by the selected category. To achieve this without creating a separate route for categories and filtered results, I applied a few rules to the modal:
 
 - Opening the modal redirects the underlying component to the index page, no matter where the user may have been (the modal can be accessed from any page since it is part of the nav bar).
 
@@ -129,7 +129,7 @@ displayIndexByCategory(category) {
 }
 ```
 
-Note that the carousel does not display when filtered results are shown.
+- The carousel does not display when filtered results are shown.
 
 ```js
 // project_index.jsx
