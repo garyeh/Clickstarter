@@ -8,7 +8,7 @@ class Api::ProjectsController < ApplicationController
   end
 
   def search
-    projects = Project.where("title ILIKE '%#{params[:value]}%' OR description ILIKE '%#{params[:value]}%'").limit(5)
+    projects = Project.all
     render json: projects
   end
 

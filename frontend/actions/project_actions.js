@@ -37,8 +37,8 @@ export const fetchProjects = () => dispatch => (
     .then(projects => dispatch(receiveProjects(projects)))
 );
 
-export const fetchSearchProjects = value => dispatch => (
-  CategoryUtil.fetchSearchProjects(value)
+export const fetchSearchProjects = () => dispatch => (
+  CategoryUtil.fetchSearchProjects()
     .then(res => dispatch(receiveSearchProjects(res)))
 );
 

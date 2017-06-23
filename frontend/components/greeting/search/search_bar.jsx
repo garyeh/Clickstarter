@@ -7,19 +7,34 @@ class SearchBar extends React.Component {
     this.state = {typed: false, toggle: false, value: "", projectList: []};
     this.handleToggle = this.handleToggle.bind(this);
     this.handleClick = this.handleClick.bind(this);
+    this.projects = [];
   }
 
   handleToggle(e) {
     e.preventDefault();
-    this.setState({ toggle: !this.state.toggle, value: "", projectList: [], typed: false });
+    if (this.state.toggle) {
+      this.setState({ toggle: !this.state.toggle, value: "", projectList: [], typed: false });
+    } else {
+      this.props.fetchSearchProjects()
+        .then(res => {
+          this.projects = res.search;
+          this.setState({ toggle: !this.state.toggle, value: "", typed: false });
+        });
+    }
   }
 
   update(field) {
     return e => {
       let newVal = e.currentTarget.value;
       if (this.state.value !== newVal) {
-        this.props.fetchSearchProjects(newVal)
-          .then(res => this.setState({ projectList: res.search, [field]: newVal, typed: true }));
+        let filtered = this.projects.filter( project => {
+          let [title, description, val] =
+          [project.title, project.description, newVal].map( (str) => (
+            str.toLowerCase()
+          ));
+          return title.includes(val) || description.includes(val);
+        });
+        this.setState({ projectList: filtered.slice(0, 5), [field]: newVal, typed: true });
       }
     };
   }
