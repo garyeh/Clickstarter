@@ -13,7 +13,12 @@
   transition: all 0.15s ease;
 }
 
-.leftnav span:last-child:hover {
+.leftnav span:last-child a {
+  transition: all 0.15s ease;
+  padding: 21px 0 21px 0;
+}
+
+.leftnav span:last-child a:hover {
   border-bottom: 3px solid #2BDE73;
   transition: all 0.15s ease;
 }
@@ -51,7 +56,7 @@
 }
 
 .leftnav span:last-child {
-  width: 89px;
+  width: 103px;
   left: 140px;
   top: -32px;
   padding: 20px 0;
