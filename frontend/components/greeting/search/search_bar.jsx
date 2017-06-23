@@ -32,7 +32,7 @@ class SearchBar extends React.Component {
           [project.title, project.description, newVal].map( (str) => (
             str.toLowerCase()
           ));
-          return title.includes(val) || description.includes(val);
+          return (title.includes(val) || description.includes(val)) && val !== "";
         });
         this.setState({ projectList: filtered.slice(0, 5), [field]: newVal, typed: true });
       }
@@ -60,7 +60,7 @@ class SearchBar extends React.Component {
                 onChange={this.update('value')} value={this.state.value} />
               <div className="searchResults">
                 {
-                  this.state.projectList.length === 0 && this.state.typed ?
+                  this.state.projectList.length === 0 && this.state.typed && this.state.value !== "" ?
                   <p>No results found</p>
                     :
                   this.state.projectList.map(project => (
