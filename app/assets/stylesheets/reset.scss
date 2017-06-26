@@ -26,6 +26,7 @@ ul {
 
 input[type="password"],
 input[type="text"],
+input[type="date"],
 input[type="submit"],
 textarea,
 button,
@@ -33,6 +34,17 @@ select {
   -webkit-appearance: none;
   -moz-appearance: none;
   appearance: none;
+  outline: none;
+}
+
+input[type="password"]:focus,
+input[type="text"]:focus,
+input[type="date"]:focus,
+input[type="submit"]:focus,
+textarea:focus,
+button:focus,
+select:focus {
+  border: 1px solid #2752ff;
 }
 
 /* Clearfix */
