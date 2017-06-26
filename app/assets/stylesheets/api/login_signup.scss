@@ -51,9 +51,15 @@
 .login-input {
   width: 330px;
   height: 16px;
-  padding: 10px;
+  padding: 12px;
   border-radius: 6px;
-  font-size: 15px;
+  border: 1px solid #DAD7D4;
+  font-size: 14px;
+  outline: none;
+}
+
+.login-input:focus {
+  border: 1px solid #2752ff;
 }
 
 .login-form div input[type="submit"] {

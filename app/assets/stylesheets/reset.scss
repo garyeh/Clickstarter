@@ -24,6 +24,17 @@ ul {
   list-style: none;
 }
 
+input[type="password"],
+input[type="text"],
+input[type="submit"],
+textarea,
+button,
+select {
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+}
+
 /* Clearfix */
 
 .group:after {
