@@ -10,8 +10,8 @@ import ExploreCreateContainer from './explore_create/explore_create_container';
 import ProjectFormContainer from './project_form/project_form_container';
 
 const App = () => (
-  <div>
-    <section>
+  <div id="canvas">
+    <section id="backdrop">
       <nav className="navbar">
         <div>
           <ExploreCreateContainer />
@@ -22,7 +22,7 @@ const App = () => (
           </a>
         </div>
         <div>
-          
+
           <GreetingContainer />
         </div>
       </nav>

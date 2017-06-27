@@ -7,3 +7,7 @@ footer div {
   font-size: 12px;
   justify-content: flex-end;
 }
+
+html, body, #root, #canvas {
+  height: 100%;
+}

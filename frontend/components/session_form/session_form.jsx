@@ -90,7 +90,7 @@ class SessionForm extends React.Component {
     return (
       <div className="login-form-container">
         <div className="login-box-wrapper">
-          <form  className="login-form-box">
+          <form className="login-form-box">
             <div className="redirect">{this.navLink()}</div>
             <div className="login-form">
             {this.titleText()}
