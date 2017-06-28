@@ -21,7 +21,7 @@ class ProjectIndex extends React.Component {
     const projects = this.props.projects;
 
     return (
-      <section>
+      <section className="backdrop">
         {
           isSingleCategory(projects.map(project => project.category)) ? "" :
           <ProjectCarousel projects={projects} />

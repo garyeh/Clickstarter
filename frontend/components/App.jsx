@@ -11,7 +11,7 @@ import ProjectFormContainer from './project_form/project_form_container';
 
 const App = () => (
   <div id="canvas">
-    <section id="backdrop">
+    <section>
       <nav className="navbar">
         <div>
           <ExploreCreateContainer />
