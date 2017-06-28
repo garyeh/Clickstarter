@@ -55,8 +55,7 @@ class CategoryModal extends React.Component {
   }
 
   closeModal() {
-    this.setState({ modalOpen: false });
-    style.content.opacity = 0;
+    setTimeout(() => this.setState({ modalOpen: false }), 200);
   }
 
   openModal() {
@@ -79,7 +78,7 @@ class CategoryModal extends React.Component {
         const categoryProjects = this.state;
         this.props.fetchCategoryProjects(categoryProjects);
       });
-      setTimeout(() => this.closeModal(), 200);
+      this.closeModal();
     };
   }
 
