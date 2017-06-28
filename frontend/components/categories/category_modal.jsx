@@ -55,7 +55,10 @@ class CategoryModal extends React.Component {
   }
 
   closeModal() {
-    setTimeout(() => this.setState({ modalOpen: false }), 200);
+    setTimeout(() => {
+      this.setState({ modalOpen: false });
+      style.content.opacity = 0;
+    }, 200);
   }
 
   openModal() {
