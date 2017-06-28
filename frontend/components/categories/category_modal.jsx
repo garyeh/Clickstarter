@@ -79,7 +79,7 @@ class CategoryModal extends React.Component {
         const categoryProjects = this.state;
         this.props.fetchCategoryProjects(categoryProjects);
       });
-      setTimeout(() => this.closeModal(), 100);
+      setTimeout(() => this.closeModal(), 200);
     };
   }
 
