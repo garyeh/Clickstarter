@@ -62,7 +62,7 @@ class CategoryModal extends React.Component {
   openModal() {
     this.setState({ modalOpen: true });
     if (this.props.history.location.pathname !== "/") {
-      this.props.history.push("/");
+      setTimeout(() => this.props.history.push("/"), 200);
       this.pathChange = true;
     } else {
       this.pathChange = false;
@@ -75,11 +75,11 @@ class CategoryModal extends React.Component {
 
   displayIndexByCategory(category) {
     return e => {
-      this.closeModal();
       this.setState({category: category}, () => {
         const categoryProjects = this.state;
         this.props.fetchCategoryProjects(categoryProjects);
       });
+      setTimeout(() => this.closeModal(), 100);
     };
   }
 
