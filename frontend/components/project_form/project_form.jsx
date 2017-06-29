@@ -129,7 +129,7 @@ class ProjectForm extends React.Component {
             {this.errors()}
           </ul>
 
-          <div><span>Project Title</span>
+          <div><span>Project title</span>
             <input type="text" placeholder="Title" onChange={this.update('title')} value={this.state.title} />
           </div>
 
@@ -141,7 +141,7 @@ class ProjectForm extends React.Component {
             <textarea name="Description" className="form-description" placeholder="Description" onChange={this.update('description')} value={this.state.description}></textarea>
           </div>
 
-          <div><span>Choose a category</span>
+          <div><span>Category</span>
             <select name="expertise" onChange={this.update('category')} value={this.state.category} >
               <option value="x" disabled="true">Select a category</option>
               {
@@ -170,7 +170,7 @@ class ProjectForm extends React.Component {
             <input type="date" id="projectDate" name="end_date" onChange={this.update('end_date')} value={this.state.end_date} min={this.currentDate}/>
           </div>
 
-          <div><span>Funding Goal ($)</span>
+          <div><span>Funding goal ($)</span>
             <input type="text" placeholder="$" onChange={this.update('funding_goal')} value={this.state.funding_goal} />
           </div>
 
