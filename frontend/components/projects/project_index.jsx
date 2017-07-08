@@ -29,7 +29,7 @@ class ProjectIndex extends React.Component {
         <div className="featured">
           {
             isSingleCategory(projects.map(project => project.category)) ?
-            <h2>Projects in <span>{projects[0].category}</span></h2>
+            <h2 id="categoryTitle">Projects in <span>{projects[0].category}</span></h2>
             :
             <h2>Featured projects</h2>
           }
