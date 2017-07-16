@@ -24,10 +24,12 @@ const StatsBox = ({ detail, currentUser, deleteProject, history, errors }) => {
   let goal = (detail.funding_goal) ? numberWithCommas(detail.funding_goal) : 0;
   let raised = (detail.raised) ? numberWithCommas(detail.raised) : 0;
   let endDate = (detail.end_date) ? new Date(detail.end_date) : new Date();
+  let numBackers = (detail.num_backers) ? detail.num_backers : 0;
   let currentDate = new Date();
   let percentRaised = Math.floor(detail.raised / detail.funding_goal * 100);
   let percentWithCap = Math.min(percentRaised, 100);
   const remaining = numberWithCommas(Math.ceil((endDate - currentDate) / 86400000));
+
 
   return (<div className="statbox">
       <div>
@@ -44,7 +46,7 @@ const StatsBox = ({ detail, currentUser, deleteProject, history, errors }) => {
           {`pledged of $${goal} goal`}
         </span>
         <span>
-          {detail.num_backers}
+          {numBackers}
         </span>
         <span>
           backers
